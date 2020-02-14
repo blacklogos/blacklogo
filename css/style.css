@@ -90,7 +90,7 @@ body {
     font-size: 13px;
     line-height: 10px;
     text-decoration: none;
-    color: #6772e5;
+    color: #FF5C5C;
     transition: 0.2s;
 }
 
@@ -450,7 +450,7 @@ h1 {
 }
 
 #footer {
-    text-align: left !important;
+    text-align: center!important;
     padding-left: 20px;
 }
 
@@ -915,7 +915,8 @@ input:focus {
     }
 }
 .badge--hire-me {
-	margin: 20px 0 25px
+	margin: 20px 0 25px;
+    display: block;
 }
 
 @media(min-width:768px) {
