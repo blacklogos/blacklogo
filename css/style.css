@@ -410,6 +410,7 @@ beta {
 
 h1 {
     font-size: 32px;
+    line-height: 1.5rem;
 }
 
 #toolsText {
@@ -528,7 +529,7 @@ h2 {
     font-weight: 400;
     padding-right: 14px;
     text-align: left;
-    line-height: 70px;
+    line-height: 2.3rem;
     margin-top: -15px;
 }
 #featuredWrapper {
@@ -692,8 +693,9 @@ input:focus {
     color: #000000;
 }
 #brand {
-    height: 40px;
-    position: fixed;
+    margin: 5px;
+    height: 50px;
+    position: relative;
     top: 12px;
     left: 15px;
 }
@@ -962,3 +964,5 @@ input:focus {
 	align-content: center;
 	display: block;
 }
+
+    
