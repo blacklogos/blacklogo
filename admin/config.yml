@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: blacklogos.github.io/blacklogo/
+  repo: blacklogos/blacklogo
   branch: master
   site_domain: adoring-swartz-a37cd0.netlify.com
 
