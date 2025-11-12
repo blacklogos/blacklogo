@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.4 Analyze Campaign Data - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #2d3748; background: #f7fafc; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+        .header { border-bottom: 3px solid #667eea; padding-bottom: 30px; margin-bottom: 40px; }
+        h1 { font-size: 2.5em; color: #1a202c; margin-bottom: 15px; }
+        .lesson-meta { color: #718096; font-size: 1.1em; }
+        h2 { font-size: 1.8em; color: #2d3748; margin-top: 40px; margin-bottom: 20px; }
+        p { margin-bottom: 20px; font-size: 1.1em; }
+        ul { margin-left: 30px; margin-bottom: 25px; }
+        li { margin-bottom: 12px; }
+        .highlight-box { background: #f0f4ff; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        .success-box { background: #f0fdf4; border-left: 5px solid #10b981; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        code { background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-family: 'Fira Code', monospace; color: #e11d48; }
+        pre { background: #1e293b; color: #e2e8f0; padding: 25px; border-radius: 8px; margin: 25px 0; }
+        pre code { background: none; color: #e2e8f0; padding: 0; }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0; }
+        .nav-button { padding: 15px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; }
+        .nav-button:hover { background: #5568d3; }
+        .nav-button.secondary { background: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2.4 Analyze Campaign Data</h1>
+            <p class="lesson-meta">Module 2: Advanced Applications | 35 min</p>
+        </div>
+
+        <h2>Turning Data Into Actionable Insights</h2>
+
+        <p>Data analysis is often time-consuming and complex. Claude Code can help you quickly analyze campaign performance, identify trends, extract insights, and create reports.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Analyzing campaign performance data</li>
+                <li>Creating executive reports</li>
+                <li>Identifying optimization opportunities</li>
+                <li>Multi-channel attribution analysis</li>
+                <li>Building data-driven recommendations</li>
+            </ul>
+        </div>
+
+        <h2>Campaign Performance Analysis</h2>
+
+        <pre><code>Analyze Q2 campaign performance data:
+
+I have campaign data in analytics/q2-campaign-data.csv with columns:
+- Date, Channel, Campaign, Spend, Impressions, Clicks, Conversions, Revenue
+
+Please analyze and create a report that includes:
+
+OVERALL PERFORMANCE:
+- Total spend, conversions, revenue
+- Overall ROI and ROAS
+- Cost per acquisition
+- Conversion rate
+
+BY CHANNEL:
+- Performance breakdown by channel
+- Best and worst performing channels
+- Efficiency metrics (CPA, ROAS by channel)
+- Budget allocation recommendations
+
+BY CAMPAIGN:
+- Top 5 performing campaigns
+- Bottom 5 campaigns (candidates for optimization/pause)
+- Win analysis (what worked and why)
+
+TRENDS:
+- Week-over-week performance trends
+- Day-of-week patterns
+- Performance trajectory (improving/declining)
+
+RECOMMENDATIONS:
+- Where to increase spend
+- What to pause or optimize
+- Testing opportunities
+- Quick wins
+
+Save analysis as analytics/q2-campaign-analysis-report.md
+Include visualizations descriptions (for charts to create)</code></pre>
+
+        <h2>Content Performance Analysis</h2>
+
+        <pre><code>Analyze blog content performance:
+
+Review analytics/blog-performance-q2.csv with:
+- Post title, Publish date, Views, Avg time on page, Bounce rate,
+  Conversions, Traffic sources
+
+Create analysis report:
+
+TOP PERFORMERS:
+- Top 10 posts by views
+- Top 10 by engagement (time on page)
+- Top 10 by conversions
+- What they have in common
+
+UNDERPERFORMERS:
+- Posts with high bounce rate
+- Posts with low engagement
+- Posts with no conversions
+- Improvement recommendations for each
+
+CONTENT INSIGHTS:
+- Best performing topics
+- Optimal post length (based on engagement)
+- Best publish days/times
+- Traffic source analysis
+
+SEO PERFORMANCE:
+- Posts ranking on page 1
+- Keyword opportunities
+- Posts needing optimization
+
+RECOMMENDATIONS:
+- Topics to expand on
+- Posts to update/refresh
+- Content gaps to fill
+- Promotion strategies
+
+Save as analytics/blog-performance-analysis.md</code></pre>
+
+        <h2>Email Campaign Analysis</h2>
+
+        <pre><code>Analyze email marketing performance:
+
+Data in analytics/email-metrics-q2.csv:
+- Campaign, Send date, List, Recipients, Opens, Clicks, Conversions, Unsubscribes
+
+Create comprehensive email analysis:
+
+DELIVERABILITY METRICS:
+- Overall delivery rate
+- List health indicators
+- Unsubscribe rate trends
+
+ENGAGEMENT METRICS:
+- Open rates by campaign type
+- Click rates by CTA type
+- Best performing subject line patterns
+- Send time optimization
+
+CONVERSION ANALYSIS:
+- Conversion rate by email type
+- Revenue attribution
+- Funnel effectiveness
+
+SEGMENT PERFORMANCE:
+- Performance by list/segment
+- Persona-based analysis
+- Lifecycle stage effectiveness
+
+A/B TEST RESULTS:
+- Subject line tests conclusions
+- Content tests findings
+- Send time tests results
+
+RECOMMENDATIONS:
+- Email template improvements
+- Subject line formulas to use
+- Optimal send times
+- List segmentation strategy
+- Re-engagement campaign needs
+
+Save as analytics/email-marketing-analysis.md</code></pre>
+
+        <h2>Multi-Channel Attribution</h2>
+
+        <pre><code>Analyze customer journey and attribution:
+
+Data: analytics/conversions-with-touchpoints.csv
+Each conversion with: Customer ID, Conversion date, Touchpoints (channel + timestamp)
+
+Perform attribution analysis:
+
+LAST-TOUCH ATTRIBUTION:
+- Channel that gets credit for final conversion
+- Revenue by last-touch channel
+
+FIRST-TOUCH ATTRIBUTION:
+- Channel that started the journey
+- Best awareness channels
+
+MULTI-TOUCH ATTRIBUTION:
+- Common journey patterns (e.g., Social → Blog → Email → Conversion)
+- Average touchpoints to conversion
+- Channel role analysis (awareness vs conversion)
+
+ASSIST ANALYSIS:
+- Channels that rarely convert but assist
+- Channels that convert directly
+- Synergy between channels
+
+TIME TO CONVERSION:
+- Average days from first touch to conversion
+- Shortest and longest paths
+- Trends over time
+
+INSIGHTS:
+- Most efficient paths to conversion
+- Undervalued channels
+- Budget reallocation opportunities
+- Campaign optimization strategies
+
+Save as analytics/attribution-analysis.md</code></pre>
+
+        <h2>Competitive Performance Benchmarking</h2>
+
+        <pre><code>Create competitive performance comparison:
+
+Our data: analytics/our-performance-q2.csv
+Industry benchmarks: analytics/industry-benchmarks.csv
+
+Compare our performance to industry averages:
+
+PAID ADVERTISING:
+- CTR vs industry average
+- CPA vs industry average
+- Conversion rate vs benchmark
+- Where we excel, where we lag
+
+ORGANIC/SEO:
+- Traffic growth vs competitors
+- Keyword rankings comparison
+- Content performance
+- Domain authority trends
+
+SOCIAL MEDIA:
+- Engagement rates vs benchmark
+- Growth rate comparison
+- Content performance vs competitors
+
+EMAIL MARKETING:
+- Open rates vs industry
+- Click rates vs industry
+- List growth vs benchmark
+
+OVERALL:
+- Market share trends
+- Share of voice
+- Competitive positioning
+
+RECOMMENDATIONS:
+- Areas to improve to reach industry average
+- Strengths to double down on
+- Competitive threats to address
+
+Save as analytics/competitive-benchmarking.md</code></pre>
+
+        <h2>Executive Dashboard & Reporting</h2>
+
+        <pre><code>Create executive summary report for Q2:
+
+Combine data from all sources to create concise executive report:
+
+# Q2 Marketing Performance - Executive Summary
+
+## Headline Metrics
+- Revenue: $XXX (XX% vs target)
+- New customers: XXX (XX% vs target)
+- ROI: X.XX (XX% vs Q1)
+- Customer acquisition cost: $XX (XX% vs Q1)
+
+## Key Wins
+1. [Biggest success with data]
+2. [Second biggest success]
+3. [Third biggest success]
+
+## Key Challenges
+1. [Biggest challenge with impact]
+2. [Second challenge]
+3. [Third challenge]
+
+## Channel Performance Snapshot
+[Table with: Channel, Spend, Conversions, CPA, ROAS, vs Q1]
+
+## What We Learned
+- Learning 1 and implication
+- Learning 2 and implication
+- Learning 3 and implication
+
+## Q3 Recommendations
+1. [Top priority with expected impact]
+2. [Second priority]
+3. [Third priority]
+
+## Budget Request
+- Proposed Q3 budget: $XXX
+- Allocation by channel
+- Expected return
+- Risk factors
+
+Create in both detailed and 1-page executive versions
+Save as analytics/q2-executive-report.md and analytics/q2-executive-summary-1page.md</code></pre>
+
+        <h2>Predictive Analysis</h2>
+
+        <pre><code>Create predictive model based on historical data:
+
+Using data from analytics/historical-performance-12months.csv:
+
+TREND ANALYSIS:
+- Seasonal patterns identified
+- Growth trajectory calculation
+- Anomaly detection
+
+PREDICTIVE MODELING:
+- Q3 performance forecast
+- Expected conversion volume
+- Required budget to hit goals
+- Confidence intervals
+
+SCENARIO PLANNING:
+- Best case (optimistic): XXX conversions
+- Base case (realistic): XXX conversions
+- Worst case (pessimistic): XXX conversions
+- Probability of each scenario
+
+WHAT-IF ANALYSIS:
+- If we increase budget by 20%, expect XXX more conversions
+- If we improve conversion rate by 10%, achieve XXX revenue
+- If we pause underperforming channels, impact is XXX
+
+RECOMMENDATIONS:
+- Budget allocation for Q3
+- Risk mitigation strategies
+- Opportunities to accelerate growth
+
+Save as analytics/q3-forecast-and-planning.md</code></pre>
+
+        <h2>Creating Actionable Insights</h2>
+
+        <div class="highlight-box">
+            <h3>From Data to Action Framework</h3>
+            <ul>
+                <li><strong>Observation:</strong> What does the data show?</li>
+                <li><strong>Insight:</strong> Why is this happening?</li>
+                <li><strong>Implication:</strong> What does this mean for us?</li>
+                <li><strong>Recommendation:</strong> What should we do?</li>
+                <li><strong>Expected Impact:</strong> What will change if we do this?</li>
+                <li><strong>Resources Needed:</strong> What's required to implement?</li>
+            </ul>
+        </div>
+
+        <h2>Automated Reporting System</h2>
+
+        <pre><code>Create automated monthly report template:
+
+# Monthly Marketing Performance Report - [Month Year]
+
+## Setup Instructions
+1. Export data from analytics platforms
+2. Place CSVs in analytics/monthly-data/
+3. Run analysis
+4. Generate visualizations
+5. Distribute report
+
+## Report Components
+
+SECTION 1: Executive Summary (1 page)
+SECTION 2: Channel Performance (2 pages)
+SECTION 3: Campaign Deep Dives (3 pages)
+SECTION 4: Content Performance (2 pages)
+SECTION 5: Conversion Funnel Analysis (2 pages)
+SECTION 6: Budget & ROI (1 page)
+SECTION 7: Recommendations (1 page)
+
+## Automation Checklist
+- [ ] Data export from all platforms
+- [ ] Data cleaning and formatting
+- [ ] Analysis execution
+- [ ] Visualization creation
+- [ ] Narrative summary writing
+- [ ] Stakeholder review
+- [ ] Distribution
+
+Create reusable template at analytics/monthly-report-template.md
+Include data requirements and analysis prompts</code></pre>
+
+        <h2>Exercise: Complete Analysis Package</h2>
+
+        <ol>
+            <li>Create sample campaign data (or use real data)</li>
+            <li>Perform comprehensive performance analysis</li>
+            <li>Identify top 3 insights</li>
+            <li>Develop specific recommendations</li>
+            <li>Create executive summary (1 page)</li>
+            <li>Build detailed report (10 pages)</li>
+        </ol>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Claude can quickly analyze complex marketing data</li>
+            <li>Good analysis turns observations into actionable insights</li>
+            <li>Executive reports should be concise with clear recommendations</li>
+            <li>Multi-channel attribution reveals true marketing impact</li>
+            <li>Predictive analysis helps with planning and budgeting</li>
+            <li>Automated reporting saves time and ensures consistency</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>Data-Driven Marketing</h3>
+            <p>You can now analyze campaign performance, extract insights, and create compelling reports in minutes instead of days. This allows you to make faster, better-informed marketing decisions.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="2.3-marketing-copy.html" class="nav-button secondary">← Previous: Marketing Copy</a>
+            <a href="2.5-competitive-analysis.html" class="nav-button">Next: Competitive Analysis →</a>
+        </div>
+    </div>
+</body>
+</html>
