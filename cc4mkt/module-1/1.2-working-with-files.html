@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2 Working with Marketing Files - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        .file-tree {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            margin: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1.2 Working with Marketing Files</h1>
+            <p class="lesson-meta">Module 1: Core Concepts | 25 min</p>
+        </div>
+
+        <h2>Organizing Your Marketing Projects</h2>
+
+        <p>As a marketer, you work with many types of files: campaign briefs, content drafts, research documents, analytics reports, brand guidelines, and more. Claude Code makes it easy to organize, find, and work with all these files efficiently.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>How to structure marketing project folders</li>
+                <li>Creating and organizing marketing files</li>
+                <li>Finding files quickly with search</li>
+                <li>Reading and editing multiple files</li>
+                <li>Best practices for file organization</li>
+            </ul>
+        </div>
+
+        <h2>Setting Up Your Marketing Project Structure</h2>
+
+        <p>A well-organized project structure makes everything easier. Here's a recommended structure for marketing projects:</p>
+
+        <div class="file-tree">
+MarketFlow/
+├── campaigns/           # Campaign briefs and plans
+│   ├── q1-launch/
+│   ├── q2-growth/
+│   └── templates/
+├── content/             # All marketing content
+│   ├── blog/
+│   ├── email/
+│   ├── social/
+│   └── ads/
+├── brand/              # Brand guidelines and assets
+│   ├── voice-guide.md
+│   ├── messaging.md
+│   └── personas/
+├── research/           # Competitive analysis and research
+│   ├── competitors/
+│   ├── market-data/
+│   └── customer-insights/
+├── analytics/          # Performance data and reports
+│   ├── campaign-reports/
+│   └── monthly-reviews/
+└── templates/          # Reusable templates
+    ├── brief-template.md
+    ├── email-template.md
+    └── social-template.md
+        </div>
+
+        <p>Let's create this structure with Claude:</p>
+
+        <pre><code>Create a complete marketing project structure for MarketFlow with:
+- campaigns/ folder with subfolders for q1-launch, q2-growth, templates
+- content/ folder with subfolders for blog, email, social, ads
+- brand/ folder for brand guidelines
+- research/ folder with competitors, market-data, customer-insights
+- analytics/ folder for reports
+- templates/ folder for reusable templates
+
+Add a README.md in each main folder explaining what goes there.</code></pre>
+
+        <h2>Creating Marketing Files</h2>
+
+        <p>Claude can create any type of marketing file you need. The key is being specific about what you want.</p>
+
+        <h3>Brand Guidelines</h3>
+        <pre><code>Create a comprehensive brand voice guide in brand/voice-guide.md that includes:
+- Brand personality traits
+- Tone of voice (formal vs casual, serious vs playful)
+- Writing style guidelines
+- Do's and don'ts
+- Example good and bad copy
+- Key phrases and terminology we use
+
+Base it on FocusFlow: professional but approachable, knowledgeable but not condescending.</code></pre>
+
+        <h3>Customer Personas</h3>
+        <pre><code>Create 3 customer persona documents in brand/personas/ for FocusFlow:
+
+Persona 1: "Manager Mark" - Remote team manager, tech company, 35-45
+Persona 2: "Founder Fiona" - Startup founder juggling many roles, 28-35
+Persona 3: "Director Dana" - Marketing director at mid-size company, 40-50
+
+For each persona include:
+- Demographics
+- Role and responsibilities
+- Pain points
+- Goals
+- Current tools and solutions
+- Information sources they trust
+- How FocusFlow helps them</code></pre>
+
+        <h3>Content Templates</h3>
+        <pre><code>Create reusable templates in templates/ folder:
+
+1. blog-post-template.md - Structure for blog posts with SEO checklist
+2. email-template.md - Framework for marketing emails
+3. social-post-template.md - Format for social media posts
+4. campaign-brief-template.md - Complete campaign brief structure
+
+Include placeholder text and instructions in each template.</code></pre>
+
+        <h2>Finding Files</h2>
+
+        <p>As your project grows, finding specific files becomes important. Claude makes this easy:</p>
+
+        <h3>List Files in a Folder</h3>
+        <pre><code>Show me all files in the content/blog/ folder</code></pre>
+
+        <h3>Search for Specific Files</h3>
+        <pre><code>Find all files that mention "product launch"</code></pre>
+
+        <h3>Find Files by Type</h3>
+        <pre><code>List all markdown files in the campaigns folder</code></pre>
+
+        <h3>Search File Contents</h3>
+        <pre><code>Search all files for mentions of "email campaign" and show me which files contain it</code></pre>
+
+        <div class="success-box">
+            <h3>Pro Tip: Use Descriptive File Names</h3>
+            <p>Name files descriptively so they're easy to find:</p>
+            <ul>
+                <li>✅ <code>2024-q1-product-launch-brief.md</code></li>
+                <li>❌ <code>brief1.md</code></li>
+            </ul>
+        </div>
+
+        <h2>Reading and Editing Files</h2>
+
+        <p>Claude can read and edit any text file in your project.</p>
+
+        <h3>Reading Files</h3>
+        <pre><code>Read the brand voice guide and summarize the key points</code></pre>
+
+        <pre><code>Show me the content of all persona files</code></pre>
+
+        <h3>Editing Existing Content</h3>
+        <pre><code>Read the blog post in content/blog/productivity-tips.md and:
+1. Make the introduction more engaging
+2. Add statistics to support the claims
+3. Improve the conclusion with a stronger CTA
+4. Ensure it matches our brand voice guidelines</code></pre>
+
+        <h3>Batch Editing</h3>
+        <pre><code>Review all email drafts in content/email/ and:
+- Ensure subject lines are under 50 characters
+- Add personalization tokens where appropriate
+- Check CTAs are clear and compelling
+- Flag any that don't match our brand voice</code></pre>
+
+        <h2>Working with Multiple Files</h2>
+
+        <p>Claude can work with multiple files simultaneously, which is powerful for maintaining consistency.</p>
+
+        <h3>Cross-Reference Content</h3>
+        <pre><code>Read the brand voice guide and all three persona documents.
+Then review the blog post in content/blog/remote-work-tips.md
+and tell me:
+1. Does it match our brand voice?
+2. Which persona is it targeting?
+3. How can we make it more relevant to that persona?</code></pre>
+
+        <h3>Create Related Content</h3>
+        <pre><code>Read the campaign brief in campaigns/q1-launch/brief.md
+and create supporting content:
+1. 5 blog post outlines
+2. 10 social media posts
+3. 3 email subjects and preview text
+4. 5 Google ad headlines
+
+Save each type in the appropriate content/ subfolder.</code></pre>
+
+        <h3>Maintain Consistency</h3>
+        <pre><code>Read our brand messaging doc in brand/messaging.md
+Then review all content in content/social/ and:
+- Flag any posts that use off-brand language
+- Suggest improvements to align with messaging
+- Identify which posts are strongest</code></pre>
+
+        <h2>File Organization Best Practices</h2>
+
+        <div class="highlight-box">
+            <h3>Follow These Principles</h3>
+            <ul>
+                <li><strong>Group by type and campaign:</strong> Keep related files together</li>
+                <li><strong>Use consistent naming:</strong> Date-campaign-type format works well</li>
+                <li><strong>Create READMEs:</strong> Document what goes in each folder</li>
+                <li><strong>Archive old campaigns:</strong> Move completed campaigns to an archive folder</li>
+                <li><strong>Keep templates separate:</strong> Protect your templates from accidental editing</li>
+                <li><strong>Version important documents:</strong> Use suffixes like v1, v2, or dates</li>
+            </ul>
+        </div>
+
+        <h2>Practical Examples</h2>
+
+        <h3>Example 1: Organizing a Campaign</h3>
+        <pre><code>Create a complete file structure for a Q2 product launch campaign:
+
+In campaigns/q2-launch/ create:
+- brief.md (campaign overview)
+- timeline.md (project schedule)
+- budget.md (budget breakdown)
+- team.md (roles and responsibilities)
+- assets-needed.md (creative requirements)
+- measurement-plan.md (KPIs and tracking)
+
+Then create supporting content in content/:
+- 3 blog post outlines in content/blog/
+- Email sequence (5 emails) in content/email/q2-launch/
+- Social content calendar in content/social/q2-launch/
+- Ad copy variations in content/ads/q2-launch/</code></pre>
+
+        <h3>Example 2: Content Audit</h3>
+        <pre><code>Perform a content audit:
+
+1. List all blog posts in content/blog/
+2. For each post, create a summary with:
+   - Title
+   - Target persona
+   - Main topic
+   - SEO keywords
+   - Publish date
+   - Performance metrics (if available)
+3. Identify content gaps
+4. Suggest 10 new post topics to fill those gaps
+
+Save the audit as analytics/content-audit-2024.md</code></pre>
+
+        <h3>Example 3: Refreshing Old Content</h3>
+        <pre><code>Find all blog posts in content/blog/ that are over 6 months old.
+
+For each post:
+1. Review if information is still current
+2. Check if statistics need updating
+3. Assess if SEO can be improved
+4. Recommend whether to update, redirect, or retire
+
+Create a content refresh plan in analytics/content-refresh-plan.md</code></pre>
+
+        <h2>Advanced File Operations</h2>
+
+        <h3>Combining Content</h3>
+        <pre><code>Take all the social media posts from content/social/q1-launch/
+and create a master social media content guide that includes:
+- Best performing post formats
+- Optimal posting times (based on comments in posts)
+- Common themes
+- Engagement patterns
+
+Save as analytics/q1-social-analysis.md</code></pre>
+
+        <h3>Creating Derivatives</h3>
+        <pre><code>Read the blog post content/blog/productivity-guide.md and create:
+1. Twitter thread version (8-10 tweets)
+2. LinkedIn post version (shorter, more professional)
+3. Email newsletter version (with different intro and CTA)
+4. Infographic outline (key points and data)
+
+Save each in the appropriate content subfolder.</code></pre>
+
+        <h2>Exercise: Build Your Marketing Hub</h2>
+
+        <div class="warning-box">
+            <h3>Hands-On Exercise</h3>
+            <p>Complete these tasks to practice file management:</p>
+            <ol>
+                <li>Create the complete MarketFlow folder structure</li>
+                <li>Create brand guidelines and 3 persona documents</li>
+                <li>Create a campaign brief for a fictional campaign</li>
+                <li>Generate 5 blog post outlines based on your personas</li>
+                <li>Create a template for social media posts</li>
+                <li>Write one complete piece of content and save it in the right folder</li>
+            </ol>
+            <p>Practice finding, reading, and editing these files using natural language commands to Claude.</p>
+        </div>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Good file organization makes everything easier and faster</li>
+            <li>Use descriptive names and logical folder structures</li>
+            <li>Claude can create, read, edit, and organize files with natural language</li>
+            <li>Working with multiple files maintains consistency across your content</li>
+            <li>Regular audits and organization keep your project manageable</li>
+            <li>Templates save time and ensure consistency</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>What You've Mastered</h3>
+            <p>You now know how to organize marketing projects, create and manage files, and maintain consistency across all your content. These fundamentals will make all your future work faster and more organized.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="1.1-welcome.html" class="nav-button secondary">← Previous: Welcome</a>
+            <a href="1.3-first-tasks.html" class="nav-button">Next: First Tasks →</a>
+        </div>
+    </div>
+</body>
+</html>

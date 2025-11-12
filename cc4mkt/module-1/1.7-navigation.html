@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.7 Claude Code Navigation - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #2d3748; background: #f7fafc; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+        .header { border-bottom: 3px solid #667eea; padding-bottom: 30px; margin-bottom: 40px; }
+        h1 { font-size: 2.5em; color: #1a202c; margin-bottom: 15px; }
+        .lesson-meta { color: #718096; font-size: 1.1em; }
+        h2 { font-size: 1.8em; color: #2d3748; margin-top: 40px; margin-bottom: 20px; }
+        p { margin-bottom: 20px; font-size: 1.1em; }
+        ul { margin-left: 30px; margin-bottom: 25px; }
+        li { margin-bottom: 12px; }
+        .highlight-box { background: #f0f4ff; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        .success-box { background: #f0fdf4; border-left: 5px solid #10b981; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        code { background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-family: 'Fira Code', monospace; color: #e11d48; }
+        pre { background: #1e293b; color: #e2e8f0; padding: 25px; border-radius: 8px; margin: 25px 0; }
+        pre code { background: none; color: #e2e8f0; padding: 0; }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0; }
+        .nav-button { padding: 15px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; }
+        .nav-button:hover { background: #5568d3; }
+        .nav-button.secondary { background: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1.7 Claude Code Navigation</h1>
+            <p class="lesson-meta">Module 1: Core Concepts | 20 min</p>
+        </div>
+
+        <h2>Mastering File Operations</h2>
+
+        <p>Efficient navigation and file management is crucial for productive marketing work with Claude Code. This lesson covers essential techniques to find, organize, and work with your marketing files quickly.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Quick file finding techniques</li>
+                <li>Advanced search patterns</li>
+                <li>Batch operations on multiple files</li>
+                <li>Project organization best practices</li>
+            </ul>
+        </div>
+
+        <h2>Finding Files Quickly</h2>
+
+        <h3>By Name</h3>
+        <pre><code>Find all files with "campaign" in the name
+Show me all email templates
+List files ending in -draft.md</code></pre>
+
+        <h3>By Content</h3>
+        <pre><code>Find all files that mention "product launch"
+Search for files containing our Q2 campaign messaging
+Which files reference "Manager Mark" persona?</code></pre>
+
+        <h3>By Location</h3>
+        <pre><code>Show all files in content/blog/
+List everything in the campaigns folder and subfolders
+What's in research/competitors/?</code></pre>
+
+        <h2>Advanced Search Patterns</h2>
+
+        <h3>Combining Criteria</h3>
+        <pre><code>Find blog posts from April that mention SEO
+Show email templates that include CTAs about free trials
+List social posts tagged for LinkedIn in the Q2 folder</code></pre>
+
+        <h3>Wildcard Searches</h3>
+        <pre><code>Find all markdown files in content/ and subdirectories
+Show PDFs in the research folder
+List all files modified in the last week</code></pre>
+
+        <h2>Batch Operations</h2>
+
+        <h3>Update Multiple Files</h3>
+        <pre><code>Find all blog posts and update the author bio at the end
+Change all instances of "free trial" to "14-day free trial" across email folder
+Add copyright year 2024 to footer of all landing pages</code></pre>
+
+        <h3>Audit Multiple Files</h3>
+        <pre><code>Review all social posts in content/social/q2/ and:
+- Check if they follow brand voice
+- Flag any missing CTAs
+- Identify posts without hashtags
+- Report which are ready to publish
+
+Create audit report in analytics/q2-social-audit.md</code></pre>
+
+        <h2>Project Organization</h2>
+
+        <h3>Archive Old Content</h3>
+        <pre><code>Create an archive/ folder
+Move all completed Q1 campaigns there
+Keep only active campaigns in main campaigns/ folder</code></pre>
+
+        <h3>Reorganize by Campaign</h3>
+        <pre><code>Create campaigns/product-launch/ structure with:
+- /brief
+- /content
+- /assets
+- /reports
+
+Move all product launch related files into this structure
+Update paths in any files that reference them</code></pre>
+
+        <h2>Working Across Multiple Files</h2>
+
+        <pre><code>I need to ensure brand consistency across all Q2 content.
+
+Read brand/voice-guide.md
+Then review ALL files in content/q2-campaign/
+Flag any that don't match brand voice
+Provide specific fixes for each
+
+Create report in analytics/q2-brand-consistency-check.md</code></pre>
+
+        <h2>Quick Reference Commands</h2>
+
+        <div class="highlight-box">
+            <h3>Essential Commands</h3>
+            <pre><code># List and Find
+List all files in [folder]
+Find files containing [text]
+Show me files modified today
+What's in this directory?
+
+# Read and Search
+Read [filename]
+Search all files for [term]
+Show me the first/last 10 lines of [file]
+Find which files mention [topic]
+
+# Create and Edit
+Create [filename] with [content]
+Edit [filename] to [change]
+Copy [file] to [location]
+Move [files] to [folder]
+
+# Batch Operations
+Update all files in [folder] to [change]
+Review all [type] files and [action]
+Apply [change] across all [criteria] files</code></pre>
+        </div>
+
+        <h2>Pro Tips for Marketers</h2>
+
+        <h3>Content Calendar Navigation</h3>
+        <pre><code>Show me all content scheduled for next week
+List blog posts that need images
+Find emails without subject line A/B tests
+Which social posts are ready to schedule?</code></pre>
+
+        <h3>Campaign Status Checks</h3>
+        <pre><code>Review all files in campaigns/q2-launch/ and report:
+- Which are complete vs draft
+- Any missing required elements
+- Overall campaign readiness percentage
+- Next steps needed</code></pre>
+
+        <h2>Exercise: Master Navigation</h2>
+
+        <ol>
+            <li>Create a complex folder structure with 20+ files</li>
+            <li>Practice finding specific files with various criteria</li>
+            <li>Perform batch updates across multiple files</li>
+            <li>Reorganize files into new structure</li>
+            <li>Create a content inventory of everything</li>
+        </ol>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Use natural language to find and navigate files</li>
+            <li>Combine search criteria for precise results</li>
+            <li>Batch operations save massive amounts of time</li>
+            <li>Keep project organized with clear folder structure</li>
+            <li>Regular audits maintain quality and consistency</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>Module 1 Complete!</h3>
+            <p>You've mastered the core concepts of Claude Code for marketing. You can now organize projects, create content, use agents, build custom reviewers, set up project memory, and navigate efficiently. You're ready for advanced applications in Module 2!</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="1.6-project-memory.html" class="nav-button secondary">← Previous: Project Memory</a>
+            <a href="../module-2/2.1-campaign-brief.html" class="nav-button">Next: Module 2 →</a>
+        </div>
+    </div>
+</body>
+</html>

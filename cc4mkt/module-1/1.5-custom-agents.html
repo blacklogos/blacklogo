@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.5 Custom Marketing Sub-Agents - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #2d3748; background: #f7fafc; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+        .header { border-bottom: 3px solid #667eea; padding-bottom: 30px; margin-bottom: 40px; }
+        h1 { font-size: 2.5em; color: #1a202c; margin-bottom: 15px; }
+        .lesson-meta { color: #718096; font-size: 1.1em; }
+        h2 { font-size: 1.8em; color: #2d3748; margin-top: 40px; margin-bottom: 20px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
+        h2:first-of-type { border-top: none; }
+        h3 { font-size: 1.4em; color: #2d3748; margin-top: 30px; margin-bottom: 15px; }
+        p { margin-bottom: 20px; font-size: 1.1em; line-height: 1.8; }
+        ul, ol { margin-left: 30px; margin-bottom: 25px; }
+        li { margin-bottom: 12px; font-size: 1.05em; }
+        .highlight-box { background: #f0f4ff; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        .success-box { background: #f0fdf4; border-left: 5px solid #10b981; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        code { background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 0.95em; color: #e11d48; }
+        pre { background: #1e293b; color: #e2e8f0; padding: 25px; border-radius: 8px; overflow-x: auto; margin: 25px 0; }
+        pre code { background: none; color: #e2e8f0; padding: 0; }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0; }
+        .nav-button { padding: 15px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.2s; }
+        .nav-button:hover { background: #5568d3; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
+        .nav-button.secondary { background: #94a3b8; }
+        .nav-button.secondary:hover { background: #64748b; }
+        strong { color: #1a202c; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1.5 Custom Marketing Sub-Agents</h1>
+            <p class="lesson-meta">Module 1: Core Concepts | 30 min</p>
+        </div>
+
+        <h2>Creating Specialized Marketing Reviewers</h2>
+
+        <p>Custom sub-agents are specialized AI personas you create to review and improve your marketing work. Think of them as expert consultants with specific expertise who provide consistent, high-quality feedback on your campaigns.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Creating custom marketing reviewer personas</li>
+                <li>Building a brand voice guardian</li>
+                <li>SEO and conversion optimization reviewers</li>
+                <li>Using sub-agents for quality control</li>
+                <li>Maintaining consistency across campaigns</li>
+            </ul>
+        </div>
+
+        <h2>Why Custom Sub-Agents?</h2>
+
+        <p>Every piece of marketing content should be reviewed from multiple angles:</p>
+        <ul>
+            <li><strong>Brand Consistency:</strong> Does it match our voice?</li>
+            <li><strong>SEO:</strong> Is it optimized for search?</li>
+            <li><strong>Conversion:</strong> Will it drive action?</li>
+            <li><strong>Clarity:</strong> Is the message clear?</li>
+            <li><strong>Engagement:</strong> Will people care?</li>
+        </ul>
+
+        <p>Custom sub-agents give you on-demand experts for each of these areas.</p>
+
+        <h2>Creating Your First Sub-Agent: Brand Voice Guardian</h2>
+
+        <p>Let's create a sub-agent that ensures all content matches your brand voice:</p>
+
+        <pre><code>Create a custom reviewer persona called "Brand Voice Guardian" and save it
+in brand/reviewers/brand-voice-guardian.md
+
+This reviewer should:
+- Know our brand voice guidelines from brand/voice-guide.md
+- Understand our target personas
+- Check for tone, language, and messaging consistency
+- Flag off-brand phrases or approaches
+- Suggest improvements to align with brand
+
+Include:
+1. Reviewer persona description
+2. What they look for
+3. Common issues they catch
+4. How they provide feedback
+5. Example review format</code></pre>
+
+        <h2>Essential Marketing Sub-Agents</h2>
+
+        <h3>1. SEO Specialist</h3>
+        <pre><code>Create an SEO Specialist reviewer in brand/reviewers/seo-specialist.md
+
+This reviewer evaluates:
+- Keyword usage and optimization
+- Meta descriptions and titles
+- Content structure (H1, H2, etc.)
+- Internal linking opportunities
+- Readability and scannability
+- Search intent alignment
+
+Provides specific, actionable SEO improvements</code></pre>
+
+        <h3>2. Conversion Expert</h3>
+        <pre><code>Create a Conversion Expert reviewer in brand/reviewers/conversion-expert.md
+
+This reviewer focuses on:
+- CTA clarity and placement
+- Value proposition strength
+- Objection handling
+- Social proof usage
+- Urgency and scarcity
+- Friction points in the funnel
+
+Gives recommendations to improve conversion rates</code></pre>
+
+        <h3>3. Copy Editor</h3>
+        <pre><code>Create a Copy Editor reviewer in brand/reviewers/copy-editor.md
+
+This reviewer checks:
+- Grammar and spelling
+- Sentence structure and flow
+- Redundancy and wordiness
+- Active vs passive voice
+- Consistency in terminology
+- Readability scores
+
+Polishes content to professional standards</code></pre>
+
+        <h3>4. Social Media Expert</h3>
+        <pre><code>Create a Social Media Expert in brand/reviewers/social-expert.md
+
+This reviewer assesses:
+- Platform-specific best practices
+- Engagement potential
+- Hashtag strategy
+- Visual content needs
+- Posting timing recommendations
+- Community response predictions
+
+Optimizes content for social performance</code></pre>
+
+        <h2>Using Your Custom Sub-Agents</h2>
+
+        <p>Once created, invoke your sub-agents to review content:</p>
+
+        <pre><code>I have a blog post at content/blog/productivity-tips.md
+
+Please have these reviewers evaluate it:
+
+1. Brand Voice Guardian (use brand/reviewers/brand-voice-guardian.md)
+2. SEO Specialist (use brand/reviewers/seo-specialist.md)
+3. Copy Editor (use brand/reviewers/copy-editor.md)
+
+Each should provide:
+- Overall score (1-10)
+- Top 3 strengths
+- Top 3 improvements needed
+- Specific edits or changes
+
+Save combined review as content/blog/productivity-tips-review.md</code></pre>
+
+        <h2>Advanced Sub-Agent: Channel Specialists</h2>
+
+        <h3>Email Marketing Specialist</h3>
+        <pre><code>Create an Email Marketing Specialist in brand/reviewers/email-specialist.md
+
+Expertise:
+- Subject line effectiveness
+- Preview text optimization
+- Email structure and flow
+- Personalization opportunities
+- Mobile optimization
+- Spam score considerations
+- CTA placement and copy
+
+Reviews email campaigns for maximum open and click rates</code></pre>
+
+        <h3>Paid Ads Specialist</h3>
+        <pre><code>Create a Paid Ads Specialist in brand/reviewers/ads-specialist.md
+
+Evaluates:
+- Ad copy within character limits
+- Headline impact and clarity
+- Relevance to target audience
+- Quality Score considerations
+- A/B testing suggestions
+- Platform-specific requirements
+- Ad-to-landing page match
+
+Optimizes ad spend efficiency</code></pre>
+
+        <h2>Creating Industry-Specific Reviewers</h2>
+
+        <p>For your specific industry, create specialized reviewers:</p>
+
+        <pre><code>Create a SaaS Product Marketing Specialist in brand/reviewers/saas-specialist.md
+
+This reviewer understands:
+- SaaS-specific messaging (features vs benefits)
+- Free trial vs demo positioning
+- Pricing page optimization
+- Feature release communications
+- Customer onboarding content
+- Churn reduction messaging
+
+Ensures content follows SaaS marketing best practices</code></pre>
+
+        <h2>The Review Board: Multiple Sub-Agents Together</h2>
+
+        <p>Use multiple sub-agents together for comprehensive reviews:</p>
+
+        <pre><code>Assemble a "Review Board" for our new landing page:
+
+Reviewers:
+1. Brand Voice Guardian
+2. SEO Specialist
+3. Conversion Expert
+4. Copy Editor
+5. SaaS Product Marketing Specialist
+
+Each reviewer should:
+- Read the landing page at content/landing-pages/focusflow-home.md
+- Evaluate from their expertise area
+- Score it 1-10
+- List what's working
+- List what needs improvement
+- Provide specific action items
+
+After all reviews, create a prioritized action plan
+Save as content/landing-pages/focusflow-home-review-board.md</code></pre>
+
+        <div class="success-box">
+            <h3>The Power of the Review Board</h3>
+            <p>This single command gets you feedback equivalent to:</p>
+            <ul>
+                <li>5 expert consultations</li>
+                <li>Multiple rounds of revisions</li>
+                <li>Days of back-and-forth</li>
+                <li>Thousands in consulting fees</li>
+            </ul>
+            <p>And you get it in minutes!</p>
+        </div>
+
+        <h2>Iterative Improvement Workflow</h2>
+
+        <pre><code>Let's improve this email campaign iteratively:
+
+ROUND 1: Initial Review
+- Have Brand Voice Guardian review content/email/welcome-series-1.md
+- Implement their suggestions
+
+ROUND 2: Optimization
+- Have Email Specialist review the updated version
+- Have Conversion Expert review simultaneously
+- Implement improvements
+
+ROUND 3: Polish
+- Have Copy Editor do final review
+- Make final edits
+
+ROUND 4: Approval
+- Have all reviewers do quick final check
+- If all score 8+, approve for sending
+
+Document the entire process in content/email/welcome-series-1-improvement-log.md</code></pre>
+
+        <h2>Creating Persona-Based Reviewers</h2>
+
+        <p>Create reviewers that represent your target personas:</p>
+
+        <pre><code>Create three persona-based reviewers:
+
+1. "Manager Mark" Reviewer - brand/reviewers/persona-mark.md
+   Reviews content asking: Would this resonate with Manager Mark?
+   Checks if pain points, language, and examples match this persona
+
+2. "Founder Fiona" Reviewer - brand/reviewers/persona-fiona.md
+   Reviews from a startup founder's perspective
+   Evaluates if messaging addresses startup-specific concerns
+
+3. "Director Dana" Reviewer - brand/reviewers/persona-dana.md
+   Reviews from enterprise perspective
+   Checks for enterprise considerations and concerns
+
+Use these to ensure content resonates with target audiences</code></pre>
+
+        <h2>Quality Control Checklist</h2>
+
+        <p>Create a comprehensive QC agent:</p>
+
+        <pre><code>Create a Quality Control Checklist reviewer in brand/reviewers/qc-checklist.md
+
+This reviewer verifies:
+
+Content:
+- [ ] Matches brand voice
+- [ ] Target persona identified
+- [ ] Value proposition clear
+- [ ] CTA present and compelling
+- [ ] No typos or grammar errors
+
+SEO:
+- [ ] Target keyword used
+- [ ] Meta description written
+- [ ] Headings properly structured
+- [ ] Images have alt text
+- [ ] Internal links included
+
+Legal/Compliance:
+- [ ] Claims are supportable
+- [ ] Disclaimers if needed
+- [ ] Links work properly
+- [ ] Copyright respected
+
+Technical:
+- [ ] Proper file naming
+- [ ] Saved in correct location
+- [ ] Version tracked
+- [ ] Accessible formatting
+
+Provides pass/fail with specific items to fix</code></pre>
+
+        <h2>Maintaining Your Review Team</h2>
+
+        <p>Keep your sub-agents updated and effective:</p>
+
+        <pre><code>Quarterly sub-agent maintenance:
+
+1. Review feedback from the past quarter
+2. Update reviewer guidelines based on what worked
+3. Add new review criteria learned from campaigns
+4. Retire or merge redundant reviewers
+5. Create new reviewers for new channels or campaigns
+6. Update all reviewers with latest brand guidelines
+
+Create maintenance log in brand/reviewers/maintenance-log.md</code></pre>
+
+        <h2>Best Practices</h2>
+
+        <div class="highlight-box">
+            <h3>Sub-Agent Success Tips</h3>
+            <ul>
+                <li><strong>Be specific:</strong> Clear expertise areas work best</li>
+                <li><strong>Reference documents:</strong> Point to brand guides and examples</li>
+                <li><strong>Update regularly:</strong> Keep reviewers current with brand evolution</li>
+                <li><strong>Use strategically:</strong> Not every piece needs every reviewer</li>
+                <li><strong>Act on feedback:</strong> Sub-agents are only useful if you implement suggestions</li>
+                <li><strong>Iterate:</strong> Improve reviewer personas based on experience</li>
+            </ul>
+        </div>
+
+        <h2>Exercise: Build Your Review Team</h2>
+
+        <p>Create a complete review team for your marketing:</p>
+
+        <ol>
+            <li>Create 5 custom sub-agent reviewers</li>
+            <li>Use them to review a piece of existing content</li>
+            <li>Implement their suggestions</li>
+            <li>Have them review the improved version</li>
+            <li>Document what worked and what didn't</li>
+        </ol>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Custom sub-agents provide expert review on-demand</li>
+            <li>Create reviewers for brand, SEO, conversion, and channel expertise</li>
+            <li>Use multiple reviewers together for comprehensive feedback</li>
+            <li>Iterate content through progressive rounds of review</li>
+            <li>Maintain and update reviewers as your brand evolves</li>
+            <li>Sub-agents ensure consistency and quality across all marketing</li>
+        </ul>
+
+        <div class="nav-buttons">
+            <a href="1.4-agents.html" class="nav-button secondary">← Previous: Agents</a>
+            <a href="1.6-project-memory.html" class="nav-button">Next: Project Memory →</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.6 Project Memory for Marketing - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #2d3748; background: #f7fafc; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+        .header { border-bottom: 3px solid #667eea; padding-bottom: 30px; margin-bottom: 40px; }
+        h1 { font-size: 2.5em; color: #1a202c; margin-bottom: 15px; }
+        .lesson-meta { color: #718096; font-size: 1.1em; }
+        h2 { font-size: 1.8em; color: #2d3748; margin-top: 40px; margin-bottom: 20px; }
+        p { margin-bottom: 20px; font-size: 1.1em; }
+        ul { margin-left: 30px; margin-bottom: 25px; }
+        li { margin-bottom: 12px; }
+        .highlight-box { background: #f0f4ff; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        .success-box { background: #f0fdf4; border-left: 5px solid #10b981; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        code { background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-family: 'Fira Code', monospace; color: #e11d48; }
+        pre { background: #1e293b; color: #e2e8f0; padding: 25px; border-radius: 8px; overflow-x: auto; margin: 25px 0; }
+        pre code { background: none; color: #e2e8f0; padding: 0; }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0; }
+        .nav-button { padding: 15px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; }
+        .nav-button:hover { background: #5568d3; }
+        .nav-button.secondary { background: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1.6 Project Memory for Marketing</h1>
+            <p class="lesson-meta">Module 1: Core Concepts | 20 min</p>
+        </div>
+
+        <h2>Using CLAUDE.md for Brand Context</h2>
+
+        <p>Project memory through CLAUDE.md is like giving Claude a persistent briefing document. Every time you work on this project, Claude reads this file first and applies those guidelines to everything it creates.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Creating a CLAUDE.md file for your marketing project</li>
+                <li>What to include for maximum effectiveness</li>
+                <li>How Claude uses project memory</li>
+                <li>Maintaining consistency across all content</li>
+            </ul>
+        </div>
+
+        <h2>What is CLAUDE.md?</h2>
+
+        <p>CLAUDE.md is a special file in your project root that Claude reads automatically. It contains:</p>
+        <ul>
+            <li>Brand guidelines and voice</li>
+            <li>Target audience information</li>
+            <li>Product/company details</li>
+            <li>Messaging frameworks</li>
+            <li>Common instructions and preferences</li>
+        </ul>
+
+        <h2>Creating Your Marketing CLAUDE.md</h2>
+
+        <pre><code>Create a CLAUDE.md file in the project root with:
+
+# FocusFlow Marketing Project
+
+## Brand Overview
+- Product: FocusFlow - Team productivity coordination tool
+- Target: Remote team managers, 25-45, tech/marketing/consulting
+- Positioning: "RescueTime for teams" - coordinate focus time across teams
+- Tone: Professional but approachable, knowledgeable but not condescending
+
+## Brand Voice
+- Use active voice
+- Be conversational but not casual
+- Lead with benefits, then features
+- Use "we" and "you" (not "our customers" or "users")
+- Avoid jargon unless necessary
+
+## Key Messages
+1. Remote teams struggle to coordinate deep work time
+2. Individual focus tools don't solve team coordination problems
+3. FocusFlow syncs focus time across the entire team
+4. Better focus = better results for everyone
+
+## Target Personas
+- Manager Mark: Team lead managing 10-15 remote people
+- Founder Fiona: Startup founder juggling many roles
+- Director Dana: Marketing director at mid-size company
+
+## Content Preferences
+- Blog posts: 1200-1800 words
+- Emails: 150-250 words max
+- Social posts: Platform-specific best lengths
+- Always include clear CTAs
+- Use statistics and data when available
+
+## SEO Keywords
+Primary: remote team productivity, focus time coordination
+Secondary: team deep work, remote work focus, productivity coordination
+
+## Never
+- Don't compare directly to competitors by name in public content
+- Don't make claims we can't back up
+- Don't use "world-class", "revolutionary", or other hyperbolic terms
+- Don't write in passive voice</code></pre>
+
+        <h2>What to Include in Your CLAUDE.md</h2>
+
+        <h3>Essential Sections</h3>
+        <ul>
+            <li><strong>Company/Product Overview:</strong> What you do and for whom</li>
+            <li><strong>Brand Voice:</strong> How you communicate</li>
+            <li><strong>Target Audience:</strong> Who you're talking to</li>
+            <li><strong>Key Messages:</strong> What you always want to communicate</li>
+            <li><strong>Do's and Don'ts:</strong> Specific guidelines</li>
+        </ul>
+
+        <h3>Optional But Helpful</h3>
+        <ul>
+            <li>Competitor context</li>
+            <li>Common objections and how to address them</li>
+            <li>Approved terminology</li>
+            <li>Legal/compliance requirements</li>
+            <li>Project-specific workflows</li>
+        </ul>
+
+        <h2>How Claude Uses CLAUDE.md</h2>
+
+        <p>Once CLAUDE.md exists, Claude automatically:</p>
+        <ul>
+            <li>Applies brand voice to all content generated</li>
+            <li>References target personas</li>
+            <li>Follows content guidelines</li>
+            <li>Uses approved messaging</li>
+            <li>Avoids flagged terms or approaches</li>
+        </ul>
+
+        <p>You don't need to remind Claude each time - it's automatic!</p>
+
+        <div class="success-box">
+            <h3>Before and After CLAUDE.md</h3>
+            <p><strong>Before:</strong> "Write a blog post about productivity"<br>
+            Result: Generic content, may not match your brand</p>
+            <p><strong>After:</strong> "Write a blog post about productivity"<br>
+            Result: Content that automatically matches FocusFlow's voice, targets the right personas, includes key messages, and follows all your guidelines</p>
+        </div>
+
+        <h2>Advanced CLAUDE.md Techniques</h2>
+
+        <h3>Campaign-Specific Instructions</h3>
+        <pre><code>## Current Campaign Context
+We're in the middle of Q2 Product Launch (June 1-30).
+
+For this period:
+- Emphasize the new team coordination dashboard
+- Use launch pricing messaging ($12/user, normally $15)
+- Include urgency around launch offer ending June 30
+- Link to launch landing page: /launch-2024
+- Use hashtag #FocusFlowLaunch on social</code></pre>
+
+        <h3>Review Reminders</h3>
+        <pre><code>## Quality Checks
+Before finalizing any content:
+- [ ] Matches brand voice
+- [ ] Targets specific persona
+- [ ] Includes CTA
+- [ ] Has SEO keywords
+- [ ] No prohibited terms
+- [ ] Reviewed by Copy Editor agent</code></pre>
+
+        <h2>Updating Your CLAUDE.md</h2>
+
+        <p>Keep it current as your brand evolves:</p>
+
+        <pre><code>Review and update CLAUDE.md monthly:
+
+1. Add any new messaging learnings
+2. Update campaign context
+3. Add successful phrases to "Always Use"
+4. Add failed phrases to "Never Use"
+5. Update personas based on customer research
+6. Refine voice based on what's working
+
+Keep a changelog at bottom of file</code></pre>
+
+        <h2>Example: Complete Marketing CLAUDE.md</h2>
+
+        <pre><code># MarketFlow Marketing Project - FocusFlow
+
+## Product
+FocusFlow: Team productivity coordination tool
+- Helps remote teams coordinate deep work time
+- Integrates with Slack, Zoom, Google Workspace
+- $12/user/month, 14-day free trial
+
+## Target Market
+B2B SaaS for remote/hybrid teams of 5-50 people
+Industries: Tech, marketing, consulting, professional services
+
+## Brand Personality
+- Helpful colleague (not a boss or professor)
+- Knowledgeable without being condescending
+- Enthusiastic but not hype-y
+- Data-driven but human
+
+## Writing Style
+- Active voice always
+- Short sentences and paragraphs
+- Bullet points for scannability
+- Conversational but professional
+- You/we perspective (not third person)
+
+## Messaging Hierarchy
+1. Teams need coordinated focus time (problem)
+2. Individual tools don't solve team problems (gap)
+3. FocusFlow coordinates across the team (solution)
+4. Better focus = better outcomes for everyone (benefit)
+
+## Personas
+**Manager Mark**: 35, manages 12 remote developers
+- Pain: Can't get team aligned for planning sessions
+- Goal: More productive team, less meeting overhead
+
+**Founder Fiona**: 30, startup founder with 8 team members
+- Pain: Constantly interrupted, team all working different hours
+- Goal: Establish focus culture as company grows
+
+## Content Guidelines
+- Blog: 1200-1800 words, SEO optimized
+- Email: 150-250 words, single CTA
+- Social: Platform best practices
+- Ads: Clear value prop, specific CTA
+
+## Always Use
+- "Coordinate focus time"
+- "Deep work for teams"
+- "Team productivity coordination"
+- Statistics and data points
+- Customer testimonial quotes
+- Clear CTAs
+
+## Never Use
+- "World-class", "revolutionary", "game-changing"
+- Competitor names in public content
+- Passive voice
+- Jargon without explanation
+- Unsupported claims
+
+## SEO Focus
+Primary: remote team productivity, focus time, team coordination
+Long-tail: how to improve remote team focus, coordinating team schedules
+
+## Campaign: Q2 Launch
+Active June 1-30
+- New dashboard feature
+- Launch pricing: $12 (save $3)
+- Urgency: Offer ends June 30
+- Landing: /launch-2024
+
+## Changelog
+- 2024-05-15: Added Q2 launch details
+- 2024-04-01: Refined messaging based on customer interviews
+- 2024-03-15: Initial creation</code></pre>
+
+        <h2>Testing Your CLAUDE.md</h2>
+
+        <p>After creating CLAUDE.md, test it:</p>
+
+        <pre><code>Without mentioning any brand guidelines, ask me to:
+
+1. Write a LinkedIn post about productivity
+2. Create an email subject line
+3. Draft a blog post introduction
+
+I should automatically apply all CLAUDE.md guidelines.
+Check if output matches expectations.</code></pre>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>CLAUDE.md gives Claude persistent project context</li>
+            <li>Include brand voice, personas, messages, and guidelines</li>
+            <li>Claude automatically applies CLAUDE.md to all work</li>
+            <li>Update monthly to keep it current</li>
+            <li>Saves you from repeating context every time</li>
+            <li>Ensures consistency across all content</li>
+        </ul>
+
+        <div class="nav-buttons">
+            <a href="1.5-custom-agents.html" class="nav-button secondary">← Previous: Custom Agents</a>
+            <a href="1.7-navigation.html" class="nav-button">Next: Navigation →</a>
+        </div>
+    </div>
+</body>
+</html>

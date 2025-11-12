@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.4 Using Agents for Marketing - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .agent-card {
+            background: #fafafa;
+            border: 2px solid #667eea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .agent-card h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1.4 Using Agents for Marketing</h1>
+            <p class="lesson-meta">Module 1: Core Concepts | 35 min</p>
+        </div>
+
+        <h2>What Are Agents?</h2>
+
+        <p>Agents are one of Claude Code's most powerful features. Think of them as AI assistants that can work on complex tasks independently while you focus on other things. For marketers, agents can handle multi-step workflows that would normally require coordinating multiple people.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Understanding agents and when to use them</li>
+                <li>Running parallel marketing workflows</li>
+                <li>Getting feedback from multiple perspectives</li>
+                <li>Handling complex multi-step campaigns</li>
+                <li>Real-world agent use cases for marketers</li>
+            </ul>
+        </div>
+
+        <h2>Why Agents Matter for Marketers</h2>
+
+        <p>Traditional marketing workflows require:</p>
+        <ul>
+            <li>Multiple team members with different expertise</li>
+            <li>Back-and-forth reviews and revisions</li>
+            <li>Coordinating schedules for meetings</li>
+            <li>Waiting for feedback from various stakeholders</li>
+        </ul>
+
+        <p>With agents, you can:</p>
+        <ul>
+            <li>Get multiple perspectives instantly</li>
+            <li>Run parallel workflows simultaneously</li>
+            <li>Complete complex projects in minutes, not days</li>
+            <li>Iterate faster with diverse feedback</li>
+        </ul>
+
+        <h2>Agent Basics</h2>
+
+        <p>An agent is a specialized instance of Claude that focuses on a specific task. When you ask Claude to use an agent, it:</p>
+
+        <ol>
+            <li>Understands the task requirements</li>
+            <li>Creates a specialized agent with the right context</li>
+            <li>The agent works independently on the task</li>
+            <li>Returns completed work back to you</li>
+        </ol>
+
+        <div class="success-box">
+            <h3>Think of Agents Like Team Members</h3>
+            <p>If you were launching a campaign, you'd normally brief your content writer, designer, and analyst separately. With agents, you brief them all at once, and they work in parallel.</p>
+        </div>
+
+        <h2>When to Use Agents</h2>
+
+        <p>Use agents when you need:</p>
+
+        <h3>1. Multiple Perspectives</h3>
+        <p>Get feedback on your campaign from different viewpoints simultaneously.</p>
+
+        <h3>2. Parallel Workflows</h3>
+        <p>Create multiple pieces of content at the same time.</p>
+
+        <h3>3. Complex Analysis</h3>
+        <p>Deep dive into data, competitors, or market research.</p>
+
+        <h3>4. Independent Tasks</h3>
+        <p>Tasks that don't need your constant input to complete.</p>
+
+        <h2>Your First Agent: Campaign Review</h2>
+
+        <p>Let's start with a practical example. You've written a campaign brief and want feedback from different perspectives.</p>
+
+        <pre><code>I have a campaign brief in campaigns/q2-launch/brief.md
+
+Please review this brief from three perspectives and provide feedback:
+
+1. As a creative director - evaluate the creative strategy and messaging
+2. As a data analyst - assess the measurement plan and KPIs
+3. As a budget manager - review the budget allocation and ROI projections
+
+For each perspective, provide:
+- What's working well
+- Areas for improvement
+- Specific recommendations
+- Red flags or concerns
+
+Save the combined review as campaigns/q2-launch/brief-review.md</code></pre>
+
+        <p>Claude will create three specialized agents, each reviewing your brief from their unique angle. This gives you the equivalent of a cross-functional review meeting in minutes.</p>
+
+        <h2>Multi-Agent Workflows for Marketing</h2>
+
+        <h3>Example 1: Content Creation at Scale</h3>
+
+        <div class="agent-card">
+            <h3>Use Case: Blog Content Series</h3>
+            <p>Create a 5-part blog series with supporting materials.</p>
+            <pre><code>Create a 5-part blog series about "Productivity Tips for Remote Teams"
+
+Use agents to work on these in parallel:
+
+Agent 1: Create outlines for all 5 posts with SEO keywords
+Agent 2: Write full drafts for posts 1-2
+Agent 3: Write full drafts for posts 3-4
+Agent 4: Write full draft for post 5
+Agent 5: Create social promotion plan for the entire series
+
+All content should follow our brand voice from brand/voice-guide.md
+Target persona: "Manager Mark" from brand/personas/
+
+Save all outputs in content/blog/productivity-series/</code></pre>
+        </div>
+
+        <h3>Example 2: Campaign Launch Package</h3>
+
+        <div class="agent-card">
+            <h3>Use Case: Complete Campaign Assets</h3>
+            <p>Create everything needed for a campaign launch simultaneously.</p>
+            <pre><code>Create a complete launch package for FocusFlow's Q2 campaign.
+
+Run these tasks in parallel using agents:
+
+Agent 1 - Email Sequence: Create 5-email welcome sequence
+Agent 2 - Social Media: 30 days of social posts (mix of platforms)
+Agent 3 - Ads: 10 variations each for Google, Facebook, LinkedIn
+Agent 4 - Landing Page: Complete landing page copy with 3 section variations
+Agent 5 - Press Kit: Press release, FAQ, boilerplate, key messages
+
+Use the campaign brief at campaigns/q2-launch/brief.md for context
+Follow brand guidelines in brand/voice-guide.md
+
+Save each in the appropriate content/ subfolder</code></pre>
+        </div>
+
+        <h3>Example 3: Competitive Intelligence</h3>
+
+        <div class="agent-card">
+            <h3>Use Case: Multi-Competitor Analysis</h3>
+            <p>Analyze multiple competitors simultaneously.</p>
+            <pre><code>Conduct competitive analysis on 5 competitors in parallel:
+
+Agent 1: Analyze RescueTime
+Agent 2: Analyze Freedom app
+Agent 3: Analyze Focus@Will
+Agent 4: Analyze Forest app
+Agent 5: Analyze Centered app
+
+For each competitor, research and document:
+- Target audience and positioning
+- Key features and pricing
+- Marketing approach and channels
+- Messaging and value propositions
+- Strengths vs our product
+- Weaknesses we can exploit
+- Marketing tactics we should consider
+
+Create individual reports in research/competitors/
+Then create a master comparison in research/competitive-landscape.md</code></pre>
+        </div>
+
+        <h2>Getting Multi-Perspective Feedback</h2>
+
+        <p>One of the most valuable uses of agents is getting feedback from multiple angles on your work.</p>
+
+        <h3>Campaign Feedback Example</h3>
+
+        <pre><code>Review the campaign in campaigns/q2-launch/ from these perspectives:
+
+1. Brand Guardian: Does it align with brand guidelines? Is messaging consistent?
+2. SEO Specialist: Are we targeting the right keywords? Is content optimized?
+3. Conversion Expert: Are CTAs effective? Is the funnel clear?
+4. Social Media Manager: Will this content perform on social? Engagement potential?
+5. Email Marketer: Are subject lines compelling? Preview text optimized?
+
+Each agent should:
+- Score the campaign (1-10) for their area
+- List 3 strengths
+- List 3 improvements needed
+- Provide specific action items
+
+Compile all feedback into campaigns/q2-launch/multi-review.md</code></pre>
+
+        <div class="success-box">
+            <h3>Why This Is Powerful</h3>
+            <p>Getting five specialized reviews would normally require:</p>
+            <ul>
+                <li>5 different meetings</li>
+                <li>Multiple rounds of revisions</li>
+                <li>Days or weeks of coordination</li>
+            </ul>
+            <p>With agents, you get comprehensive feedback in minutes.</p>
+        </div>
+
+        <h2>Advanced Agent Patterns</h2>
+
+        <h3>Sequential Agent Workflows</h3>
+
+        <p>Agents can build on each other's work:</p>
+
+        <pre><code>Create a blog post with sequential agent workflow:
+
+Step 1 - Research Agent: Research "productivity for remote teams"
+         and identify key themes, statistics, expert quotes
+
+Step 2 - Outline Agent: Using the research, create a detailed outline
+         with SEO optimization
+
+Step 3 - Writing Agent: Write the full post based on the outline
+
+Step 4 - SEO Agent: Optimize the post for target keywords
+
+Step 5 - Social Agent: Create promotional social posts
+
+Each agent uses output from previous agents.
+Save all work in content/blog/productivity-guide/</code></pre>
+
+        <h3>Parallel + Sequential Combined</h3>
+
+        <pre><code>Create a complete content marketing campaign:
+
+PHASE 1 (Parallel):
+Agent 1: Create 3 buyer personas
+Agent 2: Research 10 target keywords
+Agent 3: Analyze top 5 competitors' content
+
+PHASE 2 (Sequential, using Phase 1 outputs):
+Agent 4: Create content strategy based on personas and keywords
+Agent 5: Create 10 blog post outlines targeting the keywords
+Agent 6: Create promotion strategy based on where personas hang out
+
+PHASE 3 (Parallel):
+Agents 7-11: Write the first 5 blog posts simultaneously
+Agent 12: Create social promotion calendar
+Agent 13: Create email nurture sequence
+
+Save everything in campaigns/content-marketing-q2/</code></pre>
+
+        <h2>Agent Best Practices</h2>
+
+        <div class="highlight-box">
+            <h3>Getting the Most from Agents</h3>
+            <ul>
+                <li><strong>Be specific:</strong> Give agents clear objectives and context</li>
+                <li><strong>Provide reference materials:</strong> Point agents to brand guides, personas, etc.</li>
+                <li><strong>Define outputs clearly:</strong> Specify format, length, where to save</li>
+                <li><strong>Use parallel for independent tasks:</strong> Don't wait when you don't have to</li>
+                <li><strong>Use sequential when context matters:</strong> Let agents build on each other</li>
+                <li><strong>Review and iterate:</strong> Agent output is a draft, refine as needed</li>
+            </ul>
+        </div>
+
+        <h2>Real-World Marketing Scenarios</h2>
+
+        <h3>Scenario 1: Emergency Campaign Pivot</h3>
+
+        <p>Your competitor just launched a competing feature. You need to respond quickly.</p>
+
+        <pre><code>URGENT: Competitor announced new feature. Create response campaign.
+
+Agent 1: Analyze their announcement and positioning
+Agent 2: Draft our counter-positioning and messaging
+Agent 3: Create comparison content (us vs them)
+Agent 4: Draft social media response posts
+Agent 5: Create internal FAQ for sales team
+Agent 6: Draft email to existing customers highlighting our advantages
+
+Target completion: Next 30 minutes
+Save everything in campaigns/competitive-response/</code></pre>
+
+        <h3>Scenario 2: Content Refresh Initiative</h3>
+
+        <pre><code>Refresh our top 10 blog posts from last year:
+
+Create 10 agents in parallel, each assigned one post:
+
+Each agent should:
+1. Read the original post
+2. Update statistics and data
+3. Add new information from past year
+4. Improve SEO optimization
+5. Refresh meta descriptions
+6. Suggest new images/visuals
+7. Create updated social promotion
+
+Save refreshed posts with -v2 suffix
+Create summary report of all changes</code></pre>
+
+        <h3>Scenario 3: Localization Project</h3>
+
+        <pre><code>Adapt our US campaign for 3 international markets:
+
+Agent 1 - UK Market: Adapt messaging, spelling, cultural references
+Agent 2 - Canadian Market: Bilingual considerations, regional differences
+Agent 3 - Australian Market: Local terminology, cultural adaptation
+
+For each market create:
+- Localized landing page copy
+- Adapted email sequences
+- Market-specific social content
+- Local competitor analysis
+
+Maintain brand essence while respecting local culture
+Save in campaigns/q2-launch/[market-name]/</code></pre>
+
+        <h2>Exercise: Agent Workflow Challenge</h2>
+
+        <div class="warning-box">
+            <h3>Hands-On Challenge</h3>
+            <p>Create a complete product launch using agents:</p>
+            <ol>
+                <li>Choose a fictional product to launch (or use FocusFlow)</li>
+                <li>Design a multi-agent workflow covering:
+                    <ul>
+                        <li>Campaign brief creation</li>
+                        <li>Content creation (blog, email, social, ads)</li>
+                        <li>Competitive analysis</li>
+                        <li>Launch timeline</li>
+                    </ul>
+                </li>
+                <li>Execute the workflow with agents</li>
+                <li>Review all outputs and create a launch readiness report</li>
+            </ol>
+            <p>Goal: Complete what would normally be 2-3 weeks of work in under 2 hours.</p>
+        </div>
+
+        <h2>Common Questions</h2>
+
+        <h3>Q: How many agents can I run at once?</h3>
+        <p>Claude can handle multiple agents efficiently. For marketing work, 5-10 parallel agents is common. The limit depends more on how much output you can review effectively.</p>
+
+        <h3>Q: Do agents remember what other agents did?</h3>
+        <p>By default, agents work independently. But you can have later agents reference earlier agents' outputs by pointing them to the saved files.</p>
+
+        <h3>Q: Should I always use agents?</h3>
+        <p>No. For simple, single tasks, just ask Claude directly. Use agents when you need parallel work, multiple perspectives, or complex multi-step projects.</p>
+
+        <h3>Q: How do I know if agent output is good?</h3>
+        <p>Always review agent work. Agents are very capable but you're the final quality control. Use agents to create solid first drafts that you can refine.</p>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Agents enable parallel workflows that would normally require multiple people</li>
+            <li>Use agents for multi-perspective feedback, content creation at scale, and complex analysis</li>
+            <li>Combine parallel and sequential agent workflows for sophisticated campaigns</li>
+            <li>Always provide clear objectives and reference materials to agents</li>
+            <li>Agent output is high-quality draft work that you refine to final</li>
+            <li>Agents can compress weeks of work into hours</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>You've Unlocked Superpowers</h3>
+            <p>Understanding agents means you can now execute marketing campaigns that would normally require a full team. This is one of the most transformative skills in the course.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="1.3-first-tasks.html" class="nav-button secondary">← Previous: First Tasks</a>
+            <a href="1.5-custom-agents.html" class="nav-button">Next: Custom Sub-Agents →</a>
+        </div>
+    </div>
+</body>
+</html>
