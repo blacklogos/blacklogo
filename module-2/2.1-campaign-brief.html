@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 Write a Campaign Brief - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .step {
+            background: #fafafa;
+            border: 2px solid #e2e8f0;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2.1 Write a Campaign Brief</h1>
+            <p class="lesson-meta">Module 2: Advanced Applications | 45 min</p>
+        </div>
+
+        <h2>Creating Professional Campaign Briefs with Claude</h2>
+
+        <p>Welcome to Module 2! Now that you've mastered the fundamentals, let's apply Claude Code to advanced marketing workflows. We'll start with one of the most important documents in marketing: <strong>the campaign brief</strong>.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>How to partner with Claude to create comprehensive campaign briefs</li>
+                <li>Structuring complex marketing documents</li>
+                <li>Incorporating research and data into strategy</li>
+                <li>Getting multi-perspective feedback on your brief</li>
+                <li>Creating supporting campaign materials</li>
+            </ul>
+        </div>
+
+        <h2>What Makes a Great Campaign Brief?</h2>
+
+        <p>A campaign brief is the foundation of successful marketing execution. It should include:</p>
+
+        <ul>
+            <li><strong>Executive Summary:</strong> Campaign at a glance</li>
+            <li><strong>Background & Context:</strong> Why this campaign, why now</li>
+            <li><strong>Campaign Objectives:</strong> Specific, measurable goals</li>
+            <li><strong>Target Audience:</strong> Detailed personas and insights</li>
+            <li><strong>Key Messages:</strong> What we're saying and why it matters</li>
+            <li><strong>Creative Strategy:</strong> The big idea and how we'll express it</li>
+            <li><strong>Channel Strategy:</strong> Where we'll reach our audience</li>
+            <li><strong>Timeline & Milestones:</strong> When things happen</li>
+            <li><strong>Budget & Resources:</strong> What we need to execute</li>
+            <li><strong>Success Metrics:</strong> How we'll measure performance</li>
+        </ul>
+
+        <h2>The Collaborative Approach</h2>
+
+        <p>The best way to use Claude for campaign briefs is <strong>collaboratively</strong>. You provide strategic input and context, Claude helps structure, research, and articulate your ideas.</p>
+
+        <div class="warning-box">
+            <h3>Important Mindset</h3>
+            <p>Claude is your strategic partner, not a replacement for your marketing expertise. You bring the insights, market knowledge, and strategic thinking. Claude helps you articulate and structure those ideas effectively.</p>
+        </div>
+
+        <h2>Step-by-Step: Creating a Campaign Brief</h2>
+
+        <p>Let's create a comprehensive campaign brief for FocusFlow's product launch.</p>
+
+        <div class="step">
+            <h3><span class="step-number">1</span>Start with Strategy Input</h3>
+            <p>First, provide Claude with your strategic thinking:</p>
+            <pre><code>I need to create a campaign brief for FocusFlow's product launch.
+
+Here's my strategic thinking:
+- Primary goal: 1000 trial signups in first 30 days
+- Target: Remote team managers at tech companies (50-500 employees)
+- Key differentiator: Team-wide focus time coordination
+- Main competitors: RescueTime, Freedom app
+- Budget: $50k for paid channels
+- Launch date: June 1st
+- Core insight: Remote teams struggle to find overlap time for deep work
+
+Create a comprehensive campaign brief based on this. Include all standard sections and make it professional and thorough.</code></pre>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">2</span>Review and Refine Structure</h3>
+            <p>Claude will generate a draft brief. Review it and refine specific sections:</p>
+            <pre><code>The target audience section needs more depth. Add:
+- Detailed persona (give them a name)
+- Day in the life
+- Pain points and frustrations
+- Current solutions they're using
+- Motivations and goals
+- Preferred information sources</code></pre>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">3</span>Add Research and Data</h3>
+            <p>Strengthen the brief with research:</p>
+            <pre><code>Add a market research section that includes:
+- Remote work trends and statistics
+- Productivity app market size
+- Competitor analysis summary
+- Target audience size estimation
+- Industry insights about team coordination challenges
+
+Research this information and add it to the brief.</code></pre>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">4</span>Develop Creative Strategy</h3>
+            <p>Work with Claude on the creative approach:</p>
+            <pre><code>Expand the creative strategy section. Include:
+- Big idea / campaign concept
+- Creative territories to explore
+- Tone and voice
+- Visual direction (describe, not design)
+- Message architecture
+- Proof points and supporting evidence
+- Calls-to-action strategy</code></pre>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">5</span>Detail the Channel Strategy</h3>
+            <p>Get specific about execution:</p>
+            <pre><code>Create a detailed channel strategy section with:
+
+For each channel (LinkedIn, Google Ads, Content Marketing, Email):
+- Why this channel
+- Target audience segment
+- Key messages tailored to channel
+- Budget allocation
+- Success metrics
+- Example tactics
+
+Format as a table for easy reference.</code></pre>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">6</span>Add Timeline and Project Plan</h3>
+            <pre><code>Create a project timeline from now until 30 days post-launch.
+
+Include:
+- Pre-launch activities (creative development, asset creation, testing)
+- Launch week activities
+- Post-launch optimization
+- Key milestones and deadlines
+- Team responsibilities
+
+Format as a Gantt-style timeline.</code></pre>
+        </div>
+
+        <h2>Getting Feedback on Your Brief</h2>
+
+        <p>Now for the powerful part - getting multi-perspective feedback. Ask Claude to review the brief from different viewpoints:</p>
+
+        <h3>Executive Perspective</h3>
+        <pre><code>Review this campaign brief from an executive/stakeholder perspective.
+Look for:
+- Unclear objectives or success metrics
+- Missing business context
+- Budget justification
+- Risk assessment
+- ROI projection
+
+Provide constructive feedback.</code></pre>
+
+        <h3>Creative Perspective</h3>
+        <pre><code>Review the creative strategy section from a creative director's perspective.
+- Is the creative brief clear enough to execute?
+- Are there constraints that might limit creativity?
+- Is the tone and messaging compelling?
+- Are there opportunities we're missing?</code></pre>
+
+        <h3>Channel Specialist Perspective</h3>
+        <pre><code>Review the channel strategy as a digital marketing specialist.
+- Is the budget allocation realistic?
+- Are we choosing the right channels for this audience?
+- Are the tactics specific enough?
+- Are there channel opportunities we're overlooking?</code></pre>
+
+        <div class="success-box">
+            <h3>The Power of Multiple Perspectives</h3>
+            <p>In a traditional agency, getting this kind of feedback requires meetings with multiple teams. With Claude, you can get diverse perspectives in minutes, helping you create a more robust brief.</p>
+        </div>
+
+        <h2>Creating Supporting Documents</h2>
+
+        <p>Once your brief is solid, generate supporting materials:</p>
+
+        <h3>Creative Brief</h3>
+        <pre><code>Based on the campaign brief, create a separate creative brief for the design team.
+
+Include:
+- Project overview
+- Objectives
+- Target audience
+- Single-minded proposition
+- Supporting points
+- Tone and manner
+- Mandatories (logo usage, brand guidelines, etc.)
+- Deliverables list
+
+Save as campaigns/focusflow-launch-creative-brief.md</code></pre>
+
+        <h3>Media Brief</h3>
+        <pre><code>Create a media brief for our media buying team or agency.
+
+Include:
+- Campaign objectives
+- Target audience demographics and psychographics
+- Media budget breakdown
+- Flight dates
+- Geographic targeting
+- Suggested channels and tactics
+- KPIs for each channel
+- Competitive context
+
+Save as campaigns/focusflow-launch-media-brief.md</code></pre>
+
+        <h3>Measurement Plan</h3>
+        <pre><code>Create a detailed measurement and reporting plan.
+
+Include:
+- Primary and secondary KPIs
+- How we'll track each metric
+- Tools and platforms needed
+- Reporting cadence
+- Dashboard requirements
+- Success thresholds
+- Optimization triggers (when to adjust strategy)
+
+Save as campaigns/focusflow-launch-measurement-plan.md</code></pre>
+
+        <h2>Advanced: Scenario Planning</h2>
+
+        <p>Use Claude to think through different scenarios:</p>
+
+        <pre><code>Create three scenario plans for the FocusFlow launch:
+
+1. Best case: What if we hit 150% of our goal?
+2. Base case: What if we hit our goal exactly?
+3. Worst case: What if we only hit 50% of our goal?
+
+For each scenario:
+- What would cause it
+- How we'd respond
+- Budget implications
+- Timeline adjustments
+- Lessons learned
+
+This helps us prepare for different outcomes.</code></pre>
+
+        <h2>Real-World Example: Complete Campaign Brief</h2>
+
+        <p>Let's create a complete, production-ready campaign brief:</p>
+
+        <pre><code>Create a complete campaign brief for FocusFlow's Q3 launch using this information:
+
+BUSINESS CONTEXT:
+- Series A funded startup ($5M raised)
+- Team of 15
+- Product in beta for 3 months with 200 users
+- 85% of beta users are daily active
+- Net Promoter Score: 68
+- Main feedback: "Finally, a tool that works for teams, not just individuals"
+
+OBJECTIVES:
+- Primary: 1000 paid trial starts
+- Secondary: 50 enterprise demo requests
+- Tertiary: 10,000 website visitors, 25% from organic search
+
+TARGET MARKET:
+- Managers of remote teams (5-50 people)
+- Tech, marketing, consulting industries
+- Companies that value deep work and productivity
+- Currently using Slack, Notion, Asana
+- Pain point: Can't coordinate focus time across the team
+
+POSITIONING:
+"RescueTime is for individuals. FocusFlow is for teams."
+
+BUDGET: $75k
+- Paid media: $45k
+- Content creation: $15k
+- Tools & software: $5k
+- Contingency: $10k
+
+TIMELINE: 10 weeks (2 weeks pre-launch, 8 weeks live)
+
+CONSTRAINTS:
+- Small marketing team (2 people)
+- No in-house design resources
+- Must integrate with existing company blog and website
+
+Create a thorough, professional campaign brief that accounts for all of this.
+Save as campaigns/focusflow-q3-launch-brief.md</code></pre>
+
+        <p>Claude will create a comprehensive, professional brief you could present to stakeholders or use to brief an agency.</p>
+
+        <h2>Template for Future Campaigns</h2>
+
+        <p>Save time on future campaigns by creating a template:</p>
+
+        <pre><code>Based on the campaign brief we created, generate a reusable campaign brief template.
+
+Make it generic (remove FocusFlow-specific details) but keep the structure and include:
+- Section descriptions
+- What type of information goes in each section
+- Questions to answer
+- Tips for each section
+
+Save as templates/campaign-brief-template.md</code></pre>
+
+        <h2>Best Practices</h2>
+
+        <div class="highlight-box">
+            <h3>Tips for Campaign Briefs</h3>
+            <ul>
+                <li><strong>Start with strategy:</strong> Don't ask Claude to generate strategy from scratch. Provide your strategic thinking.</li>
+                <li><strong>Iterate section by section:</strong> Don't try to perfect everything at once.</li>
+                <li><strong>Be specific with numbers:</strong> Goals, budgets, timelines - specificity leads to better briefs.</li>
+                <li><strong>Use multiple perspectives:</strong> Get feedback from different viewpoints.</li>
+                <li><strong>Create supporting docs:</strong> Break complex briefs into role-specific documents.</li>
+                <li><strong>Save templates:</strong> Reuse structures that work.</li>
+            </ul>
+        </div>
+
+        <h2>Exercise: Create Your Own Campaign Brief</h2>
+
+        <p>Now it's your turn. Choose one of these scenarios and create a complete campaign brief:</p>
+
+        <ol>
+            <li><strong>E-commerce:</strong> Black Friday campaign for a sustainable fashion brand</li>
+            <li><strong>B2B SaaS:</strong> Webinar series to generate enterprise leads</li>
+            <li><strong>Mobile App:</strong> User acquisition campaign for a meditation app</li>
+            <li><strong>Local Business:</strong> Grand opening campaign for a coffee shop</li>
+        </ol>
+
+        <p>Include all sections we covered, get feedback from multiple perspectives, and create at least two supporting documents.</p>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Campaign briefs are collaborative - you provide strategy, Claude helps structure and articulate</li>
+            <li>Build briefs iteratively, refining section by section</li>
+            <li>Use Claude to provide multiple perspectives on your work</li>
+            <li>Create supporting documents to make briefs actionable</li>
+            <li>Save templates for future efficiency</li>
+            <li>Always ground briefs in specific business context and constraints</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>What You've Accomplished</h3>
+            <p>You can now create professional, comprehensive campaign briefs that would typically require input from multiple team members and hours of work. This is a game-changer for marketing teams of any size.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="../module-1/1.7-navigation.html" class="nav-button secondary">← Previous: Module 1</a>
+            <a href="2.2-content-strategy.html" class="nav-button">Next: Content Strategy →</a>
+        </div>
+    </div>
+</body>
+</html>

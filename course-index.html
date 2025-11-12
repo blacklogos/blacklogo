@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for Marketers - Master AI-Powered Marketing</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how to use Claude Code to supercharge your marketing workflow. Master campaign planning, content creation, analytics, and more with AI.">
+    <meta name="keywords" content="Claude Code, AI marketing, marketing automation, content creation, campaign planning">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://logo.black/course-index.html">
+    <meta property="og:title" content="Claude Code for Marketers - Master AI-Powered Marketing">
+    <meta property="og:description" content="Learn how to use Claude Code to supercharge your marketing workflow. Free interactive course.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Claude Code for Marketers">
+    <meta property="twitter:description" content="Master AI-powered marketing with Claude Code">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .intro {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .intro h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #4a5568;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #4a5568;
+            font-size: 1.05em;
+        }
+
+        .modules {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .modules h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+
+        .module {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .module h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .module-description {
+            font-size: 1.1em;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        .lesson-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .lesson-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1.05em;
+            color: #2d3748;
+        }
+
+        .lesson-list li:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-list li:before {
+            content: "→ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .why-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .why-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .benefit {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .benefit h3 {
+            font-size: 1.4em;
+            margin-bottom: 12px;
+        }
+
+        .benefit p {
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .emoji {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .modules h2, .why-section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Claude Code for Marketers</h1>
+            <p>Master AI-powered marketing workflows and supercharge your productivity with Claude Code</p>
+            <a href="#modules" class="cta-button">Start Learning →</a>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Transform Your Marketing Workflow</h2>
+            <p>Learn how to leverage Claude Code to automate repetitive tasks, generate high-quality content, analyze data, and execute campaigns faster than ever before.</p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3><span class="emoji">⚡</span>Work 10x Faster</h3>
+                    <p>Automate campaign briefs, content creation, and competitive analysis in minutes instead of hours.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3><span class="emoji">🎯</span>Better Quality</h3>
+                    <p>Get AI-powered feedback on your campaigns, copy, and strategy from multiple perspectives.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3><span class="emoji">🚀</span>Ship More Campaigns</h3>
+                    <p>Spend less time on grunt work and more time on creative strategy and execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modules" id="modules">
+        <div class="container">
+            <h2>Course Curriculum</h2>
+
+            <div class="module">
+                <h3>Module 0: Getting Started</h3>
+                <p class="module-description">Set up your environment and get ready to master Claude Code for marketing.</p>
+                <ul class="lesson-list">
+                    <li><a href="module-0/0.0-introduction.html">0.0 Introduction</a> - Course overview and what you'll learn</li>
+                    <li><a href="module-0/0.1-installation.html">0.1 Installation</a> - Install Claude Code and prerequisites</li>
+                    <li><a href="module-0/0.2-start-clone.html">0.2 Start & Clone</a> - Launch Claude Code and clone this course</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 1: Core Concepts for Marketers</h3>
+                <p class="module-description">Master the fundamentals of Claude Code with marketing-specific examples and workflows.</p>
+                <ul class="lesson-list">
+                    <li><a href="module-1/1.1-welcome.html">1.1 Welcome to MarketFlow</a> - Introduction to your marketing project</li>
+                    <li><a href="module-1/1.2-working-with-files.html">1.2 Working with Marketing Files</a> - Organize campaigns, briefs, and content</li>
+                    <li><a href="module-1/1.3-first-tasks.html">1.3 First Marketing Tasks</a> - Campaign analysis, content generation, competitor research</li>
+                    <li><a href="module-1/1.4-agents.html">1.4 Using Agents for Marketing</a> - Parallel workflows for complex campaigns</li>
+                    <li><a href="module-1/1.5-custom-agents.html">1.5 Custom Marketing Sub-Agents</a> - Create brand voice reviewers, SEO specialists, copywriters</li>
+                    <li><a href="module-1/1.6-project-memory.html">1.6 Project Memory for Marketing</a> - Use CLAUDE.md for brand guidelines and context</li>
+                    <li><a href="module-1/1.7-navigation.html">1.7 Claude Code Navigation</a> - Master file operations and searches</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 2: Advanced Marketing Applications</h3>
+                <p class="module-description">Apply Claude Code to real-world marketing challenges and workflows.</p>
+                <ul class="lesson-list">
+                    <li><a href="module-2/2.1-campaign-brief.html">2.1 Write a Campaign Brief</a> - Partner with AI to create comprehensive campaign plans</li>
+                    <li><a href="module-2/2.2-content-strategy.html">2.2 Develop Content Strategy</a> - Plan content calendars and themes</li>
+                    <li><a href="module-2/2.3-marketing-copy.html">2.3 Generate Marketing Copy</a> - Create ads, emails, and social media content</li>
+                    <li><a href="module-2/2.4-analytics.html">2.4 Analyze Campaign Data</a> - Turn data into actionable insights</li>
+                    <li><a href="module-2/2.5-competitive-analysis.html">2.5 Competitive Analysis</a> - Research and analyze competitor strategies</li>
+                    <li><a href="module-2/2.6-seo-optimization.html">2.6 SEO Optimization</a> - Keyword research and content optimization</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="container">
+            <h2>Why Claude Code for Marketing?</h2>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <h3>🎨 Enhanced Creativity</h3>
+                    <p>Break through creative blocks with AI-powered brainstorming and content ideation.</p>
+                </div>
+
+                <div class="benefit">
+                    <h3>📊 Data-Driven Decisions</h3>
+                    <p>Quickly analyze marketing data and extract actionable insights for your campaigns.</p>
+                </div>
+
+                <div class="benefit">
+                    <h3>⏱️ Time Savings</h3>
+                    <p>Automate repetitive tasks and focus on high-impact strategic work.</p>
+                </div>
+
+                <div class="benefit">
+                    <h3>✍️ Consistent Brand Voice</h3>
+                    <p>Use custom agents to maintain brand consistency across all marketing materials.</p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🔍 Better Research</h3>
+                    <p>Conduct thorough competitor analysis and market research in a fraction of the time.</p>
+                </div>
+
+                <div class="benefit">
+                    <h3>🚀 Faster Execution</h3>
+                    <p>Move from idea to execution faster with AI-assisted content creation and planning.</p>
+                </div>
+            </div>
+
+            <a href="module-0/0.0-introduction.html" class="cta-button" style="margin-top: 40px;">Begin Course →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Claude Code for Marketers</strong></p>
+            <p>An open-source interactive course for modern marketers</p>
+            <p style="margin-top: 20px;">Not affiliated with, endorsed by, or sponsored by Anthropic</p>
+            <p><a href="https://github.com">View on GitHub</a> | <a href="https://docs.anthropic.com/claude/docs">Claude Documentation</a></p>
+        </div>
+    </footer>
+</body>
+</html>

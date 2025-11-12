@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.0 Introduction - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/course-style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>0.0 Introduction</h1>
+            <p class="lesson-meta">Module 0: Getting Started | 10 min read</p>
+        </div>
+
+        <h2>Welcome to Claude Code for Marketers</h2>
+
+        <p>Welcome! This course will teach you how to use <strong>Claude Code</strong> to transform your marketing workflow. Whether you're creating campaigns, analyzing data, generating content, or conducting research, Claude Code can help you work faster and produce better results.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <p>By the end of this course, you'll be able to:</p>
+            <ul>
+                <li>Automate campaign brief creation and planning</li>
+                <li>Generate high-quality marketing copy for ads, emails, and social media</li>
+                <li>Analyze marketing data and extract actionable insights</li>
+                <li>Conduct competitive analysis and market research</li>
+                <li>Create custom AI agents for brand voice consistency</li>
+                <li>Build SEO-optimized content strategies</li>
+            </ul>
+        </div>
+
+        <h2>What is Claude Code?</h2>
+
+        <p>Claude Code is an AI-powered coding assistant that helps you work with files, automate tasks, and execute complex workflows. While it's built for developers, it's incredibly powerful for marketers too.</p>
+
+        <p>Think of Claude Code as your AI marketing assistant that can:</p>
+
+        <ul>
+            <li><strong>Read and analyze</strong> campaign briefs, research documents, and data files</li>
+            <li><strong>Generate content</strong> based on your brand guidelines and target audience</li>
+            <li><strong>Execute workflows</strong> like competitive analysis or content planning</li>
+            <li><strong>Review and improve</strong> your marketing materials with custom feedback</li>
+        </ul>
+
+        <h2>Why Marketers Should Use Claude Code</h2>
+
+        <p>Traditional marketing tools are great, but they often lock you into specific workflows. Claude Code is different:</p>
+
+        <div class="success-box">
+            <h3>Key Benefits</h3>
+            <ul>
+                <li><strong>Flexibility:</strong> Build custom workflows that match your exact needs</li>
+                <li><strong>Speed:</strong> Complete in minutes what would normally take hours</li>
+                <li><strong>Quality:</strong> Get AI-powered feedback and refinement on your work</li>
+                <li><strong>Consistency:</strong> Maintain brand voice across all marketing materials</li>
+                <li><strong>Intelligence:</strong> Leverage Claude's deep understanding of marketing strategy</li>
+            </ul>
+        </div>
+
+        <h2>Course Structure</h2>
+
+        <p>This course is divided into three modules:</p>
+
+        <ol>
+            <li><strong>Module 0: Getting Started</strong> - Install Claude Code and set up your environment</li>
+            <li><strong>Module 1: Core Concepts</strong> - Master the fundamentals with marketing examples</li>
+            <li><strong>Module 2: Advanced Applications</strong> - Apply Claude Code to real marketing challenges</li>
+        </ol>
+
+        <p>Each lesson includes:</p>
+        <ul>
+            <li>Clear explanations and examples</li>
+            <li>Hands-on exercises</li>
+            <li>Real-world marketing scenarios</li>
+            <li>Templates and workflows you can reuse</li>
+        </ul>
+
+        <h2>Who This Course Is For</h2>
+
+        <p>This course is perfect for:</p>
+
+        <ul>
+            <li><strong>Content Marketers</strong> - Create better content faster</li>
+            <li><strong>Growth Marketers</strong> - Analyze data and optimize campaigns</li>
+            <li><strong>Social Media Managers</strong> - Generate engaging content at scale</li>
+            <li><strong>Email Marketers</strong> - Write compelling copy and test variations</li>
+            <li><strong>Marketing Managers</strong> - Plan campaigns and coordinate teams</li>
+            <li><strong>SEO Specialists</strong> - Research keywords and optimize content</li>
+        </ul>
+
+        <div class="warning-box">
+            <h3>No Coding Required</h3>
+            <p>Don't worry if you're not technical! This course is designed for marketers with <strong>zero coding experience</strong>. We'll teach you everything you need to know step by step.</p>
+        </div>
+
+        <h2>What You'll Build</h2>
+
+        <p>Throughout this course, you'll work on <strong>MarketFlow</strong>, a sample marketing project. You'll learn to:</p>
+
+        <ul>
+            <li>Create a comprehensive campaign brief for a product launch</li>
+            <li>Develop a content strategy with SEO optimization</li>
+            <li>Generate marketing copy for multiple channels</li>
+            <li>Analyze competitor strategies and positioning</li>
+            <li>Build custom AI agents for your brand voice</li>
+        </ul>
+
+        <h2>Time Commitment</h2>
+
+        <p>The entire course takes approximately <strong>3-4 hours</strong> to complete. You can work through it at your own pace:</p>
+
+        <ul>
+            <li><strong>Module 0:</strong> 30 minutes - Setup and installation</li>
+            <li><strong>Module 1:</strong> 90 minutes - Core concepts and fundamentals</li>
+            <li><strong>Module 2:</strong> 90 minutes - Advanced applications and real projects</li>
+        </ul>
+
+        <h2>Prerequisites</h2>
+
+        <p>To take this course, you'll need:</p>
+
+        <ul>
+            <li>A computer (Mac, Windows, or Linux)</li>
+            <li>Basic computer skills (navigating files, using web browsers)</li>
+            <li>An internet connection</li>
+            <li>Enthusiasm to learn! 🚀</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>Ready to Get Started?</h3>
+            <p>In the next lesson, we'll install Claude Code and get your environment set up. By the end of Module 0, you'll be ready to start building marketing workflows!</p>
+        </div>
+
+        <h2>Course Philosophy</h2>
+
+        <p>This course is built on three principles:</p>
+
+        <ol>
+            <li><strong>Learn by doing:</strong> You'll work on real marketing projects, not abstract examples</li>
+            <li><strong>Practical over theoretical:</strong> Every lesson teaches skills you'll use immediately</li>
+            <li><strong>Progressive complexity:</strong> We start simple and gradually introduce advanced concepts</li>
+        </ol>
+
+        <h2>Let's Begin!</h2>
+
+        <p>Marketing is evolving rapidly, and AI tools like Claude Code are becoming essential for modern marketers. This course will give you the skills to stay ahead of the curve and deliver exceptional results.</p>
+
+        <p>Ready to transform your marketing workflow? Let's dive in!</p>
+
+        <div class="nav-buttons">
+            <a href="../course-index.html" class="nav-button secondary">← Back to Course Home</a>
+            <a href="0.1-installation.html" class="nav-button">Next: Installation →</a>
+        </div>
+    </div>
+</body>
+</html>
