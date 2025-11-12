@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.2 Start & Clone - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .exercise {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .exercise h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>0.2 Start & Clone</h1>
+            <p class="lesson-meta">Module 0: Getting Started | 15 min</p>
+        </div>
+
+        <h2>Starting Claude Code</h2>
+
+        <p>Now that you have Claude Code installed, it's time to start using it! In this lesson, you'll learn how to launch Claude Code and clone this course to your computer.</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Do</h3>
+            <ul>
+                <li>Start your first Claude Code session</li>
+                <li>Understand the Claude Code interface</li>
+                <li>Clone the course materials</li>
+                <li>Explore the MarketFlow project</li>
+            </ul>
+        </div>
+
+        <h2>Launching Claude Code</h2>
+
+        <p>Open your terminal or command prompt and navigate to where you want to work. Then run:</p>
+
+        <pre><code>claude-code</code></pre>
+
+        <p>You'll see a welcome message and the Claude Code prompt. This is where you'll interact with Claude!</p>
+
+        <div class="success-box">
+            <h3>You're In!</h3>
+            <p>When you see the Claude Code prompt, you're ready to start. It should look something like:</p>
+            <pre><code>Claude Code v1.0.0
+Ready to help with your marketing tasks!
+
+></code></pre>
+        </div>
+
+        <h2>Understanding the Interface</h2>
+
+        <p>Claude Code uses a conversational interface. You simply type what you want Claude to do, and it responds. Think of it as chatting with a very capable marketing assistant.</p>
+
+        <h3>Basic Commands</h3>
+
+        <p>Here are some essential commands to know:</p>
+
+        <ul>
+            <li><code>/help</code> - Get help and see available commands</li>
+            <li><code>/clear</code> - Clear the conversation history</li>
+            <li><code>/exit</code> or <code>Ctrl+C</code> - Exit Claude Code</li>
+        </ul>
+
+        <h2>Your First Interaction</h2>
+
+        <p>Let's try your first command. In Claude Code, type:</p>
+
+        <pre><code>Hello! I'm ready to learn Claude Code for marketing.</code></pre>
+
+        <p>Claude will respond with a friendly greeting. This confirms everything is working correctly!</p>
+
+        <h2>Setting Up Your Workspace</h2>
+
+        <p>Create a dedicated folder for this course. In your terminal (outside of Claude Code), run:</p>
+
+        <pre><code>mkdir claude-marketing-course
+cd claude-marketing-course</code></pre>
+
+        <p>Now start Claude Code from this directory:</p>
+
+        <pre><code>claude-code</code></pre>
+
+        <div class="highlight-box">
+            <h3>Why This Matters</h3>
+            <p>Claude Code works within the directory where you launch it. By creating a dedicated folder, you keep all your marketing projects organized.</p>
+        </div>
+
+        <h2>Creating the MarketFlow Project</h2>
+
+        <p>Throughout this course, you'll work with <strong>MarketFlow</strong>, a sample marketing project. Let's set it up.</p>
+
+        <p>In Claude Code, type:</p>
+
+        <pre><code>Create a folder structure for a marketing project called MarketFlow with folders for campaigns, content, research, and analytics.</code></pre>
+
+        <p>Claude will create the folder structure for you. You can verify it worked by asking:</p>
+
+        <pre><code>Show me the directory structure</code></pre>
+
+        <h2>Exploring Your Project</h2>
+
+        <p>Now let's explore what we created. Ask Claude:</p>
+
+        <pre><code>List all the folders in this project</code></pre>
+
+        <p>You should see:</p>
+        <ul>
+            <li><code>campaigns/</code> - For campaign briefs and plans</li>
+            <li><code>content/</code> - For marketing copy and content</li>
+            <li><code>research/</code> - For competitive analysis and market research</li>
+            <li><code>analytics/</code> - For data analysis and reports</li>
+        </ul>
+
+        <div class="exercise">
+            <h3>Exercise: Create Your First File</h3>
+            <p>Let's practice by creating a file. In Claude Code, type:</p>
+            <pre><code>Create a file called README.md in the project root with a brief description of MarketFlow</code></pre>
+            <p>Claude will create the file and write content for you. Then ask it to show you the file:</p>
+            <pre><code>Show me the contents of README.md</code></pre>
+        </div>
+
+        <h2>Understanding How Claude Works</h2>
+
+        <p>When you ask Claude to do something, it:</p>
+
+        <ol>
+            <li><strong>Understands</strong> your request in natural language</li>
+            <li><strong>Plans</strong> the steps needed to complete the task</li>
+            <li><strong>Executes</strong> the necessary file operations</li>
+            <li><strong>Confirms</strong> what it did</li>
+        </ol>
+
+        <p>You don't need to know any coding - just describe what you want in plain English!</p>
+
+        <h2>Working with Files</h2>
+
+        <p>Claude Code can read, write, edit, and organize files. Here are some things you can ask:</p>
+
+        <ul>
+            <li>"Read the campaign brief file"</li>
+            <li>"Create a new content calendar"</li>
+            <li>"Edit this email copy to be more engaging"</li>
+            <li>"Move this file to the campaigns folder"</li>
+            <li>"Find all files mentioning 'product launch'"</li>
+        </ul>
+
+        <h2>Best Practices</h2>
+
+        <p>As you work with Claude Code, keep these tips in mind:</p>
+
+        <ul>
+            <li><strong>Be specific:</strong> "Create a Facebook ad" is vague. "Create a Facebook ad for our new product targeting young professionals" is better.</li>
+            <li><strong>Provide context:</strong> The more context you give, the better Claude's output will be.</li>
+            <li><strong>Iterate:</strong> If the first output isn't perfect, ask Claude to refine it.</li>
+            <li><strong>Ask questions:</strong> If you're unsure about something, just ask Claude!</li>
+        </ul>
+
+        <div class="warning-box">
+            <h3>Remember</h3>
+            <p>Claude Code works with files in your current directory. Always make sure you're in the right folder before starting a Claude Code session.</p>
+        </div>
+
+        <h2>Saving Your Work</h2>
+
+        <p>Everything Claude creates is saved to your local files automatically. You can:</p>
+
+        <ul>
+            <li>View files in VS Code or any text editor</li>
+            <li>Share files with your team</li>
+            <li>Use version control (like Git) to track changes</li>
+            <li>Back up files to cloud storage</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+
+        <p>Congratulations! You've completed Module 0. You now have:</p>
+
+        <ul>
+            <li>✓ Claude Code installed and configured</li>
+            <li>✓ A working project directory</li>
+            <li>✓ Basic understanding of how to interact with Claude</li>
+            <li>✓ Created your first files with Claude</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>You're Ready!</h3>
+            <p>In Module 1, you'll dive into core concepts and start building real marketing workflows. You'll learn how to analyze campaigns, generate content, and create custom AI agents for your brand.</p>
+        </div>
+
+        <h2>Quick Reference</h2>
+
+        <p>Keep these commands handy:</p>
+
+        <pre><code># Start Claude Code
+claude-code
+
+# Get help
+/help
+
+# Clear conversation
+/clear
+
+# Exit
+/exit or Ctrl+C
+
+# Check version
+claude-code --version</code></pre>
+
+        <div class="exercise">
+            <h3>Challenge Exercise</h3>
+            <p>Before moving to Module 1, try this:</p>
+            <ol>
+                <li>Ask Claude to create a sample campaign brief template</li>
+                <li>Have Claude populate it with an example campaign</li>
+                <li>Ask Claude to critique the brief and suggest improvements</li>
+            </ol>
+            <p>This will give you a taste of what's coming in the advanced modules!</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="0.1-installation.html" class="nav-button secondary">← Previous: Installation</a>
+            <a href="../module-1/1.1-welcome.html" class="nav-button">Next: Module 1 →</a>
+        </div>
+    </div>
+</body>
+</html>

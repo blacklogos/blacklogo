@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.1 Welcome to MarketFlow - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .example {
+            background: #fafafa;
+            border: 2px solid #e2e8f0;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1.1 Welcome to MarketFlow</h1>
+            <p class="lesson-meta">Module 1: Core Concepts | 20 min</p>
+        </div>
+
+        <h2>Introduction to Your Marketing Project</h2>
+
+        <p>Welcome to Module 1! In this module, you'll learn the core concepts of Claude Code through <strong>MarketFlow</strong>, a realistic marketing project. By the end, you'll be able to handle real marketing tasks with confidence.</p>
+
+        <div class="highlight-box">
+            <h3>What Is MarketFlow?</h3>
+            <p>MarketFlow is a sample project where you're launching a new product called <strong>"FocusFlow"</strong> - a productivity app for remote teams. Throughout this module, you'll:</p>
+            <ul>
+                <li>Create campaign briefs and strategies</li>
+                <li>Generate marketing content</li>
+                <li>Analyze competitor positioning</li>
+                <li>Develop content calendars</li>
+                <li>Optimize for SEO</li>
+            </ul>
+        </div>
+
+        <h2>The FocusFlow Product</h2>
+
+        <p>To make this course practical, we need a product to market. Here's the brief:</p>
+
+        <div class="example">
+            <h3>Product: FocusFlow</h3>
+            <p><strong>Category:</strong> Productivity SaaS for remote teams</p>
+            <p><strong>Target Audience:</strong> Remote team managers and knowledge workers (25-45 years old)</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Distraction blocking with AI</li>
+                <li>Team focus time coordination</li>
+                <li>Productivity analytics</li>
+                <li>Integration with Slack, Zoom, and Google Workspace</li>
+            </ul>
+            <p><strong>Pricing:</strong> $12/user/month, 14-day free trial</p>
+            <p><strong>Unique Value Prop:</strong> "Coordinate deep work time across your entire team"</p>
+        </div>
+
+        <h2>Your Role</h2>
+
+        <p>You're the Marketing Manager at FocusFlow. Your goals are:</p>
+
+        <ol>
+            <li>Launch the product to market</li>
+            <li>Generate awareness and signups</li>
+            <li>Create content that resonates with remote teams</li>
+            <li>Build a sustainable content marketing engine</li>
+        </ol>
+
+        <h2>Setting Up MarketFlow with Claude</h2>
+
+        <p>Let's set up the project structure. In Claude Code, type:</p>
+
+        <pre><code>Create a MarketFlow project with the following structure:
+- campaigns/ (for campaign briefs)
+- content/ (for blog posts, emails, ads)
+- research/ (for competitive analysis)
+- analytics/ (for performance data)
+- brand/ (for brand guidelines)
+
+Also create a README.md that describes the FocusFlow product.</code></pre>
+
+        <p>Claude will create all the folders and files for you. Let's verify it worked:</p>
+
+        <pre><code>Show me the project structure</code></pre>
+
+        <h2>Creating Your First Marketing File</h2>
+
+        <p>Let's create a brand guidelines document. This will help Claude understand your brand voice for all future content. Ask Claude:</p>
+
+        <pre><code>Create a brand guidelines document in the brand/ folder for FocusFlow. Include:
+- Brand voice (professional but friendly, knowledgeable but not condescending)
+- Key messaging pillars
+- Tone guidelines
+- Words to use and avoid</code></pre>
+
+        <p>Claude will generate a comprehensive brand guidelines document. Review it by asking:</p>
+
+        <pre><code>Read the brand guidelines file and summarize the key points</code></pre>
+
+        <div class="success-box">
+            <h3>What Just Happened?</h3>
+            <p>You just created a professional brand guidelines document without writing a single word yourself. Claude understood your requirements and created appropriate content based on best practices.</p>
+        </div>
+
+        <h2>Understanding Claude's Capabilities</h2>
+
+        <p>Claude Code can help you with:</p>
+
+        <h3>1. Content Generation</h3>
+        <ul>
+            <li>Blog posts and articles</li>
+            <li>Ad copy for different platforms</li>
+            <li>Email sequences</li>
+            <li>Social media posts</li>
+            <li>Landing page copy</li>
+        </ul>
+
+        <h3>2. Analysis & Research</h3>
+        <ul>
+            <li>Competitive analysis</li>
+            <li>Market research summaries</li>
+            <li>Campaign performance analysis</li>
+            <li>Customer feedback analysis</li>
+        </ul>
+
+        <h3>3. Planning & Strategy</h3>
+        <ul>
+            <li>Campaign briefs</li>
+            <li>Content calendars</li>
+            <li>Go-to-market strategies</li>
+            <li>Channel strategies</li>
+        </ul>
+
+        <h3>4. Optimization</h3>
+        <ul>
+            <li>SEO keyword research</li>
+            <li>A/B test variations</li>
+            <li>Copy improvements</li>
+            <li>Audience targeting refinement</li>
+        </ul>
+
+        <h2>Working with Context</h2>
+
+        <p>Claude works best when you provide context. For example, instead of:</p>
+
+        <div class="example">
+            <p><strong>❌ Vague:</strong> "Write an ad"</p>
+        </div>
+
+        <p>Try:</p>
+
+        <div class="example">
+            <p><strong>✅ Specific:</strong> "Write a Facebook ad for FocusFlow targeting remote team managers. Emphasize the team coordination feature. Keep it under 125 characters. Use our professional but friendly brand voice from the guidelines."</p>
+        </div>
+
+        <h2>The Power of Iteration</h2>
+
+        <p>Claude Code is designed for iteration. You can refine outputs until they're perfect:</p>
+
+        <pre><code>1. Initial request: "Write a blog post about productivity"
+2. Refine: "Make it more engaging and add statistics"
+3. Refine: "Add a section about remote work challenges"
+4. Refine: "Make the conclusion more actionable"</code></pre>
+
+        <h2>Exercise: Create Your First Campaign Brief</h2>
+
+        <p>Let's put this into practice. Ask Claude to create a campaign brief for FocusFlow's launch:</p>
+
+        <pre><code>Create a campaign brief for FocusFlow's product launch in the campaigns/ folder. Include:
+- Campaign objectives
+- Target audience details
+- Key messages
+- Channel strategy
+- Success metrics
+- Timeline
+
+Base it on the product information and brand guidelines we created.</code></pre>
+
+        <p>Claude will analyze the existing files (product info and brand guidelines) and create a comprehensive campaign brief.</p>
+
+        <div class="success-box">
+            <h3>Pro Tip</h3>
+            <p>Notice how Claude can reference other files in your project. This is called <strong>context awareness</strong>, and it's one of Claude's most powerful features for marketers.</p>
+        </div>
+
+        <h2>What's Next</h2>
+
+        <p>In the upcoming lessons, you'll learn:</p>
+
+        <ul>
+            <li><strong>1.2:</strong> How to organize and manage marketing files effectively</li>
+            <li><strong>1.3:</strong> Your first marketing tasks (content generation, analysis)</li>
+            <li><strong>1.4:</strong> Using agents for parallel workflows</li>
+            <li><strong>1.5:</strong> Creating custom marketing sub-agents</li>
+            <li><strong>1.6:</strong> Using project memory for consistent outputs</li>
+            <li><strong>1.7:</strong> Mastering navigation and search</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li>MarketFlow is your hands-on project for learning Claude Code</li>
+                <li>Claude works best with specific, contextual requests</li>
+                <li>You can iterate on outputs to get them perfect</li>
+                <li>Claude can reference other files in your project</li>
+                <li>Always provide context about your brand, audience, and goals</li>
+            </ul>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="../module-0/0.2-start-clone.html" class="nav-button secondary">← Previous: Module 0</a>
+            <a href="1.2-working-with-files.html" class="nav-button">Next: Working with Files →</a>
+        </div>
+    </div>
+</body>
+</html>

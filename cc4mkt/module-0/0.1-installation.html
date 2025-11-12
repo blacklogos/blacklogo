@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.1 Installation - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .step {
+            background: #fafafa;
+            border: 2px solid #e2e8f0;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>0.1 Installation</h1>
+            <p class="lesson-meta">Module 0: Getting Started | 20 min</p>
+        </div>
+
+        <h2>Installing Claude Code</h2>
+
+        <p>In this lesson, you'll install Claude Code and all the tools you need to complete this course. Don't worry - we'll walk through everything step by step!</p>
+
+        <div class="highlight-box">
+            <h3>What You'll Install</h3>
+            <ul>
+                <li><strong>Claude Code:</strong> The AI-powered assistant</li>
+                <li><strong>Node.js:</strong> Required for Claude Code to run</li>
+                <li><strong>A code editor:</strong> VS Code (optional but recommended)</li>
+            </ul>
+        </div>
+
+        <h2>System Requirements</h2>
+
+        <p>Before we begin, make sure your computer meets these requirements:</p>
+
+        <ul>
+            <li><strong>Operating System:</strong> macOS, Windows 10+, or Linux</li>
+            <li><strong>RAM:</strong> At least 4GB (8GB+ recommended)</li>
+            <li><strong>Disk Space:</strong> 500MB free space</li>
+            <li><strong>Internet:</strong> Stable internet connection</li>
+        </ul>
+
+        <h2>Step-by-Step Installation</h2>
+
+        <div class="step">
+            <h3><span class="step-number">1</span>Create an Anthropic Account</h3>
+            <p>Visit <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> and create a free account. You'll need this to use Claude Code.</p>
+            <p>Once registered, navigate to your account settings to get your API key.</p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">2</span>Install Node.js</h3>
+            <p>Claude Code requires Node.js. Download and install it from <a href="https://nodejs.org" target="_blank">nodejs.org</a>.</p>
+            <p>Choose the <strong>LTS (Long Term Support)</strong> version for your operating system.</p>
+            <p>To verify installation, open your terminal/command prompt and run:</p>
+            <pre><code>node --version
+npm --version</code></pre>
+            <p>You should see version numbers displayed.</p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">3</span>Install Claude Code</h3>
+            <p>Open your terminal/command prompt and run:</p>
+            <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+            <p>This will install Claude Code globally on your system.</p>
+            <div class="warning-box">
+                <p><strong>Mac/Linux users:</strong> If you get a permission error, try:</p>
+                <pre><code>sudo npm install -g @anthropic-ai/claude-code</code></pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">4</span>Configure Your API Key</h3>
+            <p>Claude Code needs your Anthropic API key to work. Run:</p>
+            <pre><code>claude-code config set-key</code></pre>
+            <p>When prompted, paste your API key from step 1.</p>
+            <div class="success-box">
+                <p><strong>Security Note:</strong> Your API key is stored securely on your local machine and is never shared.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">5</span>Install VS Code (Optional)</h3>
+            <p>While not required, <strong>Visual Studio Code</strong> makes it easier to view and edit marketing files.</p>
+            <p>Download it from <a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a>.</p>
+            <p>After installation, you can open any folder with:</p>
+            <pre><code>code .</code></pre>
+        </div>
+
+        <h2>Verify Your Installation</h2>
+
+        <p>Let's make sure everything is working correctly. In your terminal, run:</p>
+
+        <pre><code>claude-code --version</code></pre>
+
+        <p>You should see the Claude Code version number. If you do, congratulations! You're all set up.</p>
+
+        <h2>Understanding Your Setup</h2>
+
+        <p>Now that you've installed Claude Code, let's understand what you have:</p>
+
+        <ul>
+            <li><strong>Terminal/Command Line:</strong> Where you'll interact with Claude Code</li>
+            <li><strong>Claude Code CLI:</strong> The command-line interface for Claude</li>
+            <li><strong>API Connection:</strong> Links your local setup to Claude's AI</li>
+            <li><strong>VS Code (optional):</strong> For viewing and editing files</li>
+        </ul>
+
+        <h2>Common Installation Issues</h2>
+
+        <h3>Issue: "command not found: claude-code"</h3>
+        <p><strong>Solution:</strong> Make sure you installed with the <code>-g</code> flag. Try closing and reopening your terminal, or restart your computer.</p>
+
+        <h3>Issue: "Permission denied"</h3>
+        <p><strong>Solution:</strong> On Mac/Linux, use <code>sudo</code> before the install command. On Windows, run Command Prompt as Administrator.</p>
+
+        <h3>Issue: "API key invalid"</h3>
+        <p><strong>Solution:</strong> Double-check your API key from the Anthropic console. Make sure you copied it completely.</p>
+
+        <div class="warning-box">
+            <h3>Still Having Issues?</h3>
+            <p>Visit the <a href="https://docs.anthropic.com/claude/docs" target="_blank">Claude Code documentation</a> or check the troubleshooting section.</p>
+        </div>
+
+        <h2>What's Next?</h2>
+
+        <p>Great job! You've successfully installed Claude Code and all the required tools. In the next lesson, we'll start Claude Code for the first time and clone this course to your local machine.</p>
+
+        <div class="success-box">
+            <h3>Checkpoint</h3>
+            <p>Before moving on, make sure you can:</p>
+            <ul>
+                <li>✓ Run <code>node --version</code> successfully</li>
+                <li>✓ Run <code>claude-code --version</code> successfully</li>
+                <li>✓ Have your API key configured</li>
+            </ul>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="0.0-introduction.html" class="nav-button secondary">← Previous: Introduction</a>
+            <a href="0.2-start-clone.html" class="nav-button">Next: Start & Clone →</a>
+        </div>
+    </div>
+</body>
+</html>

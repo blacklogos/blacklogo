@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3 First Marketing Tasks - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .lesson-meta {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .exercise {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .exercise h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            color: #e11d48;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+
+        .task-card {
+            background: #fafafa;
+            border: 2px solid #e2e8f0;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .task-card h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button.secondary {
+            background: #94a3b8;
+        }
+
+        .nav-button.secondary:hover {
+            background: #64748b;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>1.3 First Marketing Tasks</h1>
+            <p class="lesson-meta">Module 1: Core Concepts | 30 min</p>
+        </div>
+
+        <h2>Real Marketing Work with Claude</h2>
+
+        <p>Now that you understand the basics, let's dive into actual marketing tasks. In this lesson, you'll complete three common marketing activities that you'll use regularly:</p>
+
+        <ol>
+            <li>Generate marketing copy for multiple channels</li>
+            <li>Analyze competitive positioning</li>
+            <li>Create content ideas and calendars</li>
+        </ol>
+
+        <div class="highlight-box">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>How to generate on-brand marketing copy</li>
+                <li>Conducting competitor research with Claude</li>
+                <li>Creating content strategies and calendars</li>
+                <li>Using Claude to brainstorm ideas</li>
+                <li>Iterating to improve output quality</li>
+            </ul>
+        </div>
+
+        <h2>Task 1: Generate Multi-Channel Marketing Copy</h2>
+
+        <p>One of the most time-consuming marketing tasks is creating copy variations for different channels. Let's use Claude to do this in minutes.</p>
+
+        <div class="task-card">
+            <h3>Your Goal</h3>
+            <p>Create launch announcement copy for FocusFlow across 5 channels: LinkedIn, Twitter, Facebook, email subject line, and Google Ads headline.</p>
+        </div>
+
+        <p>In Claude Code, type:</p>
+
+        <pre><code>Create launch announcement copy for FocusFlow across these channels:
+1. LinkedIn post (professional, ~200 words)
+2. Twitter thread (3-4 tweets)
+3. Facebook ad copy (engaging, ~100 words with CTA)
+4. Email subject line (5 variations for A/B testing)
+5. Google Ads headline (3 variations, max 30 characters each)
+
+Use our brand guidelines. Emphasize the team coordination feature.
+Save each in a separate file in the content/ folder.</code></pre>
+
+        <p>Claude will generate copy for all five channels and save them to individual files. Let's review them:</p>
+
+        <pre><code>Show me the LinkedIn post</code></pre>
+
+        <h3>Refining the Output</h3>
+
+        <p>Maybe the LinkedIn post feels too salesy. Let's refine it:</p>
+
+        <pre><code>Rewrite the LinkedIn post to be more educational and less promotional.
+Focus on the problem of coordinating deep work time in remote teams.</code></pre>
+
+        <p>Claude will update the file with the new version. This iterative process is key to getting perfect copy.</p>
+
+        <div class="success-box">
+            <h3>Time Saved</h3>
+            <p>What would normally take 2-3 hours of writing and revising just took 5 minutes. And you can iterate as much as you need!</p>
+        </div>
+
+        <h2>Task 2: Competitive Analysis</h2>
+
+        <p>Understanding your competitors is crucial. Let's use Claude to analyze FocusFlow's competitive landscape.</p>
+
+        <div class="task-card">
+            <h3>Your Goal</h3>
+            <p>Create a competitive analysis document comparing FocusFlow to three main competitors: RescueTime, Freedom, and Focus@Will.</p>
+        </div>
+
+        <p>Ask Claude:</p>
+
+        <pre><code>Create a competitive analysis for FocusFlow comparing us to:
+- RescueTime
+- Freedom
+- Focus@Will
+
+For each competitor, analyze:
+- Target audience
+- Key features
+- Pricing model
+- Unique positioning
+- Marketing approach
+- Strengths and weaknesses vs FocusFlow
+
+Save this as competitive-analysis.md in the research/ folder.</code></pre>
+
+        <p>Claude will research these tools and create a comprehensive analysis. You can then ask follow-up questions:</p>
+
+        <pre><code>Based on this analysis, what's our biggest competitive advantage?</code></pre>
+
+        <pre><code>What marketing angle should we emphasize to differentiate from RescueTime?</code></pre>
+
+        <h3>Going Deeper</h3>
+
+        <p>You can ask Claude to dig into specific aspects:</p>
+
+        <pre><code>Analyze the messaging on RescueTime's homepage.
+How do they position themselves?
+What pain points do they address?
+How is our positioning different?</code></pre>
+
+        <div class="highlight-box">
+            <h3>Pro Tip</h3>
+            <p>While Claude has knowledge of many companies, for the most current information, you can provide Claude with website copy or marketing materials to analyze.</p>
+        </div>
+
+        <h2>Task 3: Content Strategy & Calendar</h2>
+
+        <p>Content marketing drives long-term growth. Let's create a content strategy and calendar.</p>
+
+        <div class="task-card">
+            <h3>Your Goal</h3>
+            <p>Create a 30-day content calendar with blog post ideas, social media posts, and email campaigns for FocusFlow's launch.</p>
+        </div>
+
+        <p>Ask Claude:</p>
+
+        <pre><code>Create a 30-day content marketing calendar for FocusFlow's launch.
+
+Include:
+- 4 blog post topics with SEO keywords
+- Daily social media post themes (LinkedIn, Twitter)
+- 1 email per week (4 total)
+- Content goals for each piece
+
+Focus on:
+- Remote work productivity
+- Team collaboration
+- Deep work
+- Managing distractions
+
+Format as a markdown table and save to campaigns/content-calendar.md</code></pre>
+
+        <p>Claude will generate a detailed content calendar. Let's expand on one of the blog post ideas:</p>
+
+        <pre><code>Take the first blog post idea from the calendar and create a full outline with:
+- Working title
+- Target keyword
+- Meta description
+- H2 section headings
+- Key points for each section
+- Internal/external linking opportunities
+- CTA
+
+Save this as content/blog-post-1-outline.md</code></pre>
+
+        <h3>Generating the Full Post</h3>
+
+        <p>Now let's write the actual blog post:</p>
+
+        <pre><code>Write the full blog post based on the outline.
+Aim for 1500-2000 words.
+Make it SEO-optimized but natural and engaging.
+Include actionable tips and examples.
+Save as content/blog-post-1.md</code></pre>
+
+        <div class="success-box">
+            <h3>From Strategy to Execution</h3>
+            <p>In less than 10 minutes, you went from blank slate to a complete content calendar AND a draft blog post. This is the power of Claude Code for content marketing.</p>
+        </div>
+
+        <h2>Task 4: Brainstorming & Ideation</h2>
+
+        <p>Claude is excellent for brainstorming. Let's generate campaign ideas:</p>
+
+        <pre><code>Brainstorm 10 creative marketing campaign ideas for FocusFlow's launch.
+
+For each idea include:
+- Campaign name
+- Core concept
+- Target channel
+- Expected outcome
+- Rough budget (small/medium/large)
+
+Think outside the box. Include both conventional and unconventional ideas.</code></pre>
+
+        <p>Claude will generate diverse ideas. Pick your favorite and develop it:</p>
+
+        <pre><code>I like campaign idea #3. Develop it into a full campaign brief with:
+- Detailed strategy
+- Execution plan
+- Timeline
+- Required resources
+- Success metrics
+- Risk mitigation
+
+Save as campaigns/creative-campaign-brief.md</code></pre>
+
+        <h2>Advanced: Combining Tasks</h2>
+
+        <p>You can ask Claude to complete multiple tasks in sequence:</p>
+
+        <pre><code>For our FocusFlow launch:
+
+1. Create 5 customer persona documents (save in research/personas/)
+2. For each persona, generate personalized ad copy (save in content/ads/)
+3. Create a targeting strategy document explaining which channels
+   work best for each persona (save in campaigns/targeting-strategy.md)</code></pre>
+
+        <p>Claude will complete all three tasks, maintaining consistency across all outputs.</p>
+
+        <h2>Best Practices for Marketing Tasks</h2>
+
+        <div class="highlight-box">
+            <h3>Tips for Better Output</h3>
+            <ul>
+                <li><strong>Reference your brand guidelines:</strong> Remind Claude to use them</li>
+                <li><strong>Be specific about format:</strong> Word count, tone, structure</li>
+                <li><strong>Provide examples:</strong> Show Claude what "good" looks like</li>
+                <li><strong>Iterate:</strong> Don't settle for the first draft</li>
+                <li><strong>Ask for options:</strong> Request multiple versions to choose from</li>
+                <li><strong>Specify the audience:</strong> Who is this for?</li>
+                <li><strong>Include constraints:</strong> Character limits, required keywords, etc.</li>
+            </ul>
+        </div>
+
+        <h2>Common Marketing Workflows</h2>
+
+        <p>Here are template prompts you can adapt for your own projects:</p>
+
+        <h3>Campaign Launch</h3>
+        <pre><code>Create a complete campaign launch package for [product]:
+- Campaign brief
+- Multi-channel copy (email, social, ads)
+- Landing page copy
+- Press release
+- FAQ document
+Save in campaigns/[campaign-name]/</code></pre>
+
+        <h3>Content Series</h3>
+        <pre><code>Create a 5-part blog series about [topic]:
+- Series overview and outline
+- Full drafts for all 5 posts
+- Social promotion copy for each
+- Email announcements
+- SEO keyword mapping
+Save in content/[series-name]/</code></pre>
+
+        <h3>Competitive Intelligence</h3>
+        <pre><code>Analyze [competitor] and create:
+- Positioning analysis
+- Messaging breakdown
+- Channel strategy assessment
+- Differentiation opportunities for us
+Save in research/competitive/[competitor-name].md</code></pre>
+
+        <h2>Exercises</h2>
+
+        <div class="exercise">
+            <h3>Exercise 1: Email Campaign</h3>
+            <p>Create a 5-email welcome sequence for new FocusFlow trial users. Each email should:</p>
+            <ul>
+                <li>Build on the previous email</li>
+                <li>Highlight a different feature</li>
+                <li>Include a specific CTA</li>
+                <li>Be 200-300 words</li>
+            </ul>
+            <p>Save them as email-1.md through email-5.md in content/emails/</p>
+        </div>
+
+        <div class="exercise">
+            <h3>Exercise 2: Social Media Blitz</h3>
+            <p>Create 30 days of social media posts (1 per day) for FocusFlow. Mix of:</p>
+            <ul>
+                <li>Product tips</li>
+                <li>Productivity advice</li>
+                <li>Customer testimonials (create fictional but realistic ones)</li>
+                <li>Behind-the-scenes content</li>
+                <li>Industry insights</li>
+            </ul>
+            <p>Save as campaigns/social-30-day.md</p>
+        </div>
+
+        <div class="exercise">
+            <h3>Exercise 3: SEO Content Strategy</h3>
+            <p>Research keywords related to "remote team productivity" and create:</p>
+            <ul>
+                <li>10 target keywords with difficulty and volume estimates</li>
+                <li>Content plan to target each keyword</li>
+                <li>Internal linking structure</li>
+            </ul>
+            <p>Save as research/seo-strategy.md</p>
+        </div>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Claude can handle multiple marketing tasks in sequence</li>
+            <li>Always provide context: brand, audience, goals</li>
+            <li>Iterate on outputs to get them perfect</li>
+            <li>Use Claude for ideation and brainstorming</li>
+            <li>Combine tasks for efficient workflows</li>
+            <li>Reference brand guidelines for consistency</li>
+        </ul>
+
+        <div class="success-box">
+            <h3>You're Making Progress!</h3>
+            <p>You've now completed real marketing tasks with Claude. In the next lessons, you'll learn about agents, custom sub-agents, and project memory to take your workflow to the next level.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="1.2-working-with-files.html" class="nav-button secondary">← Previous: Working with Files</a>
+            <a href="1.4-agents.html" class="nav-button">Next: Using Agents →</a>
+        </div>
+    </div>
+</body>
+</html>
