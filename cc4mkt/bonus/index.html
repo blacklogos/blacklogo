@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus: Annual Marketing Business Plan - Claude Code for Marketers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .header-banner {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        header .subtitle {
+            font-size: 1.4em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        header .description {
+            font-size: 1.1em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+            backdrop-filter: blur(10px);
+        }
+
+        .intro-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .intro-section h2 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .intro-section p {
+            font-size: 1.2em;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #4a5568;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: #667eea;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #4a5568;
+            margin-top: 10px;
+        }
+
+        .templates-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .templates-section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .template-card {
+            background: #f8f9fa;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .template-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .template-card h3 {
+            font-size: 1.6em;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .template-card p {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .template-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #2d3748;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #94a3b8;
+        }
+
+        .btn-secondary:hover {
+            background: #64748b;
+        }
+
+        .how-to-use {
+            padding: 60px 20px;
+            background: #f0f4ff;
+        }
+
+        .how-to-use h2 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2d3748;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .approach-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .approach-card h3 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .approach-card .time {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .quick-start {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .quick-start h2 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2d3748;
+        }
+
+        .checklist {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .checklist h3 {
+            font-size: 1.4em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1em;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+            color: #667eea;
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .cta-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 1.2em;
+        }
+
+        .btn-white {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-white:hover {
+            background: #f8f9fa;
+            color: #5568d3;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header .subtitle {
+                font-size: 1.2em;
+            }
+
+            .template-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        🎁 BONUS MATERIAL - Exclusive templates for course students
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>Annual Marketing Business Plan</h1>
+            <p class="subtitle">Complete Planning Templates for B2B IT Service Providers</p>
+            <p class="description">Everything you need to create a comprehensive annual marketing plan, justify your budget, and track quarterly performance.</p>
+            <div>
+                <span class="badge">📊 Strategic Planning</span>
+                <span class="badge">💰 Budget Justification</span>
+                <span class="badge">🤖 Claude Code Integrated</span>
+                <span class="badge">📈 QBR Templates</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="container">
+            <h2>What's Included</h2>
+            <p>A comprehensive planning package specifically designed for B2B IT service providers, solution integrators, and technology consultants with 5-20 person marketing teams.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Complete Templates</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Pages of Content</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">60-70%</div>
+                    <div class="stat-label">Time Savings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2-3</div>
+                    <div class="stat-label">Days to Complete</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="templates-section">
+        <div class="container">
+            <h2>Complete Template Library</h2>
+
+            <div class="template-grid">
+                <div class="template-card">
+                    <div class="template-icon">📋</div>
+                    <h3>Part 1: Strategic Foundation</h3>
+                    <div class="template-meta">
+                        <div class="meta-item">📄 ~25 pages</div>
+                        <div class="meta-item">⏱️ 1 day</div>
+                    </div>
+                    <p>Build your strategic foundation with comprehensive market analysis, objectives, and audience targeting.</p>
+                    <ul class="features-list">
+                        <li>Executive Summary template</li>
+                        <li>Market & Competitive Analysis</li>
+                        <li>Strategic Objectives & KPIs</li>
+                        <li>3 Detailed Buyer Personas</li>
+                        <li>ABM Tier Structure</li>
+                    </ul>
+                    <a href="annual-business-plan-template.md" class="btn">View Template</a>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">💰</div>
+                    <h3>Part 2: Budget & Channels</h3>
+                    <div class="template-meta">
+                        <div class="meta-item">📄 ~30 pages</div>
+                        <div class="meta-item">⏱️ 1-2 days</div>
+                    </div>
+                    <p>Complete channel strategy with budget allocation and comprehensive justification framework.</p>
+                    <ul class="features-list">
+                        <li>9 Marketing Channels with tactics</li>
+                        <li>Budget breakdown by channel</li>
+                        <li>ROI calculations and scenarios</li>
+                        <li>Budget Justification Framework</li>
+                        <li>Industry benchmarks</li>
+                    </ul>
+                    <a href="annual-business-plan-part2.md" class="btn">View Template</a>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">📊</div>
+                    <h3>Quarterly Business Review</h3>
+                    <div class="template-meta">
+                        <div class="meta-item">📄 12 slides</div>
+                        <div class="meta-item">⏱️ 4 hours/qtr</div>
+                    </div>
+                    <p>Professional QBR template for presenting marketing performance to leadership.</p>
+                    <ul class="features-list">
+                        <li>12-slide presentation structure</li>
+                        <li>Performance tracking tables</li>
+                        <li>Channel analysis format</li>
+                        <li>Preparation checklist</li>
+                        <li>Executive presentation tips</li>
+                    </ul>
+                    <a href="quarterly-business-review-template.md" class="btn">View Template</a>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">🚀</div>
+                    <h3>Implementation Guide</h3>
+                    <div class="template-meta">
+                        <div class="meta-item">📄 Guide</div>
+                        <div class="meta-item">⏱️ Quick ref</div>
+                    </div>
+                    <p>Step-by-step implementation guide with checklists and best practices.</p>
+                    <ul class="features-list">
+                        <li>6-phase planning checklist</li>
+                        <li>Quick start options (2hr, 1day, 1wk)</li>
+                        <li>Industry benchmarks</li>
+                        <li>Do's and Don'ts</li>
+                        <li>Claude Code workflow</li>
+                    </ul>
+                    <a href="README.md" class="btn">Read Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-to-use">
+        <div class="container">
+            <h2>Choose Your Approach</h2>
+
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <h3>⚡ Quick Start</h3>
+                    <div class="time">2 Hours</div>
+                    <p><strong>Best for:</strong> Initial concept presentation</p>
+                    <ul class="features-list">
+                        <li>Executive Summary (30 min)</li>
+                        <li>Strategic Objectives (30 min)</li>
+                        <li>Budget overview (30 min)</li>
+                        <li>Present to leadership (30 min)</li>
+                    </ul>
+                </div>
+
+                <div class="approach-card">
+                    <h3>🚀 Accelerated</h3>
+                    <div class="time">1 Day</div>
+                    <p><strong>Best for:</strong> Quick but complete plan</p>
+                    <ul class="features-list">
+                        <li>Executive summary (2 hrs)</li>
+                        <li>Market analysis (2 hrs)</li>
+                        <li>Channel strategy (2 hrs)</li>
+                        <li>Budget justification (2 hrs)</li>
+                    </ul>
+                </div>
+
+                <div class="approach-card">
+                    <h3>🎯 Comprehensive</h3>
+                    <div class="time">1 Week</div>
+                    <p><strong>Best for:</strong> Detailed strategic plan</p>
+                    <ul class="features-list">
+                        <li>Complete all templates</li>
+                        <li>Team input and review</li>
+                        <li>Stakeholder feedback</li>
+                        <li>Final executive presentation</li>
+                    </ul>
+                </div>
+
+                <div class="approach-card">
+                    <h3>🤖 AI-Assisted</h3>
+                    <div class="time">2-3 Days</div>
+                    <p><strong>Best for:</strong> Claude Code users</p>
+                    <ul class="features-list">
+                        <li>Use integrated prompts</li>
+                        <li>Generate first drafts with AI</li>
+                        <li>Customize with team input</li>
+                        <li>60-70% faster completion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-start">
+        <div class="container">
+            <h2>Quick Start Checklist</h2>
+
+            <div class="checklist">
+                <h3>Phase 1: Preparation (Week 1)</h3>
+                <ul>
+                    <li>Gather last year's performance data</li>
+                    <li>Review company strategic goals</li>
+                    <li>Survey sales team for feedback</li>
+                    <li>Conduct competitive research</li>
+                    <li>Analyze customer data and personas</li>
+                    <li>Benchmark against industry standards</li>
+                </ul>
+
+                <h3>Phase 2: Strategy (Week 2-3)</h3>
+                <ul>
+                    <li>Complete market analysis</li>
+                    <li>Define objectives and KPIs</li>
+                    <li>Update buyer personas</li>
+                    <li>Develop channel strategy</li>
+                    <li>Build budget model</li>
+                </ul>
+
+                <h3>Phase 3: Justification (Week 3-4)</h3>
+                <ul>
+                    <li>Calculate ROI projections</li>
+                    <li>Build budget justification</li>
+                    <li>Prepare scenario planning</li>
+                    <li>Review with finance team</li>
+                    <li>Get preliminary buy-in</li>
+                </ul>
+
+                <h3>Phase 4: Approval (Week 5-6)</h3>
+                <ul>
+                    <li>Create presentation deck</li>
+                    <li>Present to leadership</li>
+                    <li>Address feedback</li>
+                    <li>Get final approval</li>
+                    <li>Communicate to team</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build Your Plan?</h2>
+            <p>Start with the implementation guide, then dive into the templates</p>
+            <div class="cta-buttons">
+                <a href="README.md" class="btn btn-large btn-white">Start with Guide</a>
+                <a href="annual-business-plan-template.md" class="btn btn-large">Jump to Templates</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="templates-section">
+        <div class="container">
+            <h2>What You'll Create</h2>
+            <div class="template-grid">
+                <div class="template-card">
+                    <div class="template-icon">📝</div>
+                    <h3>Annual Marketing Plan</h3>
+                    <p>12-15 page comprehensive plan with justified budget, channel strategy, and quarterly milestones.</p>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">💼</div>
+                    <h3>Budget Justification</h3>
+                    <p>5-8 page executive document with ROI calculations, scenarios, and industry benchmarks.</p>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">📊</div>
+                    <h3>Quarterly Reviews</h3>
+                    <p>12-slide presentation showing performance vs goals, channel effectiveness, and next quarter plans.</p>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">👥</div>
+                    <h3>Buyer Personas</h3>
+                    <p>3 detailed profiles with demographics, buying process, content needs, and engagement strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Claude Code for Marketers - Bonus Material</strong></p>
+            <p>Annual Marketing Business Plan Templates for B2B IT Service Providers</p>
+            <p style="margin-top: 20px;"><a href="../course-index.html">← Back to Course Home</a></p>
+        </div>
+    </footer>
+</body>
+</html>
