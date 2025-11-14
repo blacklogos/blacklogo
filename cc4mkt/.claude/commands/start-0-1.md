@@ -1,55 +1,109 @@
 # Start Lesson 0.1: Installing Claude Code
 
-Let's get Claude Code installed on your machine! This is a one-time setup that takes about 20 minutes.
+Let's get Claude Code installed on your machine! This is a one-time setup that takes about 10-15 minutes.
 
 ## What You'll Install
 
-1. **Node.js** - Required runtime (if you don't have it already)
-2. **Claude Code CLI** - The command-line tool
-3. **API Key** - Your connection to Claude
+1. **Claude Code** - The AI-powered CLI tool (native installer - **no Node.js required!**)
+2. **API Key** - Your connection to Claude
 
-## Step 1: Check for Node.js
+## Installation Method (2025)
 
-Let me check if you already have Node.js installed:
+Good news! Claude Code now has a **native installer** that doesn't require Node.js. This is the recommended method.
 
-Please run this command in your terminal:
+### Step 1: Install Claude Code
+
+**For Mac, Linux, or WSL:**
 ```bash
-node --version
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-**Do you see a version number (like v18.x.x or v20.x.x)?**
-- If YES: Great! You can skip the Node.js installation.
-- If NO: We'll install it together.
-
-Let me know what you see, and I'll guide you through the next step!
-
----
-
-## Quick Installation Guide (Reference)
-
-If you want to proceed on your own, here's the full process:
-
-### Install Node.js (if needed)
-- **Mac**: Download from https://nodejs.org or use `brew install node`
-- **Windows**: Download installer from https://nodejs.org
-- **Linux**: Use your package manager (e.g., `apt install nodejs`)
-
-### Install Claude Code
+**For the latest version (includes newest features):**
 ```bash
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash -s latest
 ```
 
-### Set up API Key
+**For Windows:**
+Download the installer from https://claude.ai/download
+
+The installer will:
+- Install Claude Code binary
+- Set up auto-updates
+- Configure your system PATH
+
+### Step 2: Set up Your API Key
+
 1. Get your key from: https://console.anthropic.com/
-2. Set it up:
+2. Set it up in your terminal:
+
+**Mac/Linux:**
 ```bash
 export ANTHROPIC_API_KEY='your-key-here'
 ```
 
-### Verify Installation
+To make it permanent, add to your shell config (~/.zshrc or ~/.bashrc):
+```bash
+echo 'export ANTHROPIC_API_KEY="your-key-here"' >> ~/.zshrc
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:ANTHROPIC_API_KEY='your-key-here'
+```
+
+### Step 3: Verify Installation
+
 ```bash
 claude --version
+claude doctor
 ```
+
+The `claude doctor` command checks your installation and shows:
+- Installation type (native or npm)
+- Version information
+- Configuration status
+
+---
+
+## Already Have npm Version?
+
+If you previously installed via npm, migrate to the native installer:
+
+```bash
+claude install
+```
+
+This will switch you to the native binary installation with better auto-updates.
+
+---
+
+## New Features in 2025
+
+Your installation includes the latest Claude Code features:
+
+✨ **Checkpoints** - Automatic save points before each change (press Esc twice to rewind)
+✨ **Claude Sonnet 4.5** - The world's best coding model (now default)
+✨ **Hooks** - Automate actions at specific points (run tests after changes)
+✨ **Subagents** - Specialized AI assistants for specific tasks
+✨ **VS Code Extension** - Use Claude Code directly in VS Code (beta)
+✨ **Background Tasks** - Long-running processes don't block your work
+
+---
+
+## Troubleshooting
+
+### Installation Fails
+- Ensure you have internet connection
+- Try running with elevated privileges if needed
+- Check firewall/antivirus settings
+
+### API Key Not Working
+- Verify key is correct (copy from console.anthropic.com)
+- Check for extra spaces or quotes
+- Restart terminal after setting
+
+### Need Help?
+Run `claude doctor` to diagnose issues, or ask me for specific help!
 
 ---
 
