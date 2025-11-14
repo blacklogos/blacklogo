@@ -25,10 +25,12 @@ By completing this course, you'll be able to:
 - 🔍 Conduct competitive analysis and market research
 - 🤖 Create custom AI subagents for brand voice consistency
 - 🪝 Set up hooks for workflow automation
+- 🔌 Install and use marketplace plugins for instant functionality
 - 📈 Build SEO-optimized content strategies
 - 🎨 Brainstorm creative campaign ideas
 - ⏱️ Complete in minutes what normally takes hours
 - 🔄 Use checkpoints to experiment and iterate fearlessly
+- 🔁 **Build compounding systems** - Each campaign makes the next one easier
 
 ## ✨ New in 2025
 
@@ -49,7 +51,7 @@ This course is updated with Claude Code's latest features:
 - 0.1 Installation - Install Claude Code with native installer (updated 2025)
 - 0.2 Start & Clone - Launch Claude Code and set up your workspace
 
-### Module 1: Core Concepts for Marketers (2 hours)
+### Module 1: Core Concepts for Marketers (2.5 hours)
 - 1.1 Welcome to MarketFlow - Introduction to your marketing project
 - 1.2 Working with Marketing Files - Organize campaigns, briefs, and content
 - 1.3 First Marketing Tasks - Campaign analysis, content generation, research
@@ -58,16 +60,18 @@ This course is updated with Claude Code's latest features:
 - 1.6 Project Memory for Marketing - Use CLAUDE.md for brand guidelines
 - 1.7 Claude Code Navigation - Master file operations and searches
 - 1.8 Hooks - Automate Your Marketing Workflow (NEW 2025)
+- **1.9 Using the Claude Code Marketplace** - Install plugins and leverage community tools (NEW 2025)
 
-### Module 2: Advanced Marketing Applications (90 minutes)
+### Module 2: Advanced Marketing Applications (2 hours)
 - 2.1 Write a Campaign Brief - Partner with AI to create comprehensive plans
 - 2.2 Develop Content Strategy - Plan content calendars and themes
 - 2.3 Generate Marketing Copy - Create ads, emails, and social content
 - 2.4 Analyze Campaign Data - Turn data into actionable insights
 - 2.5 Competitive Analysis - Research and analyze competitor strategies
 - 2.6 SEO Optimization - Keyword research and content optimization
+- **2.7 The Compounding Marketing Philosophy** - Build systems where each campaign makes the next easier (NEW 2025)
 
-**Total Course Time:** 4 hours (self-paced)
+**Total Course Time:** 5 hours (self-paced)
 
 ## 🎓 Getting Started
 
