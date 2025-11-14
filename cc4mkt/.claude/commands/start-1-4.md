@@ -1,41 +1,61 @@
-# Start Lesson 1.4: Introduction to Agents
+# Start Lesson 1.4: Introduction to Subagents
 
-This is where things get powerful! Agents let you run multiple perspectives and tasks in parallel.
+This is where things get powerful! Subagents let you run multiple perspectives and tasks in parallel - one of Claude Code's most powerful features.
 
-## What Are Agents?
+## What Are Subagents?
 
-Think of agents as specialized team members you can summon:
+Think of subagents as specialized team members you can summon for specific tasks. Each subagent operates in its own context window with specialized expertise:
+
 - **Brand Voice Guardian**: Ensures all copy matches brand guidelines
 - **SEO Specialist**: Optimizes content for search
 - **Data Analyst**: Interprets campaign metrics
 - **Creative Director**: Reviews creative concepts
+- **Conversion Optimizer**: Maximizes conversion rates
 
-Each agent has specific expertise and perspective.
+Each subagent has specific expertise, its own context window, and can work in parallel with others.
 
-## Why Agents Matter for Marketers
+## Why Subagents Matter for Marketers
 
-**Before agents**: You review your own work, miss things, biased perspective
+**Before subagents**: You review your own work, miss things, biased perspective
 
-**With agents**: Get instant feedback from multiple expert viewpoints
+**With subagents**: Get instant feedback from multiple expert viewpoints simultaneously
 
 ### Real Example
 
-You write an email campaign. Instead of just me reviewing it, you can ask:
+You write an email campaign. Instead of just one review, you can ask:
 
 ```
-Review this email campaign from three perspectives:
-1. As a brand voice guardian (does it match our guidelines?)
-2. As a conversion optimizer (will it drive clicks?)
-3. As a customer (is it compelling and clear?)
+Review this email campaign using three subagents:
+1. Brand voice guardian (does it match our guidelines?)
+2. Conversion optimizer (will it drive clicks?)
+3. Startup Sam reviewer (is it compelling to founders?)
 ```
 
-Each agent provides specialized feedback!
+Each subagent provides specialized feedback from its unique perspective!
+
+---
+
+## How Subagents Work (2025)
+
+**Key Features:**
+- **Separate Context** - Each subagent has its own conversation context
+- **Parallel Execution** - Multiple subagents work simultaneously
+- **Specialized Tools** - Different tool access for different subagents
+- **Custom Configuration** - Define your own subagents for recurring tasks
+
+**In this course**, you have access to 6 pre-built marketing subagents:
+- @brand-voice-guardian
+- @seo-specialist
+- @conversion-optimizer
+- @startup-sam-reviewer
+- @manager-maria-reviewer
+- @solo-steve-reviewer
 
 ---
 
 ## Let's Try It: Multi-Perspective Campaign Review
 
-I'm going to show you how agents work with a real FocusFlow campaign asset.
+I'm going to show you how subagents work with a real FocusFlow campaign asset.
 
 ### The Asset: Landing Page Copy
 
@@ -46,47 +66,100 @@ Here's a draft landing page headline and subhead:
 
 ### Your Turn
 
-Ask me:
+Try this command:
 ```
-Review this landing page copy from three perspectives:
-- Creative director (is it compelling?)
-- Conversion optimizer (will it convert?)
-- Target customer (Startup Sam persona - will it resonate?)
+Launch 3 subagents to review this landing page:
+- @brand-voice-guardian: Check brand alignment
+- @conversion-optimizer: Analyze conversion potential
+- @startup-sam-reviewer: Test if it resonates with Sam
 
-Provide specific feedback and recommendations from each perspective.
+Provide specific feedback from each perspective.
 ```
 
-Watch how I analyze from multiple angles!
+Watch how each subagent analyzes from its specialized angle - all in parallel!
 
 ---
 
 ## Parallel Workflows
 
-Agents can also work in parallel on different tasks:
+Subagents can work simultaneously on different tasks, like having multiple team members:
 
 ```
-Launch three agents:
-1. Write a blog post about AI task prioritization
-2. Create 5 social media posts about the team dashboard
-3. Draft a customer success story outline
+Launch three subagents:
+1. Write a blog post about AI task prioritization (1,200 words)
+2. Create 5 LinkedIn posts about the team dashboard feature
+3. Draft a detailed customer success story outline
 
-Work on all three simultaneously.
+Execute all three tasks in parallel.
 ```
 
-This is like having a 3-person team working at once!
+This is like having a 3-person content team working at the same time!
+
+**Why this is powerful:**
+- Each task gets a fresh context window
+- No context pollution between tasks
+- Work completes faster (parallel execution)
+- Specialized focus for each task
 
 ---
 
-## Exercise: Your First Multi-Agent Task
+## Subagents vs. Regular Prompts
 
-Pick a marketing asset you created earlier (email, ad copy, blog outline) and ask me to review it from 3 different perspectives.
+**Regular Prompt:**
+- Single context window
+- Sequential execution
+- Context builds up over conversation
 
-**Example perspectives to try**:
-- Brand voice guardian
-- SEO specialist
-- Target persona (Sam, Maria, or Steve)
-- Legal/compliance reviewer
-- A/B test strategist
-- Social media expert
+**With Subagents:**
+- Each gets own context window
+- Parallel execution possible
+- Prevents context pollution
+- Can have different tool access
 
-When you're ready to create your own custom agents, type: `/start-1-5`
+**Best for:**
+- Multi-perspective review
+- Parallel content creation
+- Specialized deep dives
+- Complex campaign work
+
+---
+
+## Exercise: Your First Multi-Subagent Task
+
+Pick a marketing asset you created earlier (email, ad copy, blog outline) and ask me to launch 3 subagents to review it.
+
+**Example subagent combinations to try**:
+
+**For Email Copy:**
+- @brand-voice-guardian
+- @conversion-optimizer
+- @manager-maria-reviewer
+
+**For Social Post:**
+- @brand-voice-guardian
+- @seo-specialist (for hashtags/keywords)
+- @startup-sam-reviewer
+
+**For Landing Page:**
+- @conversion-optimizer
+- @seo-specialist
+- @solo-steve-reviewer (affordability check)
+
+---
+
+## Pro Tip: Checkpoints
+
+New in 2025! Claude Code now has **checkpoints** - automatic save points before each change.
+
+- Press **Esc twice** to rewind to previous checkpoint
+- Or use the `/rewind` command
+- Choose to restore code, conversation, or both
+
+This is perfect for:
+- Testing different copy variations
+- Experimenting with campaign ideas
+- Comparing subagent recommendations
+
+---
+
+When you're ready to create your own custom subagents, type: `/start-1-5`
