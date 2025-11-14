@@ -268,3 +268,7 @@ Open `course-index.html` in your browser
 Transform your marketing workflow with Claude Code's 2025 features and ship campaigns faster than ever before.
 
 **Powered by Claude Sonnet 4.5** - The world's best coding model
+
+---
+
+<sub>*"Not all lessons are numbered. Some rewards are earned by the curious."* - For those who explore beyond the path. 🔍</sub>
