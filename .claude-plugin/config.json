@@ -1,0 +1,157 @@
+{
+  "marketplace": {
+    "name": "Marketing Tools Marketplace",
+    "description": "AI-powered marketing automation plugins for Claude Code",
+    "url": "https://github.com/blacklogos/marketing-tools-marketplace",
+    "maintainer": "blacklogos",
+    "version": "1.0.0",
+    "compatibility": "claude-code-2025+",
+    "repository": "https://github.com/blacklogos/marketing-tools-marketplace"
+  },
+  "plugins": [
+    {
+      "id": "compounding-marketing",
+      "name": "Compounding Marketing",
+      "description": "Systematic campaign workflow: Plan → Execute → Review. Each campaign makes the next one easier.",
+      "version": "0.1.0",
+      "path": "plugins/compounding-marketing",
+      "category": "workflow",
+      "tags": ["campaigns", "planning", "automation", "review", "systematic"],
+      "featured": true,
+      "author": "blacklogos",
+      "license": "MIT",
+      "commands": [
+        "compounding-marketing:plan",
+        "compounding-marketing:execute",
+        "compounding-marketing:review"
+      ],
+      "agents": [
+        "brand-voice-guardian",
+        "seo-specialist",
+        "conversion-optimizer",
+        "startup-sam-reviewer",
+        "manager-maria-reviewer",
+        "solo-steve-reviewer"
+      ],
+      "status": "stable"
+    },
+    {
+      "id": "content-factory",
+      "name": "Content Factory",
+      "description": "Rapid, multi-format content generation. Create weeks of content in hours.",
+      "version": "0.1.0",
+      "path": "plugins/content-factory",
+      "category": "content",
+      "tags": ["content", "generation", "batch", "repurpose", "automation"],
+      "featured": true,
+      "author": "blacklogos",
+      "license": "MIT",
+      "commands": [
+        "content-factory:generate",
+        "content-factory:repurpose",
+        "content-factory:schedule"
+      ],
+      "status": "stable"
+    },
+    {
+      "id": "seo-optimizer",
+      "name": "SEO Optimizer",
+      "description": "Comprehensive SEO analysis and optimization tools",
+      "version": "0.1.0",
+      "path": "plugins/seo-optimizer",
+      "category": "seo",
+      "tags": ["seo", "keywords", "optimization", "audit", "schema"],
+      "featured": false,
+      "author": "blacklogos",
+      "license": "MIT",
+      "status": "planned"
+    },
+    {
+      "id": "social-scheduler",
+      "name": "Social Scheduler",
+      "description": "Social media planning, content creation, and automation",
+      "version": "0.1.0",
+      "path": "plugins/social-scheduler",
+      "category": "social",
+      "tags": ["social", "scheduling", "hashtags", "engagement", "platforms"],
+      "featured": false,
+      "author": "blacklogos",
+      "license": "MIT",
+      "status": "planned"
+    },
+    {
+      "id": "email-sequencer",
+      "name": "Email Sequencer",
+      "description": "Email marketing campaign automation and optimization",
+      "version": "0.1.0",
+      "path": "plugins/email-sequencer",
+      "category": "email",
+      "tags": ["email", "sequences", "drip", "deliverability", "campaigns"],
+      "featured": false,
+      "author": "blacklogos",
+      "license": "MIT",
+      "status": "planned"
+    },
+    {
+      "id": "analytics-reporter",
+      "name": "Analytics Reporter",
+      "description": "Marketing data analysis, insights, and reporting automation",
+      "version": "0.1.0",
+      "path": "plugins/analytics-reporter",
+      "category": "analytics",
+      "tags": ["analytics", "reporting", "insights", "data", "kpi"],
+      "featured": false,
+      "author": "blacklogos",
+      "license": "MIT",
+      "status": "planned"
+    }
+  ],
+  "categories": [
+    {
+      "id": "workflow",
+      "name": "Workflow Automation",
+      "description": "Campaign management and systematic marketing processes",
+      "icon": "🎯"
+    },
+    {
+      "id": "content",
+      "name": "Content Creation",
+      "description": "Content generation, optimization, and management",
+      "icon": "⚡"
+    },
+    {
+      "id": "seo",
+      "name": "SEO & Search",
+      "description": "Search engine optimization and keyword tools",
+      "icon": "🔍"
+    },
+    {
+      "id": "social",
+      "name": "Social Media",
+      "description": "Social platform planning and automation",
+      "icon": "📱"
+    },
+    {
+      "id": "email",
+      "name": "Email Marketing",
+      "description": "Email campaign creation and optimization",
+      "icon": "📧"
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics & Reporting",
+      "description": "Data analysis and performance reporting",
+      "icon": "📊"
+    }
+  ],
+  "shared": {
+    "agents": "shared/agents",
+    "templates": "shared/templates",
+    "skills": "shared/skills"
+  },
+  "resources": {
+    "documentation": "docs/",
+    "examples": "examples/",
+    "course": "https://github.com/blacklogos/cc4mkt"
+  }
+}
