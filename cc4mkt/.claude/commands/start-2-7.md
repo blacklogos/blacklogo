@@ -581,3 +581,7 @@ You now have:
 - ✅ Compounding philosophy mindset
 
 **The compounding starts now. Each campaign makes the next one easier. Start documenting, start templating, start compounding!**
+
+---
+
+*P.S. - Curious about the full roadmap with `/execute`, `/review`, Skills, and hooks? Some say there's a hidden level for those who look beyond the obvious... Try exploring the course files. 🔍*
