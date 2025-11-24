@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for Marketers - Retro Future Edition</title>
+    <meta name="description" content="Master AI-powered marketing. Retro-futuristic course design with modern results.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rust: #B85C3C;
+            --olive: #6B8E23;
+            --mustard: #E8B923;
+            --plum: #5C3A6B;
+            --cream: #F5F1E8;
+            --charcoal: #2C2C2C;
+            --accent-teal: #0D9488;
+            --accent-pink: #EC4899;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Custom Cursor */
+        * {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='%23B85C3C' opacity='0.5'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23B85C3C'/%3E%3C/svg%3E") 12 12, auto;
+        }
+
+        a, button {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='%23E8B923' opacity='0.6'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%23E8B923'/%3E%3C/svg%3E") 12 12, pointer;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--rust);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--olive);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 60px 24px;
+            background: linear-gradient(135deg, var(--cream) 0%, rgba(232, 185, 35, 0.05) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--mustard) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent-teal) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -80px;
+            left: -80px;
+            opacity: 0.2;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(40px) rotate(10deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Righteous', serif;
+            font-size: 4.5em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+            letter-spacing: -0.02em;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            color: var(--rust);
+            margin-bottom: 12px;
+            font-weight: 600;
+            animation: slideInUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero-description {
+            font-size: 1.15em;
+            color: var(--charcoal);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            animation: slideInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 0.8s ease-out 0.3s both;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 1.05em;
+            font-weight: 600;
+            border: none;
+            border-radius: 0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--rust);
+            color: white;
+            box-shadow: 8px 8px 0 rgba(92, 58, 107, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0 rgba(92, 58, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--rust);
+            border: 3px solid var(--rust);
+            box-shadow: 6px 6px 0 var(--mustard);
+        }
+
+        .btn-secondary:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0 var(--mustard);
+            background: var(--mustard);
+            color: var(--charcoal);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Section */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 3px solid var(--mustard);
+            border-radius: 50%;
+            top: -60px;
+            left: -60px;
+            opacity: 0.3;
+        }
+
+        .section-label {
+            font-family: 'Righteous', serif;
+            font-size: 0.9em;
+            color: var(--rust);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Righteous', serif;
+            font-size: 3em;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .section-description {
+            font-size: 1.1em;
+            color: var(--charcoal);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: var(--cream);
+            border: 3px solid var(--charcoal);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--rust);
+            top: -30px;
+            left: 20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translate(-8px, -8px);
+            box-shadow: 16px 16px 0 var(--mustard);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-family: 'Righteous', serif;
+            font-size: 1.4em;
+            margin-bottom: 12px;
+            color: var(--charcoal);
+        }
+
+        .feature-text {
+            color: var(--charcoal);
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        /* Modules Section */
+        .modules-section {
+            background: linear-gradient(135deg, var(--plum) 0%, #3F2C5C 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modules-section::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 2px dashed rgba(232, 185, 35, 0.3);
+            border-radius: 50%;
+            top: 50px;
+            right: 50px;
+        }
+
+        .modules-section::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            background: var(--mustard);
+            opacity: 0.3;
+            bottom: 100px;
+            left: 0;
+        }
+
+        .modules-section .section-title,
+        .modules-section .section-description {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .module-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(232, 185, 35, 0.5);
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(232, 185, 35, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .module-card:hover {
+            transform: scale(1.05);
+            border-color: var(--mustard);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .module-card:hover::before {
+            opacity: 1;
+        }
+
+        .module-number {
+            font-family: 'Righteous', serif;
+            font-size: 3em;
+            color: var(--mustard);
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .module-title {
+            font-family: 'Righteous', serif;
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .module-description {
+            font-size: 1em;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .lesson-count {
+            font-size: 0.85em;
+            color: var(--mustard);
+            font-weight: 600;
+        }
+
+        .lessons-preview {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .lesson-item {
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .lesson-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--mustard);
+            font-weight: bold;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+            background: var(--cream);
+            border-radius: 0;
+            position: relative;
+        }
+
+        .stat-box::before {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 3px solid var(--mustard);
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.5;
+        }
+
+        .stat-number {
+            font-family: 'Righteous', serif;
+            font-size: 2.8em;
+            color: var(--rust);
+            margin: 30px 0 12px;
+        }
+
+        .stat-label {
+            color: var(--charcoal);
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        /* Final CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--rust) 0%, #A04A2F 100%);
+            color: white;
+            padding: 100px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Righteous', serif;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+
+        .cta-section p {
+            font-size: 1.15em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            background: var(--mustard);
+            color: var(--charcoal);
+            padding: 18px 48px;
+            font-size: 1.1em;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            font-family: 'Righteous', serif;
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        footer a {
+            color: var(--mustard);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .feature-card, .stat-box, .module-card {
+            animation: fadeInScale 0.6s ease-out backwards;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        .feature-card:nth-child(5) { animation-delay: 0.5s; }
+        .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .features-grid,
+            .modules-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Claude Code for Marketers</h1>
+            <p class="hero-subtitle">Work 10x Faster. Ship More Campaigns.</p>
+            <p class="hero-description">Master AI-powered marketing workflows that actually save you time. Join hundreds of marketers who've unlocked the next level of productivity.</p>
+            <div class="hero-cta">
+                <a href="module-0/0.0-introduction.html" class="btn btn-primary">Start Course →</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Core Skills</div>
+                <h2 class="section-title">What You'll Master</h2>
+                <p class="section-description">The exact skills that transform marketing teams into 10x performers.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">10x Speed</div>
+                    <p class="feature-text">Campaign briefs in minutes instead of hours. Generate content at scale without losing quality.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Consistent Brand</div>
+                    <p class="feature-text">AI agents enforce brand voice across all materials. No more tone inconsistency.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Data Insights</div>
+                    <p class="feature-text">Analyze campaign performance instantly. Turn data into actionable strategy.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-title">More Campaigns</div>
+                    <p class="feature-text">Ship 5x more campaigns. Focus on strategy while AI handles execution.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Custom Agents</div>
+                    <p class="feature-text">Build your own AI team. Brand guardian, SEO specialist, copywriter.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Compound Growth</div>
+                    <p class="feature-text">Every campaign gets faster. Every project builds on the last.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="modules-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Three Modules</div>
+                <h2 class="section-title">Your Learning Path</h2>
+                <p class="section-description">Master AI-powered marketing in 2 weeks. Three modules. 18 lessons. Real transformations.</p>
+            </div>
+
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-number">0</div>
+                    <div class="module-title">Getting Started</div>
+                    <p class="module-description">Set up Claude Code and establish your foundation for success.</p>
+                    <div class="lesson-count">3 Lessons • 30 minutes</div>
+                    <div class="lessons-preview">
+                        <div class="lesson-item">Introduction</div>
+                        <div class="lesson-item">Installation</div>
+                        <div class="lesson-item">Start & Clone</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">1</div>
+                    <div class="module-title">Core Concepts</div>
+                    <p class="module-description">Master AI agents, automation, and real marketing workflows.</p>
+                    <div class="lesson-count">7 Lessons • 3-4 hours</div>
+                    <div class="lessons-preview">
+                        <div class="lesson-item">Welcome to MarketFlow</div>
+                        <div class="lesson-item">Working with Files</div>
+                        <div class="lesson-item">First Tasks</div>
+                        <div class="lesson-item">+ 4 more lessons</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">2</div>
+                    <div class="module-title">Advanced Apps</div>
+                    <p class="module-description">Execute real campaigns end-to-end. Strategy to analytics.</p>
+                    <div class="lesson-count">6 Lessons • 4-5 hours</div>
+                    <div class="lessons-preview">
+                        <div class="lesson-item">Campaign Briefs</div>
+                        <div class="lesson-item">Content Strategy</div>
+                        <div class="lesson-item">Marketing Copy</div>
+                        <div class="lesson-item">+ 3 more lessons</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Proven Results</div>
+                <h2 class="section-title">Real Impact</h2>
+                <p class="section-description">Measurable results from marketers who've completed the course.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Campaign Speed</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">5x</div>
+                    <div class="stat-label">Monthly Output</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">+65%</div>
+                    <div class="stat-label">Quality Scores</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">89%</div>
+                    <div class="stat-label">Consistency</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Marketing?</h2>
+            <p>Start with Module 0 today. Master Claude Code in 2 weeks. Join hundreds of marketers shipping faster.</p>
+            <a href="module-0/0.0-introduction.html" class="cta-button">Begin Course →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Claude Code for Marketers</strong> — An open-source course for modern marketers</p>
+        <p><a href="https://github.com">GitHub</a> | <a href="#">Documentation</a> | <a href="#">Community</a></p>
+    </footer>
+</body>
+</html>
