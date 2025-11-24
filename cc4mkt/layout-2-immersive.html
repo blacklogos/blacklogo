@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for Marketers - Immersive Layout</title>
+    <meta name="description" content="Master AI-powered marketing with Claude Code. Learn campaign planning, content creation, and automation.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --accent: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gray-300);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gray-400);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 100px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.35em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .button-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .button-primary:hover {
+            background: var(--gray-100);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .button-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .button-dark {
+            background: var(--primary);
+            color: white;
+        }
+
+        .button-dark:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Path Section */
+        .path-section {
+            max-width: 1200px;
+            margin: -40px auto 0;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .path-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .path-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 0;
+        }
+
+        .step {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-300);
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            font-weight: 700;
+            font-size: 1.5em;
+            border-radius: 50%;
+            margin: 0 auto 12px;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .step-description {
+            font-size: 0.85em;
+            color: var(--gray-600);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-pretitle {
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            font-size: 1.1em;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .feature {
+            padding: 32px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 12px 12px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary);
+        }
+
+        .feature:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Modules Section */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .module {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .module:hover {
+            border-color: var(--primary);
+            box-shadow: 0 16px 32px rgba(37, 99, 235, 0.1);
+        }
+
+        .module-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 24px;
+            font-size: 1.5em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .module-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        .module-body {
+            padding: 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .module-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .module-description {
+            color: var(--gray-600);
+            margin-bottom: 24px;
+            font-size: 0.95em;
+            flex: 1;
+        }
+
+        .lessons-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lesson-link {
+            display: block;
+            padding: 10px 12px;
+            background: var(--gray-50);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--gray-700);
+            font-size: 0.9em;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .lesson-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            padding-left: 16px;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: white;
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            color: var(--gray-600);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-400);
+            padding: 48px 24px;
+            text-align: center;
+            border-top: 1px solid var(--gray-800);
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .path-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .step:not(:last-child)::after {
+                content: '↓';
+                position: static;
+                transform: none;
+                display: block;
+                margin: 8px 0;
+                color: var(--gray-300);
+            }
+
+            .features-grid,
+            .modules-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .path-card {
+                padding: 24px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Claude Code for Marketers</h1>
+            <p>Transform your marketing workflow. Automate campaigns, generate content, and analyze data 10x faster with AI.</p>
+            <div class="hero-cta">
+                <a href="module-0/0.0-introduction.html" class="button button-primary">Start Course →</a>
+                <a href="#" class="button button-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Path Section -->
+    <div class="path-section">
+        <div class="path-card">
+            <div class="path-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Learn</div>
+                    <div class="step-description">Master the fundamentals through 18 structured lessons</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Practice</div>
+                    <div class="step-description">Apply concepts to real marketing workflows</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Master</div>
+                    <div class="step-description">Build advanced AI-powered campaigns</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What You'll Learn -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pretitle">Core Skills</div>
+                <h2 class="section-title">What You'll Learn</h2>
+                <p class="section-subtitle">Gain practical skills that compound your marketing productivity with every project.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">10x Faster Workflows</div>
+                    <div class="feature-description">Create campaign briefs and content in minutes, not hours. Automate your entire workflow.</div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Quality at Scale</div>
+                    <div class="feature-description">Get AI feedback from multiple perspectives. Consistently deliver excellent marketing.</div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Custom AI Agents</div>
+                    <div class="feature-description">Build specialized agents for brand voice, SEO, copywriting, and more.</div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Data-Driven Insights</div>
+                    <div class="feature-description">Analyze campaign performance and extract actionable insights instantly.</div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-title">Consistent Brand Voice</div>
+                    <div class="feature-description">Maintain brand consistency across all materials with intelligent agents.</div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-title">Ship More Campaigns</div>
+                    <div class="feature-description">Focus on strategy while AI handles repetitive work. Execute more, faster.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Complete Modules</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Interactive Lessons</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Free & Open Source</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">10x</div>
+                    <div class="stat-label">Faster Workflows</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pretitle">Learn By Doing</div>
+                <h2 class="section-title">Course Modules</h2>
+                <p class="section-subtitle">Three comprehensive modules that take you from beginner to advanced marketer.</p>
+            </div>
+
+            <div class="modules-grid">
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">0</div>
+                        <div>Getting Started</div>
+                    </div>
+                    <div class="module-body">
+                        <div class="module-title">Module 0</div>
+                        <p class="module-description">Set up your environment and prepare to master Claude Code for marketing.</p>
+                        <div class="lessons-list">
+                            <a href="module-0/0.0-introduction.html" class="lesson-link">0.0 Introduction</a>
+                            <a href="module-0/0.1-installation.html" class="lesson-link">0.1 Installation</a>
+                            <a href="module-0/0.2-start-clone.html" class="lesson-link">0.2 Start & Clone</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">1</div>
+                        <div>Core Concepts</div>
+                    </div>
+                    <div class="module-body">
+                        <div class="module-title">Module 1</div>
+                        <p class="module-description">Master fundamentals with marketing-specific examples and real-world workflows.</p>
+                        <div class="lessons-list">
+                            <a href="module-1/1.1-welcome.html" class="lesson-link">1.1 Welcome to MarketFlow</a>
+                            <a href="module-1/1.2-working-with-files.html" class="lesson-link">1.2 Working with Files</a>
+                            <a href="module-1/1.3-first-tasks.html" class="lesson-link">1.3 First Tasks</a>
+                            <a href="module-1/1.4-agents.html" class="lesson-link">1.4 Using Agents</a>
+                            <a href="module-1/1.5-custom-agents.html" class="lesson-link">1.5 Custom Agents</a>
+                            <a href="module-1/1.6-project-memory.html" class="lesson-link">1.6 Project Memory</a>
+                            <a href="module-1/1.7-navigation.html" class="lesson-link">1.7 Navigation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">2</div>
+                        <div>Advanced Apps</div>
+                    </div>
+                    <div class="module-body">
+                        <div class="module-title">Module 2</div>
+                        <p class="module-description">Apply Claude Code to real marketing challenges and advanced workflows.</p>
+                        <div class="lessons-list">
+                            <a href="module-2/2.1-campaign-brief.html" class="lesson-link">2.1 Campaign Briefs</a>
+                            <a href="module-2/2.2-content-strategy.html" class="lesson-link">2.2 Content Strategy</a>
+                            <a href="module-2/2.3-marketing-copy.html" class="lesson-link">2.3 Marketing Copy</a>
+                            <a href="module-2/2.4-analytics.html" class="lesson-link">2.4 Analytics</a>
+                            <a href="module-2/2.5-competitive-analysis.html" class="lesson-link">2.5 Competitive Analysis</a>
+                            <a href="module-2/2.6-seo-optimization.html" class="lesson-link">2.6 SEO Optimization</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus -->
+    <section style="background: var(--gray-100);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pretitle">Exclusive</div>
+                <h2 class="section-title">Bonus Templates</h2>
+                <p class="section-subtitle">Professional business plan templates designed for IT service providers.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-title">Ready-to-Use Templates</div>
+                    <div class="feature-description">Complete planning frameworks with strategic foundations and quarterly reviews.</div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">AI-Accelerated</div>
+                    <div class="feature-description">Every section includes Claude Code prompts to save 60-70% of planning time.</div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">Budget Intelligence</div>
+                    <div class="feature-description">ROI calculations, scenario planning, and executive justification included.</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="bonus/index.html" class="button button-dark">Access Bonus Templates →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Marketing?</h2>
+            <p>Start with Module 0 and master AI-powered marketing in 2 weeks. Hundreds of marketers are already shipping faster with Claude Code.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="module-0/0.0-introduction.html" class="button button-dark">Start Course →</a>
+                <a href="#" class="button button-secondary" style="background: var(--gray-100); color: var(--gray-900); border: none;">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Claude Code for Marketers</strong></p>
+            <p>An open-source interactive course for modern marketers | MIT License</p>
+            <p style="margin-top: 16px;"><a href="https://github.com">GitHub</a> | <a href="https://docs.anthropic.com">Claude Docs</a> | <a href="#">Community</a></p>
+        </div>
+    </footer>
+</body>
+</html>

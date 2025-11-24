@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for Marketers - Agent Personas</title>
+    <meta name="description" content="Meet Solo Sam, Manager Maria, and Steve. Real marketers. Real transformations with Claude Code.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #faf8f3;
+            --warm-gray: #3d3a34;
+            --terracotta: #c85a3a;
+            --sage: #6b8e71;
+            --sand: #e8dcc8;
+            --accent-gold: #d4a574;
+            --dark-bg: #2a2520;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            background: var(--cream);
+            color: var(--warm-gray);
+            line-height: 1.8;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--sand);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--terracotta);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--sage);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--warm-gray) 0%, var(--dark-bg) 100%);
+            color: var(--cream);
+            padding: 100px 24px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.8em;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0.9;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .hero-tagline {
+            font-size: 1.1em;
+            opacity: 0.85;
+            margin-top: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--terracotta);
+            color: var(--cream);
+            padding: 16px 40px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--terracotta);
+        }
+
+        .cta-primary:hover {
+            background: transparent;
+            color: var(--terracotta);
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Personas Section */
+        .personas-section {
+            padding: 120px 0;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-intro h2 {
+            font-size: 2.8em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-intro p {
+            font-size: 1.2em;
+            color: var(--sage);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .persona-card {
+            background: white;
+            border: 1px solid var(--sand);
+            padding: 0;
+            border-radius: 2px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .persona-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(200, 90, 58, 0.15);
+            border-color: var(--terracotta);
+        }
+
+        .persona-header {
+            background: linear-gradient(135deg, var(--terracotta) 0%, var(--sage) 100%);
+            padding: 60px 32px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .persona-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .persona-avatar {
+            font-size: 4em;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .persona-name {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .persona-title {
+            font-size: 1em;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .persona-body {
+            padding: 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .persona-story {
+            margin-bottom: 24px;
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: var(--warm-gray);
+        }
+
+        .persona-challenge {
+            background: var(--sand);
+            padding: 16px;
+            border-left: 4px solid var(--terracotta);
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 0.95em;
+            color: var(--warm-gray);
+        }
+
+        .persona-transformation {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--sand);
+        }
+
+        .transformation-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--sage);
+            margin-bottom: 12px;
+        }
+
+        .transformation-stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .stat-label {
+            color: var(--warm-gray);
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: var(--terracotta);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Learning Path */
+        .learning-path {
+            background: white;
+            padding: 80px 0;
+            border-top: 1px solid var(--sand);
+            border-bottom: 1px solid var(--sand);
+        }
+
+        .path-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .path-intro h2 {
+            font-size: 2.8em;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .path-intro p {
+            font-size: 1.15em;
+            color: var(--sage);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .modules-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--terracotta) 0%, var(--sage) 100%);
+            transform: translateX(-1px);
+        }
+
+        .timeline-modules {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            grid-template-columns: 1fr 1fr;
+            direction: rtl;
+        }
+
+        .timeline-item:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--cream);
+            border: 3px solid var(--terracotta);
+            border-radius: 50%;
+            z-index: 2;
+            top: 40px;
+        }
+
+        .module-content {
+            padding: 32px;
+            background: var(--sand);
+            border-radius: 2px;
+        }
+
+        .module-number {
+            display: inline-block;
+            background: var(--terracotta);
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .module-content h3 {
+            font-size: 1.6em;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .module-content p {
+            font-size: 0.95em;
+            color: var(--warm-gray);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .lesson-count {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--sage);
+        }
+
+        /* Features */
+        .features-section {
+            padding: 100px 0;
+        }
+
+        .features-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .features-intro h2 {
+            font-size: 2.8em;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: white;
+            border: 1px solid var(--sand);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--terracotta);
+            box-shadow: 0 12px 24px rgba(200, 90, 58, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            font-size: 0.95em;
+            color: var(--sage);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--warm-gray) 0%, var(--dark-bg) 100%);
+            color: var(--cream);
+            padding: 80px 24px;
+            text-align: center;
+            margin: 80px 0 0 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.15em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--warm-gray);
+            color: var(--sand);
+            padding: 40px 24px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .persona-card {
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .persona-card:nth-child(1) { animation-delay: 0.1s; }
+        .persona-card:nth-child(2) { animation-delay: 0.2s; }
+        .persona-card:nth-child(3) { animation-delay: 0.3s; }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .timeline-line {
+                left: 20px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding-left: 80px;
+            }
+
+            .timeline-item:nth-child(even) {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .section-intro h2,
+            .path-intro h2,
+            .features-intro h2 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .personas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-primary {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Three Marketers. One Course. Real Transformations.</h1>
+            <p class="hero-subtitle">Meet Solo Sam, Manager Maria, and Steve.</p>
+            <p class="hero-tagline">They started where you are. Now they're shipping campaigns 10x faster with Claude Code.</p>
+            <a href="#personas" class="cta-primary">Meet Them →</a>
+        </div>
+    </section>
+
+    <!-- Personas -->
+    <section class="personas-section" id="personas">
+        <div class="container">
+            <div class="section-intro">
+                <h2>The Journey</h2>
+                <p>Three real stories. Three different paths. One powerful tool that changed everything.</p>
+            </div>
+
+            <div class="personas-grid">
+                <!-- Solo Sam -->
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">🚀</div>
+                        <div class="persona-name">Solo Sam</div>
+                        <div class="persona-title">Startup Founder, 28</div>
+                    </div>
+                    <div class="persona-body">
+                        <p class="persona-story">
+                            Sam is doing everything alone at their startup. Every task takes forever. Campaign briefs, content, emails, social posts—it's all coming from one person's brain.
+                        </p>
+                        <div class="persona-challenge">
+                            "I was spending 40 hours a week on marketing tasks that should take 4. I had no time for strategy or actually talking to customers."
+                        </div>
+                        <div class="persona-transformation">
+                            <div class="transformation-title">After Claude Code</div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Campaign time</span>
+                                <span class="stat-value">40h → 4h</span>
+                            </div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Campaigns/month</span>
+                                <span class="stat-value">1 → 5</span>
+                            </div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Quality scores</span>
+                                <span class="stat-value">+65%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manager Maria -->
+                <div class="persona-card">
+                    <div class="persona-header" style="background: linear-gradient(135deg, var(--sage) 0%, #5a7a63 100%);">
+                        <div class="persona-avatar">👥</div>
+                        <div class="persona-name">Manager Maria</div>
+                        <div class="persona-title">Marketing Manager, 38</div>
+                    </div>
+                    <div class="persona-body">
+                        <p class="persona-story">
+                            Maria leads a team of 4 marketers. Every day is a juggling act between different brands, tones, and quality standards. Consistency is her biggest challenge.
+                        </p>
+                        <div class="persona-challenge">
+                            "My team was producing inconsistent work. No two emails had the same voice. We needed a system that could enforce quality at scale."
+                        </div>
+                        <div class="persona-transformation">
+                            <div class="transformation-title">After Claude Code</div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Consistency score</span>
+                                <span class="stat-value">42% → 89%</span>
+                            </div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Review cycles</span>
+                                <span class="stat-value">5 → 1</span>
+                            </div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Team morale</span>
+                                <span class="stat-value">↑ 40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steve the Solopreneur -->
+                <div class="persona-card">
+                    <div class="persona-header" style="background: linear-gradient(135deg, var(--accent-gold) 0%, var(--terracotta) 100%);">
+                        <div class="persona-avatar">💼</div>
+                        <div class="persona-name">Steve</div>
+                        <div class="persona-title">Consultant, 32</div>
+                    </div>
+                    <div class="persona-body">
+                        <p class="persona-story">
+                            Steve serves 5 clients as a marketing consultant. Each client expects premium work. Time is his scarcest resource, and his reputation depends on quality.
+                        </p>
+                        <div class="persona-challenge">
+                            "With 5 clients and the same 24 hours, something had to give. Either I'd sacrifice quality or I'd burn out. There was no third option."
+                        </div>
+                        <div class="persona-transformation">
+                            <div class="transformation-title">After Claude Code</div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Client satisfaction</span>
+                                <span class="stat-value">8.2 → 9.5</span>
+                            </div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">Time per deliverable</span>
+                                <span class="stat-value">8h → 2h</span>
+                            </div>
+                            <div class="transformation-stat">
+                                <span class="stat-label">New clients</span>
+                                <span class="stat-value">+3 this quarter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+        <div class="container">
+            <div class="path-intro">
+                <h2>Their Learning Path</h2>
+                <p>Three modules designed to take you from setup to mastery, exactly like it worked for them.</p>
+            </div>
+
+            <div class="modules-timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-modules">
+                    <div class="timeline-item">
+                        <div></div>
+                        <div class="module-content">
+                            <div class="timeline-dot"></div>
+                            <div class="module-number">0</div>
+                            <h3>Getting Started</h3>
+                            <p>Install Claude Code, clone the course, and understand the foundations of AI-powered marketing workflows.</p>
+                            <div class="lesson-count">3 Lessons • 30 minutes</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="module-content">
+                            <div class="timeline-dot"></div>
+                            <div class="module-number">1</div>
+                            <h3>Core Concepts</h3>
+                            <p>Master the fundamentals with real marketing examples. Learn agents, automation, and how to use AI for your specific role.</p>
+                            <div class="lesson-count">7 Lessons • 3-4 hours</div>
+                        </div>
+                        <div></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div></div>
+                        <div class="module-content">
+                            <div class="timeline-dot"></div>
+                            <div class="module-number">2</div>
+                            <h3>Advanced Applications</h3>
+                            <p>Execute real campaigns. Campaign briefs, content strategy, competitive analysis, and analytics—all powered by AI.</p>
+                            <div class="lesson-count">6 Lessons • 4-5 hours</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-intro">
+                <h2>What You'll Master</h2>
+                <p>The same skills that transformed Sam, Maria, and Steve's careers.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">Speed & Efficiency</div>
+                    <p class="feature-description">Automate repetitive tasks. Generate campaigns in minutes, not days. Ship more while working less.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Quality & Consistency</div>
+                    <p class="feature-description">AI agents ensure brand consistency. Get feedback from multiple perspectives. Never compromise on quality.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <div class="feature-title">Strategic Thinking</div>
+                    <p class="feature-description">Partner with AI for strategic analysis. Understand your market. Make data-driven decisions faster.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Analytics & Insights</div>
+                    <p class="feature-description">Turn data into action. Analyze campaign performance instantly. Iterate and improve continuously.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Custom Agents</div>
+                    <p class="feature-description">Build your own AI agents. Brand voice guardian. SEO specialist. Copywriter. Your AI team.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-title">Career Growth</div>
+                    <p class="feature-description">Focus on strategy and creative work. Become the AI-empowered marketer your industry needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for Your Transformation?</h2>
+            <p>Start with Module 0 and join Solo Sam, Manager Maria, and Steve on the path to 10x marketing productivity.</p>
+            <a href="module-0/0.0-introduction.html" class="cta-primary">Begin Your Journey →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Claude Code for Marketers</strong> — An open-source course for modern marketing teams</p>
+        <p>Built with warmth and intention. <a href="https://github.com">GitHub</a> | <a href="#">Docs</a> | <a href="#">Community</a></p>
+    </footer>
+</body>
+</html>

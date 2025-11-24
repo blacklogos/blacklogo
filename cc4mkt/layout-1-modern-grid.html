@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for Marketers - Modern Grid Layout</title>
+    <meta name="description" content="Master AI-powered marketing with Claude Code. Learn campaign planning, content creation, and automation.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header .tagline {
+            font-size: 1.25em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #d1d5db;
+        }
+
+        .header-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #d1d5db;
+            margin-top: 8px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            padding: 30px 0;
+            background: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            font-size: 0.95em;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            color: #000;
+            border-bottom-color: #fbbf24;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-label {
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fbbf24;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 16px;
+        }
+
+        .section-description {
+            font-size: 1.1em;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Grid Layouts */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #fbbf24;
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .card-description {
+            color: #6b7280;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        /* Module Cards */
+        .module-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+
+        .module-card {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #fbbf24 0%, #f97316 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .module-card:hover::before {
+            opacity: 1;
+        }
+
+        .module-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .module-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .module-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .module-description {
+            color: #6b7280;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .lessons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lesson {
+            padding: 10px 12px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            font-size: 0.9em;
+            color: #374151;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lesson:hover {
+            background: #fef3c7;
+            border-color: #fbbf24;
+            color: #111827;
+        }
+
+        .lesson::before {
+            content: '→';
+            color: #fbbf24;
+            font-weight: bold;
+            min-width: 16px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 16px;
+            padding: 60px;
+            text-align: center;
+            color: white;
+            margin: 80px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(251, 191, 36, 0.3);
+        }
+
+        .button-secondary {
+            background: white;
+            color: #fbbf24;
+        }
+
+        .button-secondary:hover {
+            background: #f9fafb;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 80px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        footer a {
+            color: #fbbf24;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            .header-stats {
+                gap: 20px;
+            }
+
+            .cta-section {
+                padding: 40px 24px;
+            }
+
+            .cards-grid,
+            .module-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Claude Code for Marketers</h1>
+            <p class="tagline">Master AI-powered marketing workflows. Automate campaigns, generate content, analyze data—all in minutes.</p>
+            
+            <div class="header-stats">
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Complete Modules</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Lessons</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Faster Workflows</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#what-you-get">What You Get</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#why-claude-code">Why Claude Code</a>
+        <a href="#get-started">Get Started</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+    </nav>
+
+    <main class="container">
+        <!-- What You Get -->
+        <section class="section" id="what-you-get">
+            <div class="section-header">
+                <div class="section-label">Core Benefits</div>
+                <h2 class="section-title">What You'll Get</h2>
+                <p class="section-description">
+                    Learn the exact techniques used by top marketing teams to work smarter and ship faster.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-title">10x Faster</div>
+                    <p class="card-description">Automate campaign briefs, content creation, and competitive analysis in minutes instead of hours.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-title">Better Quality</div>
+                    <p class="card-description">Get AI-powered feedback from multiple perspectives to improve your campaigns and copy.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <div class="card-title">Ship More</div>
+                    <p class="card-description">Focus on strategy while AI handles the repetitive work. Execute more campaigns per quarter.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <div class="card-title">Consistent Brand</div>
+                    <p class="card-description">Use custom agents to maintain brand voice across all your marketing materials automatically.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">Data Insights</div>
+                    <p class="card-description">Analyze campaign performance and extract actionable insights in seconds, not hours.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <div class="card-title">Smart Research</div>
+                    <p class="card-description">Conduct competitive analysis and market research faster than ever before with AI assistance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum -->
+        <section class="section" id="curriculum">
+            <div class="section-header">
+                <div class="section-label">Learn By Doing</div>
+                <h2 class="section-title">Course Curriculum</h2>
+                <p class="section-description">
+                    Three comprehensive modules that take you from getting started to advanced marketing applications.
+                </p>
+            </div>
+
+            <div class="module-cards-grid">
+                <div class="module-card">
+                    <div class="module-number">0</div>
+                    <div class="module-title">Getting Started</div>
+                    <p class="module-description">Set up your environment and get ready to master Claude Code for marketing.</p>
+                    <div class="lessons">
+                        <a href="module-0/0.0-introduction.html" class="lesson">Introduction</a>
+                        <a href="module-0/0.1-installation.html" class="lesson">Installation</a>
+                        <a href="module-0/0.2-start-clone.html" class="lesson">Start & Clone</a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">1</div>
+                    <div class="module-title">Core Concepts</div>
+                    <p class="module-description">Master the fundamentals with marketing-specific examples and real-world workflows.</p>
+                    <div class="lessons">
+                        <a href="module-1/1.1-welcome.html" class="lesson">Welcome to MarketFlow</a>
+                        <a href="module-1/1.2-working-with-files.html" class="lesson">Working with Files</a>
+                        <a href="module-1/1.3-first-tasks.html" class="lesson">First Tasks</a>
+                        <a href="module-1/1.4-agents.html" class="lesson">Using Agents</a>
+                        <a href="module-1/1.5-custom-agents.html" class="lesson">Custom Agents</a>
+                        <a href="module-1/1.6-project-memory.html" class="lesson">Project Memory</a>
+                        <a href="module-1/1.7-navigation.html" class="lesson">Navigation</a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-number">2</div>
+                    <div class="module-title">Advanced Applications</div>
+                    <p class="module-description">Apply Claude Code to real-world marketing challenges and complex workflows.</p>
+                    <div class="lessons">
+                        <a href="module-2/2.1-campaign-brief.html" class="lesson">Campaign Briefs</a>
+                        <a href="module-2/2.2-content-strategy.html" class="lesson">Content Strategy</a>
+                        <a href="module-2/2.3-marketing-copy.html" class="lesson">Marketing Copy</a>
+                        <a href="module-2/2.4-analytics.html" class="lesson">Analytics</a>
+                        <a href="module-2/2.5-competitive-analysis.html" class="lesson">Competitive Analysis</a>
+                        <a href="module-2/2.6-seo-optimization.html" class="lesson">SEO Optimization</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Claude Code -->
+        <section class="section" id="why-claude-code">
+            <div class="section-header">
+                <div class="section-label">The Difference</div>
+                <h2 class="section-title">Why Claude Code?</h2>
+                <p class="section-description">
+                    Claude Code isn't just another tool—it's a new way to work with AI that compounds your productivity over time.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <div class="card-title">Advanced AI Reasoning</div>
+                    <p class="card-description">Claude understands complex marketing contexts and provides thoughtful, strategic suggestions.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <div class="card-title">Built for Workflows</div>
+                    <p class="card-description">Designed to handle real marketing workflows from planning through execution and analysis.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <div class="card-title">Compounds Over Time</div>
+                    <p class="card-description">Each campaign teaches AI more about your brand, making the next one even faster.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Privacy First</div>
+                    <p class="card-description">Your marketing data stays with you. Full control over sensitive campaign information.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <div class="card-title">Future Ready</div>
+                    <p class="card-description">Claude is constantly improving. Your skills today will be even more powerful tomorrow.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <div class="card-title">Community Driven</div>
+                    <p class="card-description">Learn from and share workflows with thousands of marketers using Claude Code.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section" id="get-started">
+            <h2>Ready to Transform Your Marketing?</h2>
+            <p>Start with Module 0 and master AI-powered marketing in 2 weeks. Hundreds of marketers are already shipping faster.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="module-0/0.0-introduction.html" class="button">Start Course →</a>
+                <a href="#" class="button button-secondary">View on GitHub →</a>
+            </div>
+        </section>
+
+        <!-- Bonus Section -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-label">Exclusive</div>
+                <h2 class="section-title">Bonus Material</h2>
+                <p class="section-description">
+                    Access professional business plan templates designed specifically for IT service providers.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <div class="card-title">Planning Templates</div>
+                    <p class="card-description">Strategic foundation, budget justification, and quarterly review frameworks ready to use.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <div class="card-title">AI Integrated</div>
+                    <p class="card-description">Every section includes Claude Code prompts to accelerate your planning by 60-70%.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <div class="card-title">Budget Frameworks</div>
+                    <p class="card-description">ROI calculations, scenario planning, and executive justification tools included.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="bonus/index.html" class="button">Access Templates →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>Claude Code for Marketers</strong></p>
+            <p>An open-source interactive course for modern marketers | MIT License</p>
+            <p style="margin-top: 20px;"><a href="https://github.com">GitHub</a> | <a href="https://docs.anthropic.com">Documentation</a></p>
+        </div>
+    </footer>
+</body>
+</html>
