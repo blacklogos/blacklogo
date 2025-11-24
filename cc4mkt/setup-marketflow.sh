@@ -42,12 +42,12 @@ echo "📄 Creating sample files..."
 
 # Create CLAUDE.md (Project Memory)
 cat > MarketFlow/CLAUDE.md << 'EOF'
-# FocusFlow Marketing Project Memory
+# Planerio Marketing Project Memory
 
 ## Product Information
 
-**Product Name**: FocusFlow 2.0
-**Category**: Productivity software for remote teams
+**Product Name**: Planerio 2.0
+**Category**: Productivity software for enterprise and large corporations
 **Launch**: Q2 2024
 
 ### Key Features
@@ -62,7 +62,7 @@ cat > MarketFlow/CLAUDE.md << 'EOF'
 - **Enterprise**: Custom pricing (large organizations)
 
 ### Positioning
-"Simple productivity for modern remote teams. Get focused in 10 minutes, not 10 days."
+"Simple productivity for modern enterprise and large corporations. Get focused in 10 minutes, not 10 days."
 
 ## Brand Voice
 
@@ -125,7 +125,7 @@ cat > MarketFlow/CLAUDE.md << 'EOF'
 3. **Works With Your Tools**: "50+ integrations with tools you already use"
 
 ### Proof Points
-- 5,000+ remote teams using FocusFlow
+- 5,000+ enterprise and large corporations using Planerio
 - 4.8/5 star rating from 2,500+ reviews
 - Average user saves 2 hours per day
 - 10-minute average setup time
@@ -170,7 +170,7 @@ cat > MarketFlow/CLAUDE.md << 'EOF'
 
 ## Campaign Context
 
-### Current Campaign: FocusFlow 2.0 Launch
+### Current Campaign: Planerio 2.0 Launch
 - **Timeline**: 6 weeks (April 15 - May 31)
 - **Budget**: $50,000
 - **Goal**: 500 trial signups
@@ -186,7 +186,7 @@ cat > MarketFlow/CLAUDE.md << 'EOF'
 
 ## Notes for Claude
 
-When creating marketing content for FocusFlow:
+When creating marketing content for Planerio:
 - Always maintain our friendly, energetic, empowering brand voice
 - Focus on benefits, not just features
 - Emphasize simplicity and speed (10-minute setup)
@@ -200,7 +200,7 @@ echo "✅ Created CLAUDE.md (project memory)"
 
 # Create brand guidelines
 cat > MarketFlow/brand/brand-guidelines.md << 'EOF'
-# FocusFlow Brand Guidelines
+# Planerio Brand Guidelines
 
 ## Brand Voice
 
@@ -233,12 +233,12 @@ cat > MarketFlow/brand/brand-guidelines.md << 'EOF'
 ## Messaging Framework
 
 ### Value Proposition
-"Simple productivity for modern remote teams"
+"Simple productivity for modern enterprise and large corporations"
 
 ### Key Messages
 1. AI-powered prioritization (unique differentiator)
 2. 10-minute setup (vs competitors' 2+ hours)
-3. Built for remote teams (not retrofitted)
+3. Built for enterprise and large corporations (not retrofitted)
 
 ### Taglines
 - Primary: "Get focused and move forward"
@@ -266,24 +266,24 @@ cat > MarketFlow/brand/brand-guidelines.md << 'EOF'
 ## Examples
 
 ### Good ✅
-"Your team has 100 tasks. FocusFlow's AI tells you which 3 to tackle first."
+"Your team has 100 tasks. Planerio's AI tells you which 3 to tackle first."
 
 ### Bad ❌
-"FocusFlow leverages machine learning algorithms to optimize task allocation across organizational workflows."
+"Planerio leverages machine learning algorithms to optimize task allocation across organizational workflows."
 
 ## Voice & Tone Examples
 
 ### Website Hero
 **Good**: "Save 2 hours every day with AI-powered task prioritization"
-**Bad**: "Maximize productivity through intelligent task management"
+**Bad**: "Maximize productivity through intelligent portfolio management"
 
 ### Email Subject
 **Good**: "Your first productivity win is 5 minutes away"
-**Bad**: "Introducing FocusFlow 2.0: New Features Available"
+**Bad**: "Introducing Planerio 2.0: New Features Available"
 
 ### Social Post
-**Good**: "We asked 100 remote teams: What kills your productivity? The #1 answer: 'Not knowing what to work on first.' That's why we built FocusFlow."
-**Bad**: "FocusFlow helps teams be more productive. Learn more: [link]"
+**Good**: "We asked 100 enterprise and large corporations: What kills your productivity? The #1 answer: 'Not knowing what to work on first.' That's why we built Planerio."
+**Bad**: "Planerio helps teams be more productive. Learn more: [link]"
 
 ### Ad Copy
 **Good**: "Get your team focused in 10 minutes. No training needed."
@@ -294,7 +294,7 @@ echo "✅ Created brand guidelines"
 
 # Create sample campaign brief
 cat > MarketFlow/campaigns/2024-q2-focusflow-launch/campaign-brief.md << 'EOF'
-# FocusFlow 2.0 Launch Campaign Brief
+# Planerio 2.0 Launch Campaign Brief
 
 ## Campaign Overview
 
@@ -328,7 +328,7 @@ Highlight affordability, simplicity, professional image
 ## Channel Strategy
 
 ### Paid Search ($15K - 30%)
-- Target keywords: "team productivity software", "task management app"
+- Target keywords: "team productivity software", "portfolio management app"
 - Expected: 200 trials @ $75 CPA
 
 ### LinkedIn Ads ($12K - 24%)
@@ -414,7 +414,7 @@ The #1 productivity killer? Not knowing what to work on first.
 
 **Result**: Teams using AI prioritization save an average of 2 hours per day (Harvard Business Review, 2023).
 
-**How to implement**: Tools like FocusFlow use AI to automatically prioritize tasks. Set it up in 10 minutes, save hours every day.
+**How to implement**: Tools like Planerio use AI to automatically prioritize tasks. Set it up in 10 minutes, save hours every day.
 
 ## 2. Reduce Context Switching
 
@@ -496,7 +496,7 @@ Your team shouldn't do robot work.
 - Meeting scheduling
 - Approval workflows
 
-**Tools**: Zapier, Make, FocusFlow integrations
+**Tools**: Zapier, Make, Planerio integrations
 
 **Result**: Save 10+ hours per week on manual tasks
 
@@ -536,7 +536,7 @@ Bad tools kill productivity. Great tools amplify it.
 - Scales with your team
 - Actual ROI (measurable time savings)
 
-**Example**: Teams switching to FocusFlow from Asana save 2 hours/day on average due to simpler interface and AI prioritization.
+**Example**: Teams switching to Planerio from Asana save 2 hours/day on average due to simpler interface and AI prioritization.
 
 ## Measuring Success
 
@@ -564,19 +564,19 @@ Start with one strategy today. Your team will thank you.
 
 ---
 
-**Try FocusFlow Free**: See how AI-powered prioritization and team visibility can transform your team's productivity. [Start 14-day free trial →]
+**Try Planerio Free**: See how AI-powered prioritization and team visibility can transform your team's productivity. [Start 14-day free trial →]
 EOF
 
 echo "✅ Created sample blog post"
 
 # Create sample email
 cat > MarketFlow/content/email/2024-04-welcome-email-v1.md << 'EOF'
-# Welcome Email - FocusFlow Trial Signup
+# Welcome Email - Planerio Trial Signup
 
 **Subject Line Options**:
 1. "Your productivity just got easier ✨"
 2. "Your first win is 5 minutes away"
-3. "Welcome to FocusFlow, [Name]!"
+3. "Welcome to Planerio, [Name]!"
 
 **Test Winner**: Subject line #2 (42% open rate)
 
@@ -586,7 +586,7 @@ cat > MarketFlow/content/email/2024-04-welcome-email-v1.md << 'EOF'
 
 Hi [Name],
 
-Welcome to FocusFlow! You're about to save a lot of time.
+Welcome to Planerio! You're about to save a lot of time.
 
 **Your first win is 5 minutes away.** Here's how to get started:
 
@@ -605,14 +605,14 @@ Productivity is better together. Add your teammates for real-time collaboration.
 
 **Need help?** Reply to this email. We're here for you.
 
-**Want inspiration?** Check out how other teams are using FocusFlow:
+**Want inspiration?** Check out how other teams are using Planerio:
 - Sarah's team cut meetings by 50%
 - Mike's startup went from chaos to clarity
 - Jennifer saves 8 hours per week
 
 Here's to getting focused,
 
-The FocusFlow Team
+The Planerio Team
 
 P.S. Your trial includes everything. No credit card required. Cancel anytime.
 
@@ -632,9 +632,9 @@ cat > MarketFlow/content/social/2024-04-linkedin-launch-series.md << 'EOF'
 
 ## Post 1: Launch Announcement (April 15)
 
-We're excited to announce FocusFlow 2.0! 🎉
+We're excited to announce Planerio 2.0! 🎉
 
-After months of listening to remote teams, we built something special:
+After months of listening to enterprise and large corporations, we built something special:
 
 ✅ AI-powered task prioritization (tells you what to work on next)
 ✅ Team visibility dashboard (see everything in one place)
@@ -656,7 +656,7 @@ Ready to get focused? Start your free 14-day trial (no credit card needed):
 
 - Alex Chen, Founder @ StartupXYZ
 
-Here's how Alex's 12-person team transformed their productivity with FocusFlow:
+Here's how Alex's 12-person team transformed their productivity with Planerio:
 
 **Before**:
 ❌ Using 8 different tools
@@ -664,7 +664,7 @@ Here's how Alex's 12-person team transformed their productivity with FocusFlow:
 ❌ 3 status meetings per week
 ❌ Context switching killing flow
 
-**After** (with FocusFlow):
+**After** (with Planerio):
 ✅ One platform for everything
 ✅ AI prioritizes tasks automatically
 ✅ Reduced to 1 quick standup
@@ -674,7 +674,7 @@ Here's how Alex's 12-person team transformed their productivity with FocusFlow:
 
 Read the full case study: [link]
 
-Want similar results? Try FocusFlow free for 14 days: [link]
+Want similar results? Try Planerio free for 14 days: [link]
 
 #casestudy #startup #productivity
 
@@ -701,7 +701,7 @@ But that's like giving directions by showing someone a map of the entire country
 
 That's what AI-powered prioritization does.
 
-FocusFlow analyzes your tasks and tells everyone what to focus on. The result? Teams save 2 hours per day previously spent deciding what to work on.
+Planerio analyzes your tasks and tells everyone what to focus on. The result? Teams save 2 hours per day previously spent deciding what to work on.
 
 Want to see how it works? Free trial: [link]
 
@@ -725,7 +725,7 @@ Usually answered with:
 
 **Time spent**: 6+ hours per week
 
-FocusFlow's Team Dashboard shows you:
+Planerio's Team Dashboard shows you:
 - Current tasks for each team member
 - Real-time progress updates
 - Blockers and dependencies
@@ -747,7 +747,7 @@ See it in action: [link]
 
 Launch week special: 20% off annual plans ⚡
 
-We launched FocusFlow 2.0 two weeks ago. The response has been incredible:
+We launched Planerio 2.0 two weeks ago. The response has been incredible:
 - 600+ trial signups
 - 4.9/5 average rating
 - "Best productivity tool we've used" (Jennifer M., Manager)
@@ -771,13 +771,13 @@ echo "✅ Created social media content"
 
 # Create sample competitive analysis
 cat > MarketFlow/research/competitive-analysis.md << 'EOF'
-# Competitive Analysis: FocusFlow vs Major Competitors
+# Competitive Analysis: Planerio vs Major Competitors
 
 *Last Updated: April 2024*
 
 ## Executive Summary
 
-FocusFlow competes primarily with Asana, Monday.com, and ClickUp in the team productivity space.
+Planerio competes primarily with Asana, Monday.com, and ClickUp in the team productivity space.
 
 **Our Competitive Advantage**:
 1. Simpler setup (10 min vs 2+ hours)
@@ -794,7 +794,7 @@ FocusFlow competes primarily with Asana, Monday.com, and ClickUp in the team pro
 - Market position: Market leader, enterprise-focused
 
 **Product**:
-- Core: Project and task management
+- Core: Project and portfolio management
 - Strengths: Robust features, integrations, brand recognition
 - Weaknesses: Complex, steep learning curve, expensive at scale
 
@@ -812,7 +812,7 @@ FocusFlow competes primarily with Asana, Monday.com, and ClickUp in the team pro
 - Webinars and events
 
 **Our Positioning Against Asana**:
-- "Asana is powerful but overwhelming. FocusFlow is powerful AND simple."
+- "Asana is powerful but overwhelming. Planerio is powerful AND simple."
 - "10-minute setup vs 2+ hour Asana setup"
 - "Built for teams like yours (10-50 people), not enterprises"
 
@@ -843,7 +843,7 @@ FocusFlow competes primarily with Asana, Monday.com, and ClickUp in the team pro
 - Industry-specific campaigns
 
 **Our Positioning Against Monday.com**:
-- "Monday.com offers 1,000 features. FocusFlow offers the 10 that matter."
+- "Monday.com offers 1,000 features. Planerio offers the 10 that matter."
 - "No overwhelming customization. Works great out of the box."
 - "Better price for small teams"
 
@@ -874,13 +874,13 @@ FocusFlow competes primarily with Asana, Monday.com, and ClickUp in the team pro
 - Bottom-up adoption
 
 **Our Positioning Against ClickUp**:
-- "ClickUp tries to do everything. FocusFlow does one thing brilliantly: focus."
+- "ClickUp tries to do everything. Planerio does one thing brilliantly: focus."
 - "You don't need 1,000 features. You need clarity."
 - "Simple enough to use on day one"
 
 ## Feature Comparison Matrix
 
-| Feature | FocusFlow | Asana | Monday.com | ClickUp |
+| Feature | Planerio | Asana | Monday.com | ClickUp |
 |---------|-----------|-------|------------|---------|
 | AI Task Prioritization | ✅ | ❌ | ❌ | ❌ |
 | Team Dashboard | ✅ | ✅ | ✅ | ✅ |
@@ -896,7 +896,7 @@ FocusFlow competes primarily with Asana, Monday.com, and ClickUp in the team pro
 
 **Simplicity** (Y-axis) vs **Features** (X-axis):
 
-- FocusFlow: High simplicity, Medium features (SWEET SPOT)
+- Planerio: High simplicity, Medium features (SWEET SPOT)
 - Asana: Medium simplicity, High features
 - Monday.com: Low simplicity, High features
 - ClickUp: Low simplicity, Very high features
@@ -922,8 +922,8 @@ FocusFlow competes primarily with Asana, Monday.com, and ClickUp in the team pro
 2. **Emphasize AI feature**: Unique in market, high value
 3. **Add top 10 requested integrations**: Close the gap
 4. **Build migration tools**: Make switching easy
-5. **Create comparison pages**: "FocusFlow vs [Competitor]" SEO
-6. **Case studies from switchers**: "Why we left Asana for FocusFlow"
+5. **Create comparison pages**: "Planerio vs [Competitor]" SEO
+6. **Case studies from switchers**: "Why we left Asana for Planerio"
 
 ## Competitive Battle Cards
 
@@ -934,13 +934,13 @@ echo "✅ Created competitive analysis"
 
 # Create README for MarketFlow project
 cat > MarketFlow/README.md << 'EOF'
-# MarketFlow - FocusFlow 2.0 Launch Campaign
+# MarketFlow - Planerio 2.0 Launch Campaign
 
 This is a sample marketing project for the **Claude Code for Marketers** course.
 
 ## Project Overview
 
-**Product**: FocusFlow 2.0 - Productivity software for remote teams
+**Product**: Planerio 2.0 - Productivity software for enterprise and large corporations
 **Campaign**: Q2 2024 Launch ("Focus Forward")
 **Duration**: 6 weeks (April 15 - May 31, 2024)
 **Budget**: $50,000
@@ -968,7 +968,7 @@ MarketFlow/
 
 ## Getting Started
 
-1. **Read CLAUDE.md first** - This contains all the context about FocusFlow, brand voice, personas, and messaging.
+1. **Read CLAUDE.md first** - This contains all the context about Planerio, brand voice, personas, and messaging.
 
 2. **Review the campaign brief** - Understand the Q2 launch campaign goals and strategy.
 

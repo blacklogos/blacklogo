@@ -55,13 +55,13 @@ Each subagent provides specialized feedback from its unique perspective!
 
 ## Let's Try It: Multi-Perspective Campaign Review
 
-I'm going to show you how subagents work with a real FocusFlow campaign asset.
+I'm going to show you how subagents work with a real Planerio campaign asset.
 
 ### The Asset: Landing Page Copy
 
 Here's a draft landing page headline and subhead:
 
-**Headline**: "FocusFlow 2.0: The Ultimate Productivity Tool"
+**Headline**: "Planerio 2.0: The Ultimate Productivity Tool"
 **Subhead**: "Get more done with our powerful new features including AI task prioritization, team dashboards, and 50+ integrations."
 
 ### Your Turn

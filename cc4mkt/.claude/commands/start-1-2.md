@@ -11,7 +11,7 @@ Welcome to file operations! This is where you'll learn how to organize, find, an
 
 ## Interactive Exercise: Organize Your Campaign
 
-Let's practice with a real scenario. You just received a dump of files from your designer and copywriter for the FocusFlow 2.0 launch:
+Let's practice with a real scenario. You just received a dump of files from your designer and copywriter for the Planerio 2.0 launch:
 
 **Files received**:
 - `final_FINAL_v3.png`

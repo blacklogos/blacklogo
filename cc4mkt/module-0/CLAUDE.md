@@ -75,7 +75,7 @@ This is the onboarding module that gets marketers from zero to their first worki
   - Let them make decisions
 
 **Introduce MarketFlow Context**:
-- Product: FocusFlow 2.0 (productivity app)
+- Product: Planerio 2.0 (project management software)
 - Three personas: Sam, Maria, Steve
 - Realistic launch scenario
 - $50K budget

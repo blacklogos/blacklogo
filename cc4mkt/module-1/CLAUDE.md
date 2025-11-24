@@ -32,7 +32,7 @@ This is where students learn the fundamental concepts that power their marketing
 
 **Teaching Strategy**:
 - Tour the project structure
-- Introduce FocusFlow 2.0 context deeply
+- Introduce Planerio 2.0 context deeply
 - Present three personas (Sam, Maria, Steve)
 - Show existing brand guidelines
 - Let them explore with guidance
@@ -157,7 +157,7 @@ All working simultaneously!
 ```
 Agent: Brand Voice Guardian
 
-Role: Ensure all content matches FocusFlow brand voice
+Role: Ensure all content matches Planerio brand voice
 
 Expertise:
 - Brand voice guidelines (friendly, energetic, empowering)
@@ -192,7 +192,7 @@ Output Format:
 
 **CLAUDE.md Structure**:
 ```
-# FocusFlow Marketing Project Memory
+# Planerio Marketing Project Memory
 
 ## Product Information
 [Features, pricing, positioning]
@@ -304,7 +304,7 @@ Students succeed in Module 1 when they:
 
 ## Notes for Claude
 
-- Use FocusFlow context consistently
+- Use Planerio context consistently
 - Real marketing scenarios only
 - Encourage iteration over perfection
 - Celebrate every success

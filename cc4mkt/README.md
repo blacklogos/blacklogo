@@ -127,7 +127,7 @@ This course is built on three principles:
 
 ## 🛠️ What You'll Build
 
-Throughout the course, you'll work on **MarketFlow**, a sample project where you're launching a productivity app called FocusFlow. You'll create:
+Throughout the course, you'll work on **MarketFlow**, a sample project where you're launching a project management software called Planerio. You'll create:
 
 - Comprehensive campaign briefs
 - Multi-channel marketing copy
@@ -162,7 +162,7 @@ Throughout the course, you'll work on **MarketFlow**, a sample project where you
 ## 📖 Course Features
 
 - **Interactive Lessons** - Use `/start-X-Y` slash commands for guided learning
-- **Real-World Examples** - Practical marketing scenarios with FocusFlow
+- **Real-World Examples** - Practical marketing scenarios with Planerio
 - **Custom Subagents** - 6 pre-built marketing reviewers included
 - **Automation Templates** - Hooks for quality gates and workflows
 - **Reusable Templates** - Take templates back to your work

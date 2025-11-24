@@ -174,7 +174,7 @@ Missing for budget approval:
 ## Example Review
 
 **Content to Review**:
-"FocusFlow: Get 10x more productive! Our revolutionary AI will transform your team overnight! Only $5/user!"
+"Planerio: Get 10x more productive! Our revolutionary AI will transform your team overnight! Only $5/user!"
 
 **Manager Maria Review**:
 
@@ -250,7 +250,7 @@ None of these are answered.
 ### Recommendations to Win Maria:
 
 1. **Replace hype with data**:
-   "Managers using FocusFlow save 6.5 hours/week on average. That's 26 hours per month back for strategic work."
+   "Managers using Planerio save 6.5 hours/week on average. That's 26 hours per month back for strategic work."
    - Why: Maria needs concrete, believable numbers
 
 2. **Add credible case study**:
@@ -277,7 +277,7 @@ None of these are answered.
 
 "Give Your Remote Team the Visibility You've Been Missing
 
-As a manager of 15+ people, you spend hours each week asking 'what's everyone working on?' FocusFlow gives you real-time team visibility so you can focus on leadership, not status updates.
+As a manager of 15+ people, you spend hours each week asking 'what's everyone working on?' Planerio gives you real-time team visibility so you can focus on leadership, not status updates.
 
 **Proven Results:**
 • Reduce status meetings by 50% (save 6+ hours/week)

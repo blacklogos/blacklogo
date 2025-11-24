@@ -294,7 +294,7 @@ MarketFlow/
 
 **Example:**
 ```markdown
-# Q2 FocusFlow Launch - Retrospective
+# Q2 Planerio Launch - Retrospective
 
 ## Performance Summary
 - Goal: 500 trial signups

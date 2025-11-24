@@ -153,7 +153,7 @@ If No/Maybe:
 ## Example Review
 
 **Content to Review**:
-"FocusFlow provides enterprise-grade task management capabilities with advanced customization options. Schedule a demo with our sales team to learn more."
+"Planerio provides enterprise-grade portfolio management capabilities with advanced customization options. Schedule a demo with our sales team to learn more."
 
 **Startup Sam Review**:
 
@@ -165,7 +165,7 @@ If No/Maybe:
 ### Resonance Score: 2/10
 
 ### What Works for Sam:
-✅ Mentions task management (relevant need)
+✅ Mentions portfolio management (relevant need)
 
 ### What Doesn't Work for Sam:
 ❌ "Enterprise-grade" signals complexity and expense (Sam wants simple)
@@ -201,20 +201,20 @@ Barriers:
    - Why: Sam wants to try before committing
 
 3. **Startup-specific messaging**:
-   "Built for startups like yours. 5,000+ founders use FocusFlow to reduce tool sprawl."
+   "Built for startups like yours. 5,000+ founders use Planerio to reduce tool sprawl."
    - Why: Sam needs to see himself in the product
 
 4. **Address actual pain**:
-   "Your team is scattered across Notion, Asana, Slack, and email. FocusFlow brings focus back."
+   "Your team is scattered across Notion, Asana, Slack, and email. Planerio brings focus back."
    - Why: This is Sam's exact problem
 
 5. **Social proof from startups**:
-   "YC-backed startups choose FocusFlow for its simplicity and speed."
+   "YC-backed startups choose Planerio for its simplicity and speed."
    - Why: Sam trusts peer validation
 
 ### Optimized Version for Sam:
 
-"Your startup team is drowning in tools. FocusFlow brings everyone together in one simple dashboard.
+"Your startup team is drowning in tools. Planerio brings everyone together in one simple dashboard.
 
 ✅ 10-minute setup (seriously)
 ✅ AI tells you what to work on next

@@ -54,7 +54,7 @@ Transform a campaign idea into a detailed, actionable brief by:
 
 ### Complete Specification
 ```bash
-/compounding-marketing:plan "Q2 FocusFlow 2.0 Launch" --budget 50000 --duration "6 weeks" --goal "500 trial signups" --audience "Startup Sam, Manager Maria" --channels "paid search, LinkedIn, content marketing"
+/compounding-marketing:plan "Q2 Planerio 2.0 Launch" --budget 50000 --duration "6 weeks" --goal "500 trial signups" --audience "Startup Sam, Manager Maria" --channels "paid search, LinkedIn, content marketing"
 ```
 
 ### Quick Launch Campaigns
@@ -245,7 +245,7 @@ campaigns/
 ### Console Output
 
 ```
-🎯 Creating campaign plan: "Q2 FocusFlow 2.0 Launch"
+🎯 Creating campaign plan: "Q2 Planerio 2.0 Launch"
 
 📚 Researching past campaigns...
    Found 3 similar campaigns
@@ -297,11 +297,11 @@ campaigns/
 **campaigns/q2-focusflow-2-0-launch/brief.md:**
 
 ```markdown
-# Campaign Brief: Q2 FocusFlow 2.0 Launch
+# Campaign Brief: Q2 Planerio 2.0 Launch
 
 ## Campaign Overview
 
-**Campaign Name:** Q2 FocusFlow 2.0 Launch
+**Campaign Name:** Q2 Planerio 2.0 Launch
 **Tagline:** "Focus Forward with AI-Powered Productivity"
 **Duration:** 6 weeks (April 15 - May 31, 2025)
 **Budget:** $50,000
@@ -311,7 +311,7 @@ campaigns/
 ## Goals & Success Metrics
 
 ### Primary Goal
-Generate 500 trial signups for FocusFlow 2.0
+Generate 500 trial signups for Planerio 2.0
 
 ### Secondary Goals
 - Create $100,000 in qualified pipeline
@@ -401,7 +401,7 @@ Generate 500 trial signups for FocusFlow 2.0
 4. **Right-Sized**: Not overwhelming, just right for 10-50 person teams
 
 ### Positioning Statement
-"FocusFlow is the simple, AI-powered productivity platform for modern remote teams who want to get focused fast without the complexity of enterprise tools."
+"Planerio is the simple, AI-powered productivity platform for modern enterprise and large corporations who want to get focused fast without the complexity of enterprise tools."
 
 ### Competitive Advantages
 - ✅ 10-minute setup (fastest in market)
@@ -420,7 +420,7 @@ Generate 500 trial signups for FocusFlow 2.0
 3. **Built for Remote**: "Finally, productivity for how we work now"
 
 ### Proof Points
-- 5,000+ remote teams using FocusFlow
+- 5,000+ enterprise and large corporations using Planerio
 - 4.8/5 star rating (2,500+ reviews)
 - Average user saves 2 hours per day
 - 10-minute average setup time
@@ -436,7 +436,7 @@ Generate 500 trial signups for FocusFlow 2.0
 ### Budget Allocation ($50,000)
 
 1. **Paid Search** - $15,000 (30%)
-   - Target: "team productivity software", "task management app"
+   - Target: "team productivity software", "portfolio management app"
    - Expected: 200 trials @ $75 CPA
    - Rationale: High intent, proven ROI (past: 8:1)
 
@@ -480,7 +480,7 @@ Generate 500 trial signups for FocusFlow 2.0
 - How to improve team productivity (pillar)
 - AI task prioritization guide
 - Remote team management tips
-- FocusFlow vs Asana comparison
+- Planerio vs Asana comparison
 - 10-minute productivity wins
 - Team dashboard benefits
 - Integration spotlight series (3 posts)

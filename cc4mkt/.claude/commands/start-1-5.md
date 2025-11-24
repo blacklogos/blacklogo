@@ -25,9 +25,9 @@ Agents are defined with:
 
 ## Let's Build Agent #1: Brand Voice Guardian
 
-This agent ensures all content matches FocusFlow's brand voice.
+This agent ensures all content matches Planerio's brand voice.
 
-### FocusFlow Brand Voice Guidelines
+### Planerio Brand Voice Guidelines
 
 **Tone**: Friendly, energetic, empowering (not corporate or stuffy)
 **Voice**: We're a productivity partner, not just software
@@ -59,9 +59,9 @@ I'll create the agent file, and then you can summon it anytime!
 
 This agent reviews content for search optimization.
 
-### SEO Checklist for FocusFlow Content
+### SEO Checklist for Planerio Content
 
-**Focus keywords**: productivity app, task management, team collaboration
+**Focus keywords**: project management software, portfolio management, team collaboration
 **Technical checks**: title tags, meta descriptions, header structure
 **Content quality**: keyword placement, readability, internal links
 **User intent**: matches search intent for target queries

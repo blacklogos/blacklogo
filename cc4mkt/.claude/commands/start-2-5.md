@@ -67,7 +67,7 @@ Axes:
 - X-axis: Features (Basic → Advanced)
 
 Plot competitors:
-- FocusFlow: High simplicity, Medium features (sweet spot)
+- Planerio: High simplicity, Medium features (sweet spot)
 - Asana: Medium simplicity, High features (enterprise)
 - Monday.com: Low simplicity, High features (complex)
 - ClickUp: Medium simplicity, High features (feature-heavy)
@@ -93,7 +93,7 @@ Create multiple positioning maps with insights.
 ```
 Create feature comparison table:
 
-| Feature | FocusFlow | Asana | Monday.com | ClickUp |
+| Feature | Planerio | Asana | Monday.com | ClickUp |
 |---------|-----------|-------|------------|---------|
 | AI Task Prioritization | ✅ Unique | ❌ | ❌ | ❌ |
 | Team Dashboard | ✅ | ✅ | ✅ | ✅ |
@@ -142,12 +142,12 @@ ClickUp:
 - Tone: Bold, confident, feature-focused
 - Target: Power users and tool consolidators
 
-FocusFlow positioning opportunity:
+Planerio positioning opportunity:
 - Gap: No one owns "AI-powered simplicity"
 - Message: "Get focused instantly with AI"
 - Value: Save time on prioritization
 - Tone: Friendly, energetic, results-focused
-- Target: Small-medium remote teams
+- Target: Small-medium enterprise and large corporations
 
 Create messaging comparison and positioning recommendations.
 ```
@@ -192,7 +192,7 @@ Create competitive content analysis and calendar.
 ```
 Compare pricing strategies:
 
-FocusFlow:
+Planerio:
 - Free tier: 2 users, basic features
 - Starter: $12/user/mo (small teams)
 - Business: $20/user/mo (growing teams)
@@ -279,7 +279,7 @@ Key messages:
 - "You'll be up and running in 10 minutes, not 2 weeks"
 
 Proof points:
-- Customer quote: "We evaluated Asana but chose FocusFlow because..."
+- Customer quote: "We evaluated Asana but chose Planerio because..."
 - Case study: Company X switched from Asana, saved 5 hours/week
 - Demo: Show side-by-side setup comparison
 

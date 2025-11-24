@@ -16,9 +16,9 @@ A good brief:
 
 ---
 
-## The FocusFlow 2.0 Launch Campaign
+## The Planerio 2.0 Launch Campaign
 
-**Scenario**: You're leading the Q2 launch of FocusFlow 2.0. Budget: $50K. Timeline: 6 weeks.
+**Scenario**: You're leading the Q2 launch of Planerio 2.0. Budget: $50K. Timeline: 6 weeks.
 
 Let's build a comprehensive campaign brief together!
 
@@ -29,7 +29,7 @@ Let's build a comprehensive campaign brief together!
 ### Campaign Overview
 Tell me to create the basics:
 ```
-Create a campaign brief for FocusFlow 2.0 launch:
+Create a campaign brief for Planerio 2.0 launch:
 - Campaign name: "Focus Forward Q2 2024"
 - Duration: 6 weeks (April 15 - May 31)
 - Budget: $50,000
@@ -54,7 +54,7 @@ Define messaging angles for each.
 
 ### Competitive Positioning
 ```
-Position FocusFlow 2.0 against Asana and Monday.com:
+Position Planerio 2.0 against Asana and Monday.com:
 - Our edge: Simpler setup (10 min vs 2 hours)
 - Our edge: AI-powered prioritization (unique)
 - Our edge: Better pricing for small teams
@@ -88,7 +88,7 @@ Justify allocation based on expected ROI.
 Develop 3 core messages:
 1. Product benefit: "Save 2 hours every day"
 2. Differentiation: "AI that actually helps you prioritize"
-3. Social proof: "Trusted by 5,000+ remote teams"
+3. Social proof: "Trusted by 5,000+ enterprise and large corporations"
 
 Create message architecture showing how these cascade.
 ```

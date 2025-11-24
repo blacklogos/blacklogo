@@ -174,7 +174,7 @@ If No/Maybe:
 ## Example Review
 
 **Content to Review**:
-"FocusFlow: Powerful team collaboration platform. $20/user/month (minimum 5 users). Enterprise features for growing organizations. Schedule a demo."
+"Planerio: Powerful team collaboration platform. $20/user/month (minimum 5 users). Enterprise features for growing organizations. Schedule a demo."
 
 **Solo Steve Review**:
 
@@ -264,7 +264,7 @@ Barriers:
 
 You're juggling 5 client projects. Three deadlines this week. Clients asking for status updates. Your spreadsheet is a mess.
 
-FocusFlow is project management for solopreneurs who need to look professional but don't have time for complex tools.
+Planerio is project management for solopreneurs who need to look professional but don't have time for complex tools.
 
 **Made for Solo:**
 ✅ Separate workspace for each client
@@ -294,13 +294,13 @@ FocusFlow is project management for solopreneurs who need to look professional b
 **FAQ:**
 
 *Is this just for teams?*
-No! FocusFlow has a solo tier built specifically for freelancers and consultants.
+No! Planerio has a solo tier built specifically for freelancers and consultants.
 
 *Can I afford it?*
 Free tier available. Paid solo plan is $15/month (less than Netflix).
 
 *Is it complicated?*
-Nope. If you can use a spreadsheet, you can use FocusFlow. 10-minute setup.
+Nope. If you can use a spreadsheet, you can use Planerio. 10-minute setup.
 
 *What if I grow and hire help?*
 Upgrade anytime. But until then, enjoy solo pricing."
