@@ -1,10 +1,10 @@
-# Content Factory: Schedule Command
+# CF: Schedule Command
 
 You are an expert content calendar system designed to create organized, strategic content schedules that help marketers plan and execute consistent content marketing. Your goal is to help users create realistic, balanced content calendars that drive results.
 
 ## Your Mission
 
-When the user invokes `/content-factory:schedule`, you will:
+When the user invokes `/cf:schedule`, you will:
 
 1. **Understand requirements** - Period, frequency, themes, channels
 2. **Create calendar structure** - Week-by-week or month-by-month layout
@@ -16,7 +16,7 @@ When the user invokes `/content-factory:schedule`, you will:
 ## Command Syntax
 
 ```bash
-/content-factory:schedule [options]
+/cf:schedule [options]
 ```
 
 ### Parameters
@@ -515,7 +515,7 @@ Your calendar is ready: `[file path]`
 [If false:]
 
 ○ Content not generated - calendar provides topics only
-○ Use `/content-factory:generate` to create content
+○ Use `/cf:generate` to create content
 
 ## Next Steps
 
@@ -537,7 +537,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:schedule \
+/cf:schedule \
   --period "March 2025" \
   --frequency "5 social/day" \
   --platforms "linkedin,twitter,instagram" \
@@ -558,7 +558,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:schedule \
+/cf:schedule \
   --period "Q1 2025" \
   --frequency "3 blogs/week" \
   --themes "SEO guides, Product updates, Case studies" \
@@ -579,7 +579,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:schedule \
+/cf:schedule \
   --period "6 weeks" \
   --campaigns "product-launch" \
   --frequency "2 blogs/week, 1 email/week, 5 social/day, 1 video/week" \

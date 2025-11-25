@@ -1,10 +1,10 @@
-# Compounding Marketing Plugin
+# CM Plugin
 
 > Where each campaign makes the next one easier through accumulated templates, patterns, and automated workflows.
 
 ## Overview
 
-The Compounding Marketing Plugin brings systematic, efficient marketing workflows to Claude Code. Inspired by the Compounding Engineering Philosophy, this plugin helps marketers plan, execute, and review campaigns with increasing efficiency over time.
+The CM Plugin brings systematic, efficient marketing workflows to Claude Code. Inspired by the Compounding Engineering Philosophy, this plugin helps marketers plan, execute, and review campaigns with increasing efficiency over time.
 
 **Core Philosophy:** Each campaign you run documents patterns, creates templates, and builds knowledge that makes future campaigns faster and better.
 
@@ -12,9 +12,9 @@ The Compounding Marketing Plugin brings systematic, efficient marketing workflow
 
 ### Commands (Workflow Automation)
 
-- **`/compounding-marketing:plan`** - Research, analyze, and create comprehensive campaign briefs
-- **`/compounding-marketing:execute`** - Generate multi-channel content with parallel subagents (Coming Soon)
-- **`/compounding-marketing:review`** - Launch 12+ specialized reviewers for comprehensive feedback (Coming Soon)
+- **`/cm:plan`** - Research, analyze, and create comprehensive campaign briefs
+- **`/cm:execute`** - Generate multi-channel content with parallel subagents (Coming Soon)
+- **`/cm:review`** - Launch 12+ specialized reviewers for comprehensive feedback (Coming Soon)
 
 ### Subagents (Specialized Reviewers)
 
@@ -75,10 +75,10 @@ The Compounding Marketing Plugin brings systematic, efficient marketing workflow
 
 ```bash
 # Add the marketplace (when published)
-/plugin marketplace add blacklogos/cc4mkt-marketplace
+/plugin marketplace add blacklogos/cc4.marketing
 
 # Install the plugin
-/plugin install compounding-marketing@cc4mkt-marketplace
+/plugin install cm@cc4.marketing
 
 # Verify installation
 /help
@@ -88,7 +88,7 @@ The Compounding Marketing Plugin brings systematic, efficient marketing workflow
 
 ```bash
 # Clone or link the plugin directory
-ln -s /path/to/compounding-marketing-plugin ~/.claude/plugins/compounding-marketing
+ln -s /path/to/cm-plugin ~/.claude/plugins/cm
 
 # Restart Claude Code
 ```
@@ -98,7 +98,7 @@ ln -s /path/to/compounding-marketing-plugin ~/.claude/plugins/compounding-market
 ### 1. Plan Your Campaign
 
 ```bash
-/compounding-marketing:plan "Q2 Product Launch" --budget 50000 --duration "6 weeks"
+/cm:plan "Q2 Product Launch" --budget 50000 --duration "6 weeks"
 ```
 
 This will:
@@ -111,7 +111,7 @@ This will:
 ### 2. Execute Content Creation (Coming Soon)
 
 ```bash
-/compounding-marketing:execute campaigns/q2-product-launch/brief.md
+/cm:execute campaigns/q2-product-launch/brief.md
 ```
 
 This will:
@@ -124,7 +124,7 @@ This will:
 ### 3. Review Everything (Coming Soon)
 
 ```bash
-/compounding-marketing:review campaigns/q2-product-launch/
+/cm:review campaigns/q2-product-launch/
 ```
 
 This will:
@@ -157,7 +157,7 @@ This will:
 
 ### ✅ Currently Available (MVP)
 
-- `/compounding-marketing:plan` command
+- `/cm:plan` command
 - 6 specialized subagent reviewers
 - Basic template library
 - Campaign brief automation
@@ -165,8 +165,8 @@ This will:
 
 ### 🚧 Coming Soon
 
-- `/compounding-marketing:execute` command
-- `/compounding-marketing:review` command
+- `/cm:execute` command
+- `/cm:review` command
 - 6 additional specialized subagents (12 total)
 - 4 auto-invoked Skills
 - 3 workflow hooks
@@ -209,7 +209,7 @@ Configure the plugin at repository level for consistent tooling:
 ```json
 {
   "plugins": {
-    "compounding-marketing": {
+    "cm": {
       "enabled": true,
       "brand_guidelines": "brand/guidelines.md",
       "template_library": "templates/",

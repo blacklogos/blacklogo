@@ -4,40 +4,40 @@
 
 ## Featured Plugins
 
-### Compounding Marketing
-**@marketing-tools/compounding-marketing**
+### CM
+**@marketing-tools/cm**
 
 Systematic campaign workflow with Plan → Execute → Review stages. Each campaign makes the next one easier through accumulated templates and patterns.
 
 **Version:** 0.1.0
 **Category:** Workflow Automation
-**Install:** `/plugin install compounding-marketing@marketing-tools-marketplace`
+**Install:** `/plugin install cm@marketing-tools-marketplace`
 
 **Commands:**
-- `/compounding-marketing:plan` - Research and create comprehensive campaign briefs
-- `/compounding-marketing:execute` - Generate multi-channel content with parallel subagents (Coming Soon)
-- `/compounding-marketing:review` - Launch 12+ specialized reviewers for comprehensive feedback (Coming Soon)
+- `/cm:plan` - Research and create comprehensive campaign briefs
+- `/cm:execute` - Generate multi-channel content with parallel subagents (Coming Soon)
+- `/cm:review` - Launch 12+ specialized reviewers for comprehensive feedback (Coming Soon)
 
 **Agents:** 6 specialized reviewers (12+ planned)
 **Templates:** Campaign briefs, content calendars, email sequences, landing pages
 
-[View Documentation →](../plugins/compounding-marketing/PLUGIN.md)
+[View Documentation →](../plugins/cm/PLUGIN.md)
 
 ---
 
-### Content Factory
-**@marketing-tools/content-factory**
+### CF
+**@marketing-tools/cf**
 
 Rapid, multi-format content generation. Create weeks of content in hours with intelligent batch processing and content repurposing.
 
 **Version:** 0.1.0
 **Category:** Content Generation
-**Install:** `/plugin install content-factory@marketing-tools-marketplace`
+**Install:** `/plugin install cf@marketing-tools-marketplace`
 
 **Commands:**
-- `/content-factory:generate` - Batch content creation across multiple formats
-- `/content-factory:repurpose` - Transform one content piece into many formats
-- `/content-factory:schedule` - Create and organize content calendars
+- `/cf:generate` - Batch content creation across multiple formats
+- `/cf:repurpose` - Transform one content piece into many formats
+- `/cf:schedule` - Create and organize content calendars
 
 **Features:**
 - Parallel generation using specialized subagents
@@ -47,17 +47,17 @@ Rapid, multi-format content generation. Create weeks of content in hours with in
 
 **Templates:** Blog posts, emails, social media, video scripts, podcast outlines
 
-[View Documentation →](../plugins/content-factory/PLUGIN.md)
+[View Documentation →](../plugins/cf/PLUGIN.md)
 
 ---
 
 ## All Plugins
 
 ### 🎯 Workflow Automation
-- **compounding-marketing** - Systematic campaign workflows with Plan → Execute → Review stages
+- **cm** - Systematic campaign workflows with Plan → Execute → Review stages
 
 ### ⚡ Content Creation
-- **content-factory** - Rapid multi-format content generation and repurposing
+- **cf** - Rapid multi-format content generation and repurposing
 
 ### 🔍 Coming Soon
 - **seo-optimizer** - Comprehensive SEO analysis and optimization
@@ -77,13 +77,13 @@ Rapid, multi-format content generation. Create weeks of content in hours with in
 /plugin
 
 # Install a plugin
-/plugin install compounding-marketing@marketing-tools-marketplace
+/plugin install cm@marketing-tools-marketplace
 ```
 
 ### Method 2: Quick Install via NPX
 
 ```bash
-npx claude-plugins install @blacklogos/marketing-tools-marketplace/compounding-marketing
+npx claude-plugins install @blacklogos/marketing-tools-marketplace/cm
 ```
 
 ### Method 3: Manual Installation
@@ -91,7 +91,7 @@ npx claude-plugins install @blacklogos/marketing-tools-marketplace/compounding-m
 ```bash
 git clone https://github.com/blacklogos/marketing-tools-marketplace.git
 cd marketing-tools-marketplace
-ln -s $(pwd)/plugins/compounding-marketing ~/.claude/plugins/compounding-marketing
+ln -s $(pwd)/plugins/cm ~/.claude/plugins/cm
 ```
 
 ## Getting Started
@@ -101,15 +101,15 @@ ln -s $(pwd)/plugins/compounding-marketing ~/.claude/plugins/compounding-marketi
    /plugin marketplace add https://github.com/blacklogos/marketing-tools-marketplace
    ```
 
-2. **Start with Compounding Marketing:**
+2. **Start with CM:**
    - Best for systematic campaign workflows
    - Includes planning, execution, and review stages
    - Great for learning the compounding philosophy
 
-3. **Add Content Factory for rapid content:**
+3. **Add CF for rapid content:**
    - Perfect for high-volume content needs
    - Excellent for content repurposing
-   - Integrates well with Compounding Marketing
+   - Integrates well with CM
 
 4. **Explore shared resources:**
    - Check `shared/agents/` for specialized reviewers

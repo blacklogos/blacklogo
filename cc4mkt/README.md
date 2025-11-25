@@ -69,7 +69,7 @@ This course is updated with Claude Code's latest features:
 - 2.4 Analyze Campaign Data - Turn data into actionable insights
 - 2.5 Competitive Analysis - Research and analyze competitor strategies
 - 2.6 SEO Optimization - Keyword research and content optimization
-- **2.7 The Compounding Marketing Philosophy** - Build systems where each campaign makes the next easier (NEW 2025)
+- **2.7 The CM Philosophy** - Build systems where each campaign makes the next easier (NEW 2025)
 
 **Total Course Time:** 5 hours (self-paced)
 

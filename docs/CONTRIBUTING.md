@@ -232,8 +232,8 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 
 **Examples:**
 ```
-feat(content-factory): add video script generation
-fix(compounding-marketing): resolve plan command error
+feat(cf): add video script generation
+fix(cm): resolve plan command error
 docs(readme): update installation instructions
 ```
 

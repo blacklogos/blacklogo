@@ -1,10 +1,10 @@
-# Content Factory Plugin
+# CF Plugin
 
 > Create weeks of content in hours with intelligent batch processing and multi-format repurposing.
 
 ## Overview
 
-The Content Factory plugin transforms how marketers create content by enabling rapid, parallel generation across multiple formats while maintaining brand consistency and quality. Generate blog posts, email sequences, social media content, video scripts, and more—all from a single brief.
+The CF plugin transforms how marketers create content by enabling rapid, parallel generation across multiple formats while maintaining brand consistency and quality. Generate blog posts, email sequences, social media content, video scripts, and more—all from a single brief.
 
 **Core Philosophy:** High-volume, high-quality content creation through specialized agents, smart templates, and automated quality checks.
 
@@ -12,9 +12,9 @@ The Content Factory plugin transforms how marketers create content by enabling r
 
 ### Commands (Content Generation)
 
-- **`/content-factory:generate`** - Batch content creation across multiple formats simultaneously
-- **`/content-factory:repurpose`** - Transform one piece of content into many formats
-- **`/content-factory:schedule`** - Create and organize content calendars with auto-population
+- **`/cf:generate`** - Batch content creation across multiple formats simultaneously
+- **`/cf:repurpose`** - Transform one piece of content into many formats
+- **`/cf:schedule`** - Create and organize content calendars with auto-population
 
 ### Specialized Agents
 
@@ -64,8 +64,8 @@ The Content Factory plugin transforms how marketers create content by enabling r
 # Add marketplace (if not already added)
 /plugin marketplace add https://github.com/blacklogos/marketing-tools-marketplace
 
-# Install Content Factory
-/plugin install content-factory@marketing-tools-marketplace
+# Install CF
+/plugin install cf@marketing-tools-marketplace
 
 # Verify installation
 /help
@@ -76,7 +76,7 @@ The Content Factory plugin transforms how marketers create content by enabling r
 ```bash
 git clone https://github.com/blacklogos/marketing-tools-marketplace.git
 cd marketing-tools-marketplace
-ln -s $(pwd)/plugins/content-factory ~/.claude/plugins/content-factory
+ln -s $(pwd)/plugins/cf ~/.claude/plugins/cf
 ```
 
 ## Quick Start
@@ -86,7 +86,7 @@ ln -s $(pwd)/plugins/content-factory ~/.claude/plugins/content-factory
 Create multiple pieces of content simultaneously:
 
 ```bash
-/content-factory:generate "Product Launch: FocusFlow 2.0" \
+/cf:generate "Product Launch: FocusFlow 2.0" \
   --formats "blog,email,social" \
   --quantity "3 blogs, 5 emails, 20 social posts" \
   --timeline "2 weeks"
@@ -127,7 +127,7 @@ content/focusflow-2.0-launch/
 Transform one asset into multiple formats:
 
 ```bash
-/content-factory:repurpose content/blog-post.md \
+/cf:repurpose content/blog-post.md \
   --into "email,social,video-script" \
   --platforms "linkedin,twitter,instagram"
 ```
@@ -155,7 +155,7 @@ Transform one asset into multiple formats:
 Generate and organize a content calendar:
 
 ```bash
-/content-factory:schedule \
+/cf:schedule \
   --period "Q1 2025" \
   --frequency "3 blogs/week, 5 social/day, 2 emails/week" \
   --themes "Product updates, Thought leadership, Customer success"
@@ -173,13 +173,13 @@ Generate and organize a content calendar:
 
 ## Command Reference
 
-### `/content-factory:generate`
+### `/cf:generate`
 
 **Purpose:** Batch content creation across multiple formats
 
 **Syntax:**
 ```bash
-/content-factory:generate "<brief>" [options]
+/cf:generate "<brief>" [options]
 ```
 
 **Options:**
@@ -194,31 +194,31 @@ Generate and organize a content calendar:
 
 ```bash
 # Generate launch content
-/content-factory:generate "SaaS Product Launch" \
+/cf:generate "SaaS Product Launch" \
   --formats "blog,email,social" \
   --quantity "5 blogs, 10 emails, 30 social"
 
 # SEO content campaign
-/content-factory:generate "SEO Content Campaign: Project Management" \
+/cf:generate "SEO Content Campaign: Project Management" \
   --formats "blog" \
   --quantity "10 blogs" \
   --seo-keywords "project management software, team collaboration"
 
 # Full campaign content
-/content-factory:generate "Q1 Brand Awareness Campaign" \
+/cf:generate "Q1 Brand Awareness Campaign" \
   --formats "blog,email,social,video" \
   --quantity "8 blogs, 12 emails, 60 social, 4 video scripts"
 ```
 
 ---
 
-### `/content-factory:repurpose`
+### `/cf:repurpose`
 
 **Purpose:** Transform existing content into multiple formats
 
 **Syntax:**
 ```bash
-/content-factory:repurpose <source-file> [options]
+/cf:repurpose <source-file> [options]
 ```
 
 **Options:**
@@ -231,28 +231,28 @@ Generate and organize a content calendar:
 
 ```bash
 # Blog to social
-/content-factory:repurpose blog/case-study.md \
+/cf:repurpose blog/case-study.md \
   --into "social" \
   --platforms "linkedin,twitter,instagram"
 
 # Webinar to content series
-/content-factory:repurpose webinar-transcript.txt \
+/cf:repurpose webinar-transcript.txt \
   --into "blog,email,social,video-clips"
 
 # Research report to multi-format
-/content-factory:repurpose research/industry-report.pdf \
+/cf:repurpose research/industry-report.pdf \
   --into "blog,infographic-copy,social,email-series"
 ```
 
 ---
 
-### `/content-factory:schedule`
+### `/cf:schedule`
 
 **Purpose:** Create and manage content calendars
 
 **Syntax:**
 ```bash
-/content-factory:schedule [options]
+/cf:schedule [options]
 ```
 
 **Options:**
@@ -266,12 +266,12 @@ Generate and organize a content calendar:
 
 ```bash
 # Create monthly calendar
-/content-factory:schedule \
+/cf:schedule \
   --period "March 2025" \
   --frequency "2 blogs/week, 5 social/day"
 
 # Campaign-specific calendar
-/content-factory:schedule \
+/cf:schedule \
   --period "6 weeks" \
   --campaigns "product-launch" \
   --generate-content true
@@ -283,7 +283,7 @@ Generate and organize a content calendar:
 
 ### Parallel Content Generation
 
-Content Factory uses specialized subagents to create content in parallel:
+CF uses specialized subagents to create content in parallel:
 
 1. **Analyze Brief** - Understand goals, audience, messaging
 2. **Launch Agents** - Spin up specialized content creators
@@ -343,7 +343,7 @@ Uses `@seo-specialist` agent for comprehensive SEO.
 **Scenario:** Launching new product, need content across all channels
 
 ```bash
-/content-factory:generate "FocusFlow 2.0 Product Launch" \
+/cf:generate "FocusFlow 2.0 Product Launch" \
   --formats "blog,email,social,video" \
   --quantity "5 blogs, 8 emails, 40 social, 3 video scripts"
 ```
@@ -359,7 +359,7 @@ Uses `@seo-specialist` agent for comprehensive SEO.
 ```bash
 # Process all blogs
 for blog in content/blogs/*.md; do
-  /content-factory:repurpose $blog \
+  /cf:repurpose $blog \
     --into "social" \
     --platforms "linkedin,twitter"
 done
@@ -374,7 +374,7 @@ done
 **Scenario:** Need to plan and create month of content
 
 ```bash
-/content-factory:schedule \
+/cf:schedule \
   --period "April 2025" \
   --frequency "3 blogs/week, 10 social/day, 2 emails/week" \
   --generate-content true
@@ -389,7 +389,7 @@ done
 **Scenario:** Create educational email series
 
 ```bash
-/content-factory:generate "Email Course: Mastering Productivity" \
+/cf:generate "Email Course: Mastering Productivity" \
   --formats "email" \
   --quantity "10 emails" \
   --timeline "10 days"
@@ -429,7 +429,7 @@ Create `brand/guidelines.md` to ensure consistency:
 
 Reference in commands:
 ```bash
-/content-factory:generate "Campaign" --brand-guidelines brand/guidelines.md
+/cf:generate "Campaign" --brand-guidelines brand/guidelines.md
 ```
 
 ---
@@ -439,7 +439,7 @@ Reference in commands:
 Define target keywords for SEO optimization:
 
 ```bash
-/content-factory:generate "Blog Campaign" \
+/cf:generate "Blog Campaign" \
   --seo-keywords "productivity software, time management, focus tools"
 ```
 
@@ -456,19 +456,19 @@ time tracking
 
 ## Integration with Other Plugins
 
-### With Compounding Marketing
+### With CM
 
-Use Content Factory for the "Execute" stage:
+Use CF for the "Execute" stage:
 
-1. Plan campaign with `/compounding-marketing:plan`
-2. Generate content with `/content-factory:generate`
-3. Review with `/compounding-marketing:review`
+1. Plan campaign with `/cm:plan`
+2. Generate content with `/cf:generate`
+3. Review with `/cm:review`
 
 ### With SEO Optimizer (Coming Soon)
 
 Generate content, then optimize:
 
-1. Create with `/content-factory:generate`
+1. Create with `/cf:generate`
 2. Optimize with `/seo:optimize`
 3. Track with `/seo:audit`
 
@@ -489,10 +489,10 @@ Control quality/speed trade-off:
 
 ```bash
 # Fast generation (good quality)
-/content-factory:generate "Campaign" --mode fast
+/cf:generate "Campaign" --mode fast
 
 # Thorough generation (excellent quality, slower)
-/content-factory:generate "Campaign" --mode thorough
+/cf:generate "Campaign" --mode thorough
 ```
 
 ---
@@ -523,7 +523,7 @@ Control quality/speed trade-off:
 ## Support
 
 - **Documentation:** [Getting Started Guide](../../docs/GETTING-STARTED.md)
-- **Examples:** [Content Factory Examples](../../examples/content-factory/)
+- **Examples:** [CF Examples](../../examples/cf/)
 - **Issues:** [GitHub Issues](https://github.com/blacklogos/marketing-tools-marketplace/issues)
 - **Community:** [GitHub Discussions](https://github.com/blacklogos/marketing-tools-marketplace/discussions)
 

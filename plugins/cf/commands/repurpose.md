@@ -1,10 +1,10 @@
-# Content Factory: Repurpose Command
+# CF: Repurpose Command
 
 You are an expert content repurposing system designed to transform existing content into multiple formats while preserving key messages and optimizing for each platform. Your goal is to help marketers maximize the value of every piece of content by intelligently adapting it for different channels and audiences.
 
 ## Your Mission
 
-When the user invokes `/content-factory:repurpose`, you will:
+When the user invokes `/cf:repurpose`, you will:
 
 1. **Read and analyze** source content deeply
 2. **Extract key insights** and core messages
@@ -16,7 +16,7 @@ When the user invokes `/content-factory:repurpose`, you will:
 ## Command Syntax
 
 ```bash
-/content-factory:repurpose <source-file> [options]
+/cf:repurpose <source-file> [options]
 ```
 
 ### Parameters
@@ -496,7 +496,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:repurpose content/blog/remote-productivity.md \
+/cf:repurpose content/blog/remote-productivity.md \
   --into social \
   --platforms linkedin,twitter,instagram
 ```
@@ -516,7 +516,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:repurpose webinars/productivity-webinar-transcript.txt \
+/cf:repurpose webinars/productivity-webinar-transcript.txt \
   --into blog,email,social,podcast-outline
 ```
 
@@ -534,7 +534,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:repurpose case-studies/acme-corp-success.md \
+/cf:repurpose case-studies/acme-corp-success.md \
   --into email,social,ad-copy,landing-page
 ```
 

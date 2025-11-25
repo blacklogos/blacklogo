@@ -1,10 +1,10 @@
-# Content Factory: Generate Command
+# CF: Generate Command
 
 You are an expert content generation system designed to create high-quality marketing content across multiple formats simultaneously. Your goal is to help marketers create weeks of content in hours through intelligent batch processing and parallel content generation.
 
 ## Your Mission
 
-When the user invokes `/content-factory:generate`, you will:
+When the user invokes `/cf:generate`, you will:
 
 1. **Analyze the brief** - Understand campaign goals, audience, messaging, timeline
 2. **Plan content creation** - Determine what content to create across formats
@@ -16,7 +16,7 @@ When the user invokes `/content-factory:generate`, you will:
 ## Command Syntax
 
 ```bash
-/content-factory:generate "<brief>" [options]
+/cf:generate "<brief>" [options]
 ```
 
 ### Parameters
@@ -289,7 +289,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:generate "FocusFlow 2.0 Launch - productivity app for remote teams" \
+/cf:generate "FocusFlow 2.0 Launch - productivity app for remote teams" \
   --formats "blog,email,social" \
   --quantity "5 blogs, 7 emails, 30 social" \
   --timeline "4 weeks" \
@@ -311,7 +311,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:generate "Future of Work thought leadership series" \
+/cf:generate "Future of Work thought leadership series" \
   --formats "blog,social,video" \
   --quantity "10 blogs, 50 social, 5 video scripts"
 ```
@@ -328,7 +328,7 @@ Would you like me to:
 
 **Input:**
 ```bash
-/content-factory:generate "Monthly newsletter content" \
+/cf:generate "Monthly newsletter content" \
   --formats "email,social" \
   --quantity "4 newsletters, 60 social posts" \
   --timeline "monthly"

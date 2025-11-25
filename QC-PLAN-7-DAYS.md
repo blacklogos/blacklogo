@@ -43,7 +43,7 @@ Read in this order:
 2. `CLAUDE.md` (project memory)
 3. `docs/GETTING-STARTED.md`
 4. `cc4mkt/README.md` (course overview)
-5. `cc4mkt-marketplace-integration-plan.md`
+5. `cc4.marketing-integration-plan.md`
 
 **Checklist:**
 - [ ] Understand the compounding philosophy
@@ -102,14 +102,14 @@ Follow the getting started guide exactly as a new user would:
 # Read: .claude-plugin/config.json
 
 # Verify all plugin files exist
-ls plugins/compounding-marketing/
-ls plugins/content-factory/
+ls plugins/cm/
+ls plugins/cf/
 
 # Check all commands are documented
-cat plugins/compounding-marketing/commands/plan.md
-cat plugins/content-factory/commands/generate.md
-cat plugins/content-factory/commands/repurpose.md
-cat plugins/content-factory/commands/schedule.md
+cat plugins/cm/commands/plan.md
+cat plugins/cf/commands/generate.md
+cat plugins/cf/commands/repurpose.md
+cat plugins/cf/commands/schedule.md
 ```
 
 **Checklist:**
@@ -353,12 +353,12 @@ cat .claude-plugin/index.md
 For each plugin in config.json:
 ```bash
 # Check plugin exists
-ls plugins/compounding-marketing/
-ls plugins/content-factory/
+ls plugins/cm/
+ls plugins/cf/
 
 # Verify PLUGIN.md exists
-cat plugins/compounding-marketing/PLUGIN.md
-cat plugins/content-factory/PLUGIN.md
+cat plugins/cm/PLUGIN.md
+cat plugins/cf/PLUGIN.md
 ```
 
 **Checklist:**
@@ -375,7 +375,7 @@ ls shared/templates/
 ls shared/skills/
 
 # Verify agents are correct copies
-diff plugins/compounding-marketing/agents/brand-voice-guardian.md shared/agents/brand-voice-guardian.md
+diff plugins/cm/agents/brand-voice-guardian.md shared/agents/brand-voice-guardian.md
 ```
 
 **Verify:**
@@ -385,10 +385,10 @@ diff plugins/compounding-marketing/agents/brand-voice-guardian.md shared/agents/
 
 ### Afternoon (2.5 hours): Plugin Deep Dive
 
-**Task 4: Compounding Marketing plugin review (1 hour)**
+**Task 4: CM plugin review (1 hour)**
 
 ```bash
-cd plugins/compounding-marketing
+cd plugins/cm
 
 # Check structure
 tree -L 2
@@ -408,10 +408,10 @@ cat templates/email-sequence.md
 - [ ] Examples are realistic
 - [ ] Installation instructions clear
 
-**Task 5: Content Factory plugin review (1.5 hours)**
+**Task 5: CF plugin review (1.5 hours)**
 
 ```bash
-cd plugins/content-factory
+cd plugins/cf
 
 # Check structure
 tree -L 2
@@ -455,11 +455,11 @@ Check that all references work:
 
 **Task 1: Test Workflow 1 - Campaign Planning (1.5 hours)**
 
-Simulate using `/compounding-marketing:plan`:
+Simulate using `/cm:plan`:
 
 ```bash
 # Read the command definition
-cat plugins/compounding-marketing/commands/plan.md
+cat plugins/cm/commands/plan.md
 
 # Mentally walk through the workflow
 # Imagine you're Claude executing the command
@@ -478,10 +478,10 @@ cat plugins/compounding-marketing/commands/plan.md
 
 **Task 2: Test Workflow 2 - Content Generation (1.5 hours)**
 
-Simulate using `/content-factory:generate`:
+Simulate using `/cf:generate`:
 
 ```bash
-cat plugins/content-factory/commands/generate.md
+cat plugins/cf/commands/generate.md
 ```
 
 **Test scenarios:**
@@ -500,7 +500,7 @@ cat plugins/content-factory/commands/generate.md
 **Task 3: Test Workflow 3 - Content Repurposing (1.5 hours)**
 
 ```bash
-cat plugins/content-factory/commands/repurpose.md
+cat plugins/cf/commands/repurpose.md
 ```
 
 **Test scenarios:**
@@ -517,7 +517,7 @@ cat plugins/content-factory/commands/repurpose.md
 **Task 4: Test Workflow 4 - Content Calendar (1.5 hours)**
 
 ```bash
-cat plugins/content-factory/commands/schedule.md
+cat plugins/cf/commands/schedule.md
 ```
 
 **Test scenarios:**
@@ -602,8 +602,8 @@ cat CLAUDE.md
 
 For each plugin:
 ```bash
-cat plugins/compounding-marketing/PLUGIN.md
-cat plugins/content-factory/PLUGIN.md
+cat plugins/cm/PLUGIN.md
+cat plugins/cf/PLUGIN.md
 ```
 
 **Quality criteria:**
@@ -638,8 +638,8 @@ Create a checklist:
 ## All Links to Verify
 
 ### README.md
-- [ ] Link to plugins/compounding-marketing/PLUGIN.md
-- [ ] Link to plugins/content-factory/PLUGIN.md
+- [ ] Link to plugins/cm/PLUGIN.md
+- [ ] Link to plugins/cf/PLUGIN.md
 - [ ] Link to docs/GETTING-STARTED.md
 - [ ] Link to docs/CONTRIBUTING.md
 - [ ] Link to LICENSE
@@ -723,8 +723,8 @@ Create `KNOWN-ISSUES.md`:
 **Task 4: Add missing examples (1 hour)**
 
 Identify areas lacking examples:
-- [ ] Add example to Compounding Marketing plan command
-- [ ] Add more Content Factory examples
+- [ ] Add example to CM plan command
+- [ ] Add more CF examples
 - [ ] Create additional workflow examples
 
 **Task 5: Improve unclear sections (1 hour)**

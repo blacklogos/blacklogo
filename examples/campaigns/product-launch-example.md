@@ -15,7 +15,7 @@ This is a complete example of using Marketing Tools Marketplace plugins to plan 
 ### Step 1: Plan the Campaign
 
 ```bash
-/compounding-marketing:plan "FocusFlow 2.0 Launch" \
+/cm:plan "FocusFlow 2.0 Launch" \
   --budget 50000 \
   --duration "6 weeks"
 ```
@@ -41,7 +41,7 @@ This is a complete example of using Marketing Tools Marketplace plugins to plan 
 ### Step 2: Generate Campaign Content
 
 ```bash
-/content-factory:generate campaigns/focusflow-2.0-launch/brief.md \
+/cf:generate campaigns/focusflow-2.0-launch/brief.md \
   --formats "blog,email,social,video" \
   --quantity "5 blogs, 8 emails, 40 social posts, 3 video scripts"
 ```
@@ -120,7 +120,7 @@ content/focusflow-2.0-launch/
 After Week 2, you identify that the case study blog post performed exceptionally well:
 
 ```bash
-/content-factory:repurpose content/blogs/case-study-200-percent-increase.md \
+/cf:repurpose content/blogs/case-study-200-percent-increase.md \
   --into "social,email,video-script" \
   --platforms "linkedin,twitter,instagram"
 ```
@@ -139,7 +139,7 @@ After Week 2, you identify that the case study blog post performed exceptionally
 ### Step 4: Create Content Calendar
 
 ```bash
-/content-factory:schedule \
+/cf:schedule \
   --period "6 weeks" \
   --campaigns "focusflow-2.0-launch" \
   --frequency "2 blogs/week, 1 email/week, 5 social/day" \
@@ -160,7 +160,7 @@ After Week 2, you identify that the case study blog post performed exceptionally
 Once available:
 
 ```bash
-/compounding-marketing:review campaigns/focusflow-2.0-launch/
+/cm:review campaigns/focusflow-2.0-launch/
 ```
 
 **Would provide:**

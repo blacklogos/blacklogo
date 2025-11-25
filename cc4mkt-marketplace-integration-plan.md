@@ -8,13 +8,13 @@ Apply the Every Marketplace plugin system and Compounding Engineering Philosophy
 
 ## 🎯 WHAT WE'LL BUILD
 
-### Primary Deliverable: **"Compounding Marketing Plugin"**
+### Primary Deliverable: **"CM Plugin"**
 A Claude Code plugin that embodies the "compounding" philosophy for marketing—where each campaign makes the next one easier.
 
 **Three-Stage Marketing Workflow** (inspired by Engineering plugin):
-1. **Plan** (`/compounding-marketing:plan`) - Campaign planning, research, brief creation
-2. **Execute** (`/compounding-marketing:execute`) - Multi-channel content creation with tracking
-3. **Review** (`/compounding-marketing:review`) - Multi-agent quality review and optimization
+1. **Plan** (`/cm:plan`) - Campaign planning, research, brief creation
+2. **Execute** (`/cm:execute`) - Multi-channel content creation with tracking
+3. **Review** (`/cm:review`) - Multi-agent quality review and optimization
 
 ---
 
@@ -75,18 +75,18 @@ Plugins are collections of:
    Select "Browse Plugins"
 
 3. Install a plugin:
-   /plugin install compounding-marketing@every-marketplace
+   /plugin install cm@every-marketplace
 
 4. Verify installation:
    /help
    (See new commands available)
 
-## Example: Compounding Marketing Plugin
+## Example: CM Plugin
 
 Once installed, you get:
-- /compounding-marketing:plan - Campaign planner
-- /compounding-marketing:execute - Content generator
-- /compounding-marketing:review - Multi-agent reviewer
+- /cm:plan - Campaign planner
+- /cm:execute - Content generator
+- /cm:review - Multi-agent reviewer
 - Auto-invoked skills for marketing expertise
 ```
 
@@ -94,16 +94,16 @@ Once installed, you get:
 
 ---
 
-### PHASE 2: Create "Compounding Marketing Plugin"
+### PHASE 2: Create "CM Plugin"
 
 **Plugin Structure:**
 ```
-compounding-marketing/
+cm/
 ├── PLUGIN.md                          # Plugin metadata
 ├── commands/
-│   ├── plan.md                       # /compounding-marketing:plan
-│   ├── execute.md                    # /compounding-marketing:execute
-│   └── review.md                     # /compounding-marketing:review
+│   ├── plan.md                       # /cm:plan
+│   ├── execute.md                    # /cm:execute
+│   └── review.md                     # /cm:review
 ├── agents/
 │   ├── brand-voice-guardian.md       # (existing)
 │   ├── seo-specialist.md             # (existing)
@@ -158,7 +158,7 @@ compounding-marketing/
 
 **Command Syntax:**
 ```
-/compounding-marketing:plan "Q2 FocusFlow 2.0 Launch" --budget 50000 --duration "6 weeks"
+/cm:plan "Q2 FocusFlow 2.0 Launch" --budget 50000 --duration "6 weeks"
 ```
 
 **Output:**
@@ -185,7 +185,7 @@ Each campaign you plan adds patterns and insights that make future planning fast
 
 **Command Syntax:**
 ```
-/compounding-marketing:execute campaigns/q2-focusflow-launch/brief.md
+/cm:execute campaigns/q2-focusflow-launch/brief.md
 ```
 
 **Workflow:**
@@ -217,7 +217,7 @@ Each asset created adds to your template library and pattern recognition for fut
 
 **Command Syntax:**
 ```
-/compounding-marketing:review campaigns/q2-focusflow-launch/
+/cm:review campaigns/q2-focusflow-launch/
 ```
 
 **Reviewers Launched:**
@@ -415,7 +415,7 @@ Learns from past campaign briefs in the project and suggests improvements based 
 
 ### PHASE 6: Add Compounding Philosophy Lesson
 
-**New Lesson: 2.7 - "The Compounding Marketing Philosophy"**
+**New Lesson: 2.7 - "The CM Philosophy"**
 
 **Learning Objectives:**
 - Understand how each campaign compounds knowledge
@@ -468,10 +468,10 @@ Learns from past campaign briefs in the project and suggests improvements based 
 
 ### Module 2: Advanced Applications (2.5 hours)
 - 2.1-2.6 (existing)
-- **2.7 The Compounding Marketing Philosophy** (NEW - 30 min)
+- **2.7 The CM Philosophy** (NEW - 30 min)
 
 ### Module 3: Plugin-Powered Marketing (NEW - 1 hour)
-- **3.1 Installing the Compounding Marketing Plugin** (15 min)
+- **3.1 Installing the CM Plugin** (15 min)
 - **3.2 Three-Stage Workflow: Plan** (15 min)
 - **3.3 Three-Stage Workflow: Execute** (15 min)
 - **3.4 Three-Stage Workflow: Review** (15 min)
@@ -484,7 +484,7 @@ Learns from past campaign briefs in the project and suggests improvements based 
 
 ### Immediate (Course Updates):
 1. ✅ Lesson 1.9: Using the Claude Code Marketplace
-2. ✅ Lesson 2.7: The Compounding Marketing Philosophy
+2. ✅ Lesson 2.7: The CM Philosophy
 3. ✅ Module 3: Plugin-Powered Marketing (4 lessons)
 4. ✅ Updated README with Module 3
 5. ✅ Updated reference guides
@@ -504,7 +504,7 @@ cc4mkt/
 │   ├── commands/         # (existing + lesson 1.9)
 │   ├── agents/          # (existing 6)
 │   └── ...
-├── compounding-marketing-plugin/    # NEW PLUGIN
+├── cm-plugin/    # NEW PLUGIN
 │   ├── PLUGIN.md
 │   ├── commands/
 │   ├── agents/          # (12 total)

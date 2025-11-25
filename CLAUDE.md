@@ -40,8 +40,8 @@ marketing-tools-marketplace/
 │   ├── index.md            # Plugin catalog
 │   └── config.json         # Marketplace metadata
 ├── plugins/                # All plugin implementations
-│   ├── compounding-marketing/
-│   └── content-factory/
+│   ├── cm/
+│   └── cf/
 ├── shared/                 # Shared resources across plugins
 │   ├── agents/            # Reusable AI agents
 │   ├── templates/         # Common templates
@@ -62,16 +62,16 @@ marketing-tools-marketplace/
 
 ## Available Plugins
 
-### 1. Compounding Marketing (v0.1.0)
+### 1. CM (v0.1.0)
 
 **Purpose:** Systematic campaign workflow automation
 
 **Status:** MVP - plan command available, execute and review coming soon
 
 **Commands:**
-- `/compounding-marketing:plan` - ✅ Available
-- `/compounding-marketing:execute` - 🚧 In development
-- `/compounding-marketing:review` - 🚧 In development
+- `/cm:plan` - ✅ Available
+- `/cm:execute` - 🚧 In development
+- `/cm:review` - 🚧 In development
 
 **Agents (6 current, 12 planned):**
 - brand-voice-guardian
@@ -87,27 +87,27 @@ marketing-tools-marketplace/
 - email-sequence.md
 - (more planned)
 
-**Location:** `plugins/compounding-marketing/`
+**Location:** `plugins/cm/`
 
 ---
 
-### 2. Content Factory (v0.1.0)
+### 2. CF (v0.1.0)
 
 **Purpose:** Rapid multi-format content generation and repurposing
 
 **Status:** Core functionality complete
 
 **Commands:**
-- `/content-factory:generate` - ✅ Available
-- `/content-factory:repurpose` - ✅ Available
-- `/content-factory:schedule` - ✅ Available
+- `/cf:generate` - ✅ Available
+- `/cf:repurpose` - ✅ Available
+- `/cf:schedule` - ✅ Available
 
 **Templates:**
 - blog-template.md
 - social-media-template.md
 - video-script-template.md
 
-**Location:** `plugins/content-factory/`
+**Location:** `plugins/cf/`
 
 ---
 
@@ -273,8 +273,8 @@ Every plugin must have:
 Format: `/<plugin-name>:<command-name>`
 
 Examples:
-- `/compounding-marketing:plan`
-- `/content-factory:generate`
+- `/cm:plan`
+- `/cf:generate`
 - `/seo:audit`
 
 ### Documentation Requirements
@@ -332,18 +332,18 @@ Auto-invoked expertise:
 
 ```bash
 # Step 1: Plan the campaign
-/compounding-marketing:plan "Q2 Product Launch" --budget 50000
+/cm:plan "Q2 Product Launch" --budget 50000
 
 # Step 2: Generate all content
-/content-factory:generate campaigns/q2-launch/brief.md \
+/cf:generate campaigns/q2-launch/brief.md \
   --formats "blog,email,social,video"
 
 # Step 3: Repurpose best content
-/content-factory:repurpose content/blogs/announcement.md \
+/cf:repurpose content/blogs/announcement.md \
   --into "social" --platforms "linkedin,twitter,instagram"
 
 # Step 4: Review everything
-/compounding-marketing:review campaigns/q2-launch/
+/cm:review campaigns/q2-launch/
 
 # Step 5: Publish and track
 ```
@@ -353,7 +353,7 @@ Auto-invoked expertise:
 ```bash
 # Batch repurpose all blog posts
 for blog in content/blogs/*.md; do
-  /content-factory:repurpose $blog --into "social,email"
+  /cf:repurpose $blog --into "social,email"
 done
 ```
 
@@ -361,7 +361,7 @@ done
 
 ```bash
 # Create and populate calendar
-/content-factory:schedule \
+/cf:schedule \
   --period "March 2025" \
   --frequency "3 blogs/week, 5 social/day" \
   --generate-content true
@@ -373,13 +373,13 @@ done
 
 ### Phase 1: Foundation (Q1 2025) ✅
 - [x] Marketplace structure
-- [x] Compounding Marketing (MVP)
-- [x] Content Factory
+- [x] CM (MVP)
+- [x] CF
 - [x] Core documentation
 - [x] Example workflows
 
 ### Phase 2: Expansion (Q2 2025) 🚧
-- [ ] Complete Compounding Marketing (execute + review)
+- [ ] Complete CM (execute + review)
 - [ ] SEO Optimizer plugin
 - [ ] Social Scheduler plugin
 - [ ] Video tutorials
@@ -538,8 +538,8 @@ We follow semantic versioning (semver):
 
 Current versions:
 - **Marketplace:** v1.0.0
-- **Compounding Marketing:** v0.1.0 (MVP)
-- **Content Factory:** v0.1.0
+- **CM:** v0.1.0 (MVP)
+- **CF:** v0.1.0
 
 ---
 
@@ -569,14 +569,14 @@ Key points:
 
 **Added:**
 - Initial marketplace structure
-- Compounding Marketing plugin (MVP with plan command)
-- Content Factory plugin (generate, repurpose, schedule commands)
+- CM plugin (MVP with plan command)
+- CF plugin (generate, repurpose, schedule commands)
 - Comprehensive documentation
 - Example workflows
 - Shared agent library
 
 **Coming Soon:**
-- Compounding Marketing execute and review commands
+- CM execute and review commands
 - SEO Optimizer plugin
 - Social Scheduler plugin
 

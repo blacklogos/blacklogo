@@ -1,7 +1,7 @@
-# 🔓 Level X: The Future of Compounding Marketing
+# 🔓 Level X: The Future of CM
 ## **SECRET CHAPTER** - Advanced Compounding Systems
 
-> **🎉 Congratulations!** You found the secret chapter. This is a preview of the full Compounding Marketing Plugin system coming in v1.0. These features represent the complete vision of marketing that compounds over time.
+> **🎉 Congratulations!** You found the secret chapter. This is a preview of the full CM Plugin system coming in v1.0. These features represent the complete vision of marketing that compounds over time.
 
 ---
 
@@ -29,7 +29,7 @@ Remember spending 8 hours writing copy for 5 different channels? The `/execute` 
 ### How It Works
 
 ```bash
-/compounding-marketing:execute --brief campaign-briefs/q2-focusflow-launch.md
+/cm:execute --brief campaign-briefs/q2-focusflow-launch.md
 ```
 
 **What happens:**
@@ -67,7 +67,7 @@ Remember spending 8 hours writing copy for 5 different channels? The `/execute` 
 
 ```bash
 # Execute with specific channels
-/compounding-marketing:execute \
+/cm:execute \
   --brief campaign-briefs/q2-focusflow-launch.md \
   --channels email,social,landing-page \
   --tone professional \
@@ -93,13 +93,13 @@ Remember spending 8 hours writing copy for 5 different channels? The `/execute` 
 **Try this:**
 ```bash
 # First, create the plan
-/compounding-marketing:plan "Webinar: Scaling SaaS to $1M ARR" \
+/cm:plan "Webinar: Scaling SaaS to $1M ARR" \
   --budget 15000 \
   --duration "3 weeks" \
   --channels email,linkedin,landing-page
 
 # Then execute
-/compounding-marketing:execute \
+/cm:execute \
   --brief campaign-briefs/webinar-scaling-saas.md \
   --channels email,linkedin,landing-page
 ```
@@ -142,7 +142,7 @@ The `/review` command is your quality assurance dream team. It launches **12+ sp
 ### How It Works
 
 ```bash
-/compounding-marketing:review --content content/q2-focusflow-launch/
+/cm:review --content content/q2-focusflow-launch/
 ```
 
 **The Review Process:**
@@ -225,7 +225,7 @@ Try reviewing your own content:
 
 ```bash
 # Review a specific piece
-/compounding-marketing:review \
+/cm:review \
   --content content/q2-focusflow-launch/landing-page.md \
   --focus conversion,accessibility
 
@@ -642,7 +642,7 @@ Here's how all these pieces work together for a complete campaign:
 ### Step 1: Plan (5 minutes)
 
 ```bash
-/compounding-marketing:plan "Q3 Feature Launch: Advanced Analytics" \
+/cm:plan "Q3 Feature Launch: Advanced Analytics" \
   --budget 30000 \
   --duration "4 weeks" \
   --channels email,linkedin,landing-page,blog
@@ -659,7 +659,7 @@ Here's how all these pieces work together for a complete campaign:
 ### Step 2: Execute (10 minutes)
 
 ```bash
-/compounding-marketing:execute \
+/cm:execute \
   --brief campaign-briefs/q3-analytics-launch.md
 ```
 
@@ -674,7 +674,7 @@ Here's how all these pieces work together for a complete campaign:
 ### Step 3: Review (8 minutes)
 
 ```bash
-/compounding-marketing:review \
+/cm:review \
   --content content/q3-analytics-launch/
 ```
 
@@ -708,7 +708,7 @@ Here's how all these pieces work together for a complete campaign:
 ### Step 6: Learn (5 minutes post-campaign)
 
 ```bash
-/compounding-marketing:learn \
+/cm:learn \
   --campaign q3-analytics-launch \
   --metrics campaign-metrics/q3-analytics-results.json
 ```
@@ -752,7 +752,7 @@ Here's how all these pieces work together for a complete campaign:
 
 **Company:** TechFlow (B2B SaaS, project management)
 **Challenge:** Product marketing team of 2 people, launching monthly features
-**Before Compounding Marketing:** 40 hours per campaign, inconsistent quality
+**Before CM:** 40 hours per campaign, inconsistent quality
 
 ### The Journey
 
@@ -820,10 +820,10 @@ Right now, you can install the MVP version with:
 /plugin marketplace add EveryInc/every-marketplace
 
 # Install the plugin
-/plugin install compounding-marketing@every-marketplace
+/plugin install cm@every-marketplace
 
 # Verify
-/help  # You'll see /compounding-marketing:plan
+/help  # You'll see /cm:plan
 ```
 
 ### Coming in v1.0 (Full System)

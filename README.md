@@ -18,26 +18,26 @@ Transform your marketing workflows with AI-powered plugins designed specifically
 /plugin
 
 # 3. Install a plugin
-/plugin install compounding-marketing@marketing-tools-marketplace
+/plugin install cm@marketing-tools-marketplace
 
 # 4. Start using it
-/compounding-marketing:plan "Q1 Campaign Brief"
+/cm:plan "Q1 Campaign Brief"
 ```
 
 ---
 
 ## 📦 Available Plugins
 
-### 🎯 Compounding Marketing
+### 🎯 CM
 
 **Systematic campaign workflows that get easier over time**
 
 Transform how you plan, execute, and review marketing campaigns. Each campaign you run builds knowledge, creates templates, and compounds into faster, better future campaigns.
 
 **Commands:**
-- `/compounding-marketing:plan` - Research and create comprehensive campaign briefs
-- `/compounding-marketing:execute` - Generate multi-channel content with parallel agents
-- `/compounding-marketing:review` - Launch 12+ specialized reviewers for quality assurance
+- `/cm:plan` - Research and create comprehensive campaign briefs
+- `/cm:execute` - Generate multi-channel content with parallel agents
+- `/cm:review` - Launch 12+ specialized reviewers for quality assurance
 
 **Perfect for:**
 - Campaign managers
@@ -46,24 +46,24 @@ Transform how you plan, execute, and review marketing campaigns. Each campaign y
 
 **Status:** ✅ Available (v0.1.0 - MVP with plan command)
 
-[**Read Full Documentation →**](plugins/compounding-marketing/PLUGIN.md)
+[**Read Full Documentation →**](plugins/cm/PLUGIN.md)
 
 ```bash
-/plugin install compounding-marketing@marketing-tools-marketplace
+/plugin install cm@marketing-tools-marketplace
 ```
 
 ---
 
-### ⚡ Content Factory
+### ⚡ CF
 
 **Create weeks of content in hours**
 
 Rapid, multi-format content generation and intelligent repurposing. Generate blog posts, email sequences, social media content, and video scripts—all from a single brief or by transforming existing content.
 
 **Commands:**
-- `/content-factory:generate` - Batch content creation across multiple formats
-- `/content-factory:repurpose` - Transform one content piece into many formats
-- `/content-factory:schedule` - Create and populate content calendars
+- `/cf:generate` - Batch content creation across multiple formats
+- `/cf:repurpose` - Transform one content piece into many formats
+- `/cf:schedule` - Create and populate content calendars
 
 **Perfect for:**
 - Content marketers
@@ -72,10 +72,10 @@ Rapid, multi-format content generation and intelligent repurposing. Generate blo
 
 **Status:** ✅ Available (v0.1.0 - Core functionality)
 
-[**Read Full Documentation →**](plugins/content-factory/PLUGIN.md)
+[**Read Full Documentation →**](plugins/cf/PLUGIN.md)
 
 ```bash
-/plugin install content-factory@marketing-tools-marketplace
+/plugin install cf@marketing-tools-marketplace
 ```
 
 ---
@@ -139,7 +139,7 @@ The easiest way to install plugins:
 /plugin
 
 # Install specific plugin
-/plugin install compounding-marketing@marketing-tools-marketplace
+/plugin install cm@marketing-tools-marketplace
 ```
 
 ### Method 2: NPX Quick Install
@@ -147,7 +147,7 @@ The easiest way to install plugins:
 One-command installation:
 
 ```bash
-npx claude-plugins install @blacklogos/marketing-tools-marketplace/compounding-marketing
+npx claude-plugins install @blacklogos/marketing-tools-marketplace/cm
 ```
 
 ### Method 3: Manual Installation
@@ -160,7 +160,7 @@ git clone https://github.com/blacklogos/marketing-tools-marketplace.git
 cd marketing-tools-marketplace
 
 # Link a plugin
-ln -s $(pwd)/plugins/compounding-marketing ~/.claude/plugins/compounding-marketing
+ln -s $(pwd)/plugins/cm ~/.claude/plugins/cm
 
 # Restart Claude Code
 ```
@@ -219,20 +219,20 @@ Install only what you need:
 
 ```bash
 # 1. Plan the campaign
-/compounding-marketing:plan "Q2 Product Launch"
+/cm:plan "Q2 Product Launch"
 
 # 2. Generate all content
-/content-factory:generate campaigns/q2-launch/brief.md \
+/cf:generate campaigns/q2-launch/brief.md \
   --formats "blog,email,social,video" \
   --quantity "5 blogs, 10 emails, 50 social, 4 videos"
 
 # 3. Repurpose top content
-/content-factory:repurpose content/blogs/launch-announcement.md \
+/cf:repurpose content/blogs/launch-announcement.md \
   --into "social,email" \
   --platforms "linkedin,twitter,instagram"
 
 # 4. Review everything
-/compounding-marketing:review campaigns/q2-launch/
+/cm:review campaigns/q2-launch/
 
 # 5. Iterate based on feedback
 # (Make improvements, regenerate as needed)
@@ -243,13 +243,13 @@ Install only what you need:
 
 ### Plugin Synergies
 
-**Compounding Marketing + Content Factory:**
-- Plan with Compounding Marketing
-- Execute with Content Factory
-- Review with Compounding Marketing
+**CM + CF:**
+- Plan with CM
+- Execute with CF
+- Review with CM
 
-**Content Factory + SEO Optimizer (coming soon):**
-- Generate content with Content Factory
+**CF + SEO Optimizer (coming soon):**
+- Generate content with CF
 - Optimize with SEO Optimizer
 - Track performance together
 
@@ -298,13 +298,13 @@ See our [Contributing Guide](docs/CONTRIBUTING.md) for details.
 
 ### Phase 1: Foundation (Current - Q1 2025)
 - ✅ Marketplace structure
-- ✅ Compounding Marketing plugin (MVP)
-- ✅ Content Factory plugin
+- ✅ CM plugin (MVP)
+- ✅ CF plugin
 - ✅ Comprehensive documentation
 - ✅ Example workflows
 
 ### Phase 2: Expansion (Q2 2025)
-- 🚧 Complete Compounding Marketing (execute + review commands)
+- 🚧 Complete CM (execute + review commands)
 - 🚧 SEO Optimizer plugin
 - 🚧 Social Scheduler plugin
 - 🚧 Community templates library
@@ -368,11 +368,11 @@ Install plugins at the repository level for team-wide consistency:
 ```json
 {
   "plugins": {
-    "compounding-marketing": {
+    "cm": {
       "enabled": true,
       "brand_guidelines": "brand/guidelines.md"
     },
-    "content-factory": {
+    "cf": {
       "enabled": true,
       "default_formats": ["blog", "email", "social"]
     }
@@ -441,10 +441,10 @@ If these plugins help your marketing workflows:
 /plugin marketplace add https://github.com/blacklogos/marketing-tools-marketplace
 
 # Install your first plugin
-/plugin install compounding-marketing@marketing-tools-marketplace
+/plugin install cm@marketing-tools-marketplace
 
 # Run your first command
-/compounding-marketing:plan "My First Campaign"
+/cm:plan "My First Campaign"
 ```
 
 **Start compounding today.** Each campaign makes the next one easier. 🚀

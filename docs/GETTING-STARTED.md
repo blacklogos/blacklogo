@@ -50,14 +50,14 @@ This opens a menu showing:
 - **Quick install** options
 
 **Available now:**
-- 🎯 **Compounding Marketing** - Systematic campaign workflows
-- ⚡ **Content Factory** - Rapid content generation
+- 🎯 **CM** - Systematic campaign workflows
+- ⚡ **CF** - Rapid content generation
 
 ---
 
 ## Step 3: Install Your First Plugin
 
-### Option A: Compounding Marketing (Recommended for beginners)
+### Option A: CM (Recommended for beginners)
 
 Perfect if you want to:
 - Plan campaigns systematically
@@ -65,10 +65,10 @@ Perfect if you want to:
 - Learn the compounding philosophy
 
 ```bash
-/plugin install compounding-marketing@marketing-tools-marketplace
+/plugin install cm@marketing-tools-marketplace
 ```
 
-### Option B: Content Factory
+### Option B: CF
 
 Perfect if you need to:
 - Generate lots of content quickly
@@ -76,7 +76,7 @@ Perfect if you need to:
 - Create content calendars
 
 ```bash
-/plugin install content-factory@marketing-tools-marketplace
+/plugin install cf@marketing-tools-marketplace
 ```
 
 ### Option C: Install Both
@@ -84,8 +84,8 @@ Perfect if you need to:
 For complete workflow coverage:
 
 ```bash
-/plugin install compounding-marketing@marketing-tools-marketplace
-/plugin install content-factory@marketing-tools-marketplace
+/plugin install cm@marketing-tools-marketplace
+/plugin install cf@marketing-tools-marketplace
 ```
 
 **Expected output:**
@@ -106,19 +106,19 @@ Check that your plugins are installed:
 ```
 
 You should see new commands like:
-- `/compounding-marketing:plan`
-- `/content-factory:generate`
-- `/content-factory:repurpose`
-- `/content-factory:schedule`
+- `/cm:plan`
+- `/cf:generate`
+- `/cf:repurpose`
+- `/cf:schedule`
 
 ---
 
 ## Step 5: Try Your First Command
 
-### If you installed Compounding Marketing:
+### If you installed CM:
 
 ```bash
-/compounding-marketing:plan "My First Campaign"
+/cm:plan "My First Campaign"
 ```
 
 **You'll be prompted for:**
@@ -137,10 +137,10 @@ You should see new commands like:
 
 ---
 
-### If you installed Content Factory:
+### If you installed CF:
 
 ```bash
-/content-factory:generate "Blog post about productivity tips" \
+/cf:generate "Blog post about productivity tips" \
   --formats "blog" \
   --quantity "1 blog"
 ```
@@ -164,7 +164,7 @@ Now that you've tried a command, let's run a complete workflow:
 #### Step 1: Plan the Campaign
 
 ```bash
-/compounding-marketing:plan "Feature X Launch Campaign" \
+/cm:plan "Feature X Launch Campaign" \
   --budget 25000 \
   --duration "4 weeks"
 ```
@@ -182,7 +182,7 @@ Answer Claude's questions about:
 #### Step 2: Generate Campaign Content
 
 ```bash
-/content-factory:generate campaigns/feature-x-launch/brief.md \
+/cf:generate campaigns/feature-x-launch/brief.md \
   --formats "blog,email,social" \
   --quantity "3 blogs, 5 emails, 20 social posts"
 ```
@@ -203,7 +203,7 @@ Answer Claude's questions about:
 Say your launch announcement blog performed well:
 
 ```bash
-/content-factory:repurpose content/blogs/feature-x-announcement.md \
+/cf:repurpose content/blogs/feature-x-announcement.md \
   --into "social,email" \
   --platforms "linkedin,twitter,instagram"
 ```
@@ -214,10 +214,10 @@ Say your launch announcement blog performed well:
 
 #### Step 4: Review Quality (Coming Soon)
 
-Once the `/compounding-marketing:review` command is available:
+Once the `/cm:review` command is available:
 
 ```bash
-/compounding-marketing:review campaigns/feature-x-launch/
+/cm:review campaigns/feature-x-launch/
 ```
 
 **Will provide:**
@@ -329,7 +329,7 @@ Create `brand/guidelines.md` early:
 
 Reference it in commands:
 ```bash
-/content-factory:generate "Campaign" --brand-guidelines brand/guidelines.md
+/cf:generate "Campaign" --brand-guidelines brand/guidelines.md
 ```
 
 ### 3. Organize Your Content
@@ -374,12 +374,12 @@ Start with a comprehensive blog, then repurpose:
 
 ```bash
 # 1. Generate the blog
-/content-factory:generate "Guide to Remote Team Productivity" \
+/cf:generate "Guide to Remote Team Productivity" \
   --formats "blog" \
   --seo-keywords "remote team, productivity, management"
 
 # 2. Repurpose to all formats
-/content-factory:repurpose content/blogs/remote-team-guide.md \
+/cf:repurpose content/blogs/remote-team-guide.md \
   --into "email,social,video-script"
 ```
 
@@ -393,10 +393,10 @@ Plan comprehensively, then execute:
 
 ```bash
 # 1. Plan the campaign
-/compounding-marketing:plan "Q2 Brand Awareness Campaign"
+/cm:plan "Q2 Brand Awareness Campaign"
 
 # 2. Generate all content at once
-/content-factory:generate campaigns/q2-awareness/brief.md \
+/cf:generate campaigns/q2-awareness/brief.md \
   --formats "blog,email,social,video"
 ```
 
@@ -410,12 +410,12 @@ Create calendar first, fill it in:
 
 ```bash
 # 1. Create calendar structure
-/content-factory:schedule \
+/cf:schedule \
   --period "April 2025" \
   --frequency "2 blogs/week, 5 social/day"
 
 # 2. Generate content to fill calendar
-/content-factory:generate \
+/cf:generate \
   --from-calendar calendars/april-2025.md
 ```
 
@@ -438,7 +438,7 @@ Create calendar first, fill it in:
 
 ### Command Not Found
 
-**Error:** "Command `/compounding-marketing:plan` not recognized"
+**Error:** "Command `/cm:plan` not recognized"
 
 **Solution:**
 1. Verify plugin is installed: `/plugin`
@@ -501,13 +501,13 @@ Create calendar first, fill it in:
 
 ### Common Commands
 ```bash
-# Compounding Marketing
-/compounding-marketing:plan "<campaign-name>"
+# CM
+/cm:plan "<campaign-name>"
 
-# Content Factory
-/content-factory:generate "<brief>" --formats "<formats>"
-/content-factory:repurpose <file> --into "<formats>"
-/content-factory:schedule --period "<timeframe>"
+# CF
+/cf:generate "<brief>" --formats "<formats>"
+/cf:repurpose <file> --into "<formats>"
+/cf:schedule --period "<timeframe>"
 ```
 
 ### Getting Help

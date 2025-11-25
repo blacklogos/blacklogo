@@ -80,7 +80,7 @@ After 7 days you'll have:
 
 **Include:**
 - ✅ Marketplace infrastructure
-- ✅ Both plugins (compounding-marketing, content-factory)
+- ✅ Both plugins (cm, cf)
 - ✅ Course content (all modules)
 - ✅ Documentation
 - ✅ Examples and templates

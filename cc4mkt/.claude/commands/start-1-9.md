@@ -73,7 +73,7 @@ You'll see:
 ### Step 3: Install a Plugin
 
 ```
-/plugin install compounding-marketing@every-marketplace
+/plugin install cm@every-marketplace
 ```
 
 This installs the plugin and makes all its components available.
@@ -85,9 +85,9 @@ This installs the plugin and makes all its components available.
 ```
 
 You'll see new commands available! For example:
-- `/compounding-marketing:plan` - Campaign planner
-- `/compounding-marketing:execute` - Content generator
-- `/compounding-marketing:review` - Multi-agent reviewer
+- `/cm:plan` - Campaign planner
+- `/cm:execute` - Content generator
+- `/cm:review` - Multi-agent reviewer
 
 ---
 
@@ -151,9 +151,9 @@ This is the "intelligence" in the plugin system - context-aware assistance.
 You type `/command-name` to trigger them.
 
 **Examples:**
-- `/compounding-marketing:plan` - Start campaign planning
-- `/compounding-marketing:execute` - Generate content
-- `/compounding-marketing:review` - Launch multi-agent review
+- `/cm:plan` - Start campaign planning
+- `/cm:execute` - Generate content
+- `/cm:review` - Launch multi-agent review
 
 **When to use:** When YOU want to start a specific workflow.
 
@@ -218,7 +218,7 @@ Automatic triggers at specific workflow points.
 
 | Component | How Initiated | Purpose | Example |
 |-----------|---------------|---------|---------|
-| **Plugin** | Install once | Package of tools | `compounding-marketing` |
+| **Plugin** | Install once | Package of tools | `cm` |
 | **Command** | You type `/cmd` | Start workflow | `/plan` |
 | **Skill** | Auto (by Claude) | Context expertise | Marketing Research |
 | **Subagent** | You request | Specialized review | @brand-voice-guardian |
@@ -228,14 +228,14 @@ Automatic triggers at specific workflow points.
 
 ## Real Marketing Plugin Example
 
-**The "Compounding Marketing Plugin"** (we'll explore this next!)
+**The "CM Plugin"** (we'll explore this next!)
 
 **What it provides:**
 
 **Commands:**
-- `/compounding-marketing:plan` - Research and create campaign brief
-- `/compounding-marketing:execute` - Generate content across channels
-- `/compounding-marketing:review` - Launch 12+ specialized reviewers
+- `/cm:plan` - Research and create campaign brief
+- `/cm:execute` - Generate content across channels
+- `/cm:review` - Launch 12+ specialized reviewers
 
 **Skills (auto-invoked):**
 - Marketing Research Skill - For competitor/audience analysis
@@ -298,7 +298,7 @@ Automatic triggers at specific workflow points.
 
 In the next lesson, you'll learn the **Compounding Philosophy** - how each campaign makes the next one easier through accumulated knowledge, templates, and patterns.
 
-Then we'll install and use the **Compounding Marketing Plugin** to see 3-stage workflow automation in action!
+Then we'll install and use the **CM Plugin** to see 3-stage workflow automation in action!
 
 **Ready?** Type: `/start-2-7` to learn the compounding philosophy!
 

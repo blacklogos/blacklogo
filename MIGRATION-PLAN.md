@@ -43,7 +43,7 @@ Repo 2: claude-code-for-marketers/
 2. **claude-marketing-tools** (brand + purpose)
 3. **cc4mkt-tools** (course tie-in)
 4. **marketflow** (brandable, memorable)
-5. **compounding-marketing** (philosophy-driven)
+5. **cm** (philosophy-driven)
 
 **Recommendation:** `marketing-tools-marketplace` (clear, searchable, professional)
 
@@ -65,7 +65,7 @@ Repo 2: claude-code-for-marketers/
 
 **Include:**
 - ✅ Marketplace infrastructure (.claude-plugin/, plugins/, shared/)
-- ✅ Both plugins (compounding-marketing, content-factory)
+- ✅ Both plugins (cm, cf)
 - ✅ Course content (cc4mkt/)
 - ✅ Documentation (docs/)
 - ✅ Examples
@@ -97,8 +97,8 @@ git branch -m main
 
 # Create structure
 mkdir -p .claude-plugin
-mkdir -p plugins/compounding-marketing
-mkdir -p plugins/content-factory
+mkdir -p plugins/cm
+mkdir -p plugins/cf
 mkdir -p shared/agents
 mkdir -p shared/templates
 mkdir -p shared/skills
@@ -223,8 +223,8 @@ cd $NEW_REPO
 cp -r $OLD_REPO/.claude-plugin/ .
 
 # Copy plugins
-cp -r $OLD_REPO/plugins/compounding-marketing/ plugins/
-cp -r $OLD_REPO/plugins/content-factory/ plugins/
+cp -r $OLD_REPO/plugins/cm/ plugins/
+cp -r $OLD_REPO/plugins/cf/ plugins/
 
 # Copy shared resources
 cp -r $OLD_REPO/shared/agents/ shared/
@@ -406,7 +406,7 @@ cat > brand/guidelines.md << 'EOF'
 - Campaigns (not "projects" when referring to marketing)
 - Workflows (not "processes", "procedures")
 - Compounding (our core philosophy)
-- Content Factory (our plugin name)
+- CF (our plugin name)
 - Agents (not "bots", "AI assistants")
 
 ### Avoid
@@ -441,7 +441,7 @@ cat > brand/guidelines.md << 'EOF'
 
 ```bash
 # Good: Clear description, realistic example
-/content-factory:generate "Q2 Product Launch" \
+/cf:generate "Q2 Product Launch" \
   --formats "blog,email,social" \
   --quantity "5 blogs, 10 emails, 30 social"
 
@@ -521,7 +521,7 @@ File not found
 1. **Solo Marketer Sam**
    - Doing everything alone
    - Needs efficiency
-   - Example: "Sam used Content Factory to create 2 weeks of content in 3 hours"
+   - Example: "Sam used CF to create 2 weeks of content in 3 hours"
 
 2. **Manager Maria**
    - Leading small team
@@ -628,7 +628,7 @@ For README.md and documentation:
 ```
 Just launched a campaign in 8 hours instead of 40.
 
-How? Compounding Marketing plugin for Claude Code.
+How? CM plugin for Claude Code.
 
 Each campaign builds templates for the next. By campaign 10, it takes 10 hours instead of 40.
 
@@ -852,8 +852,8 @@ marketing-tools-marketplace/
 │   ├── index.md            # Plugin catalog
 │   └── config.json         # Marketplace metadata
 ├── plugins/                # All plugin implementations
-│   ├── compounding-marketing/
-│   └── content-factory/
+│   ├── cm/
+│   └── cf/
 ├── shared/                 # Shared resources across plugins
 │   ├── agents/            # Reusable AI agents
 │   ├── templates/         # Common templates
@@ -932,8 +932,8 @@ A comprehensive course teaching marketers how to use Claude Code for marketing w
 
 The course teaches marketers how to use Claude Code, including:
 - Installing plugins from this marketplace
-- Using the Compounding Marketing plugin
-- Using the Content Factory plugin
+- Using the CM plugin
+- Using the CF plugin
 - Building their own workflows
 
 The marketplace provides the tools that course graduates will use in production.
@@ -990,7 +990,7 @@ git add .
 git commit -m "feat: Initial repository setup for Marketing Tools Marketplace
 
 Complete marketplace infrastructure with:
-- 2 production-ready plugins (Compounding Marketing, Content Factory)
+- 2 production-ready plugins (CM, CF)
 - Claude Code for Marketers course (modules 0-2)
 - Comprehensive documentation
 - Brand guidelines and visual identity
@@ -1083,7 +1083,7 @@ Steps to reproduce the behavior:
 
 ## Environment
 
-- Plugin: [e.g., compounding-marketing v0.1.0]
+- Plugin: [e.g., cm v0.1.0]
 - Claude Code version: [e.g., 2025.1]
 - OS: [e.g., macOS 14.1]
 
@@ -1234,10 +1234,10 @@ A GitHub-hosted marketplace distributing marketing automation plugins that help 
 
 ## Two Plugins Available Now:
 
-### 1. Compounding Marketing
+### 1. CM
 Systematic campaign workflows where each campaign makes the next one easier.
 
-### 2. Content Factory
+### 2. CF
 Rapid, multi-format content generation and intelligent repurposing.
 
 ## Philosophy: Compounding Over Time

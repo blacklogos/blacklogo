@@ -1,6 +1,6 @@
-# Start Lesson 2.7: The Compounding Marketing Philosophy
+# Start Lesson 2.7: The CM Philosophy
 
-Welcome to a game-changing concept: **Compounding Marketing** - where each campaign makes the next one easier.
+Welcome to a game-changing concept: **CM** - where each campaign makes the next one easier.
 
 ## The Problem with Traditional Marketing
 
@@ -27,7 +27,7 @@ Campaign 10: 40 hours → STILL starting from scratch
 
 ---
 
-## The Compounding Marketing Philosophy
+## The CM Philosophy
 
 **Compounding Approach:**
 ```
@@ -367,7 +367,7 @@ Total: 179 hours
 
 ---
 
-## Implementing Compounding Marketing
+## Implementing CM
 
 ### Phase 1: Start Documenting (Campaigns 1-2)
 
@@ -551,7 +551,7 @@ Focus: Strategy, not execution
 
 You now understand the philosophy. Let's see it in action!
 
-In the next module, we'll install and use the **Compounding Marketing Plugin** which embodies this philosophy through:
+In the next module, we'll install and use the **CM Plugin** which embodies this philosophy through:
 - `/plan` - Research and brief creation with accumulated patterns
 - `/execute` - Content generation with template library
 - `/review` - Multi-agent feedback with learned best practices
