@@ -8,7 +8,7 @@ In this 20-minute lesson, you'll explore the MarketFlow project structure and un
 
 ## The MarketFlow Project Context
 
-**Product**: FocusFlow 2.0 - A productivity app for remote teams
+**Product**: Planerio 2.0 - A project management software for enterprise and large corporations
 **Launch Date**: Q2 2024
 **Budget**: $50K marketing budget
 **Your Team**: Small marketing team (you + 2 others)
@@ -39,7 +39,7 @@ I'll help you navigate the MarketFlow project structure.
 
 **What would you like to explore first?**
 
-1. **Brand Guidelines** - See the FocusFlow brand voice, colors, messaging
+1. **Brand Guidelines** - See the Planerio brand voice, colors, messaging
 2. **Campaign Folder** - Review the Q2 launch campaign brief
 3. **Content Assets** - Browse existing blog posts, emails, social content
 4. **Research** - Check out competitor analysis and market research

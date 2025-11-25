@@ -27,16 +27,16 @@ A special file that Claude Code automatically reads, containing:
 
 ## Let's Create Your CLAUDE.md
 
-I'll help you build a comprehensive project memory file for FocusFlow.
+I'll help you build a comprehensive project memory file for Planerio.
 
 ### What to Include
 
 ```markdown
-# FocusFlow Marketing Project Memory
+# Planerio Marketing Project Memory
 
 ## Product Information
-- Name: FocusFlow 2.0
-- Category: Productivity software for remote teams
+- Name: Planerio 2.0
+- Category: Productivity software for enterprise and large corporations
 - Key features: AI task prioritization, team dashboard, 50+ integrations
 - Pricing: $12/user/month (annual), $15/month (monthly)
 
@@ -69,7 +69,7 @@ I'll help you build a comprehensive project memory file for FocusFlow.
 
 Tell me:
 ```
-Create a CLAUDE.md file with FocusFlow project information:
+Create a CLAUDE.md file with Planerio project information:
 - Product details (features, pricing, positioning)
 - Brand voice guidelines
 - Three target personas (Sam, Maria, Steve)
@@ -90,7 +90,7 @@ Once CLAUDE.md exists, test it:
 
 **Ask me** (without providing context):
 ```
-Write a LinkedIn post for FocusFlow 2.0 launch
+Write a LinkedIn post for Planerio 2.0 launch
 ```
 
 Watch how I automatically:

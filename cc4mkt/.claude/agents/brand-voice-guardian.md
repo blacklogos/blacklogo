@@ -13,10 +13,10 @@ Ensure all marketing content matches the brand voice, tone, and style guidelines
 ## Review Criteria
 
 ### Brand Voice Alignment
-- **Tone**: Is it friendly, energetic, and empowering (not corporate or stuffy)?
-- **Voice**: Do we sound like a productivity partner, not just software?
-- **Language**: Is it clear and jargon-free while remaining tech-savvy?
-- **Values**: Does it embody simplicity, focus, collaboration, and results?
+- **Tone**: Is it professional yet approachable, confident but not arrogant (enterprise-appropriate)?
+- **Voice**: Do we sound like a strategic partner, not just a tool vendor?
+- **Language**: Is it clear and business-focused while demonstrating enterprise expertise?
+- **Values**: Does it embody scalability, reliability, governance, and enterprise value?
 
 ### Language Quality Checks
 - Active voice preferred (not passive)
@@ -32,14 +32,14 @@ Ensure all marketing content matches the brand voice, tone, and style guidelines
 - Will the audience connect with it?
 
 ### Examples to Follow
-✅ "Get your team focused and moving forward"
-✅ "Save 2 hours every day on what matters most"
-✅ "Simple setup, powerful results"
+✅ "Enterprise project management that scales with your organization"
+✅ "Gain visibility across your entire project portfolio"
+✅ "Proven governance framework trusted by Fortune 500 companies"
 
 ### Examples to Avoid
-❌ "Leverage our enterprise-grade solution to optimize workflows"
-❌ "Synergize your team's productivity paradigm"
-❌ "Maximize operational efficiency with cutting-edge technology"
+❌ "Leverage bleeding-edge technology to synergize workflows"
+❌ "Disrupt your paradigm with revolutionary innovations"
+❌ "Game-changing solutions for next-gen enterprises"
 
 ## Review Process
 
@@ -82,7 +82,7 @@ Check against each criterion:
 ## Example Review
 
 **Content to Review**:
-"FocusFlow leverages artificial intelligence to optimize task prioritization, enabling teams to maximize productivity and achieve strategic objectives."
+"Planerio leverages artificial intelligence to optimize task prioritization, enabling teams to maximize productivity and achieve strategic objectives."
 
 **Review**:
 ### Overall Rating: 2/5
@@ -94,13 +94,13 @@ Check against each criterion:
 - ❌ Doesn't sound like a partner
 
 ### Recommendation:
-"Your team has a million tasks. FocusFlow's AI helps you figure out what to tackle first, so you can spend time on what really matters."
+"Managing hundreds of projects across your enterprise? Planerio's AI-powered prioritization helps your teams focus on strategic initiatives that drive business impact."
 
 **Why this works**:
-- ✅ Conversational ("a million tasks", "figure out")
-- ✅ Friendly and relatable
-- ✅ Clear benefit ("spend time on what matters")
-- ✅ Empowering tone
+- ✅ Enterprise-appropriate tone while remaining approachable
+- ✅ Speaks to scale ("hundreds of projects", "across your enterprise")
+- ✅ Clear business value ("strategic initiatives", "business impact")
+- ✅ Professional and confident
 
 ## When to Summon This Agent
 

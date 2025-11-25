@@ -12,7 +12,7 @@ Marketing generates tons of data. Your job: turn it into actionable insights.
 
 ### Monthly Marketing Dashboard
 ```
-Analyze FocusFlow Q2 launch campaign (Week 4 checkpoint):
+Analyze Planerio Q2 launch campaign (Week 4 checkpoint):
 
 Campaign data to analyze:
 - Paid search: $5,000 spent, 2,500 clicks, 150 trials, $33 CPA
@@ -66,7 +66,7 @@ Create attribution analysis report.
 
 ### Conversion Funnel Deep Dive
 ```
-Analyze FocusFlow trial-to-paid conversion funnel:
+Analyze Planerio trial-to-paid conversion funnel:
 
 Stage 1: Trial signup (730 users)
 Stage 2: Activated (completed onboarding): 511 users (70%)
@@ -128,7 +128,7 @@ Generate cohort analysis report.
 
 ### How Do We Stack Up?
 ```
-Compare FocusFlow metrics to industry benchmarks:
+Compare Planerio metrics to industry benchmarks:
 
 Our metrics:
 - Trial conversion rate: 20%
@@ -214,7 +214,7 @@ Duration: 24 hours
 Results:
 Variant A "Your productivity just got easier": 38% open, 5.2% click
 Variant B "Your first win is 5 minutes away": 42% open, 6.8% click ⭐
-Variant C "[Name], welcome to FocusFlow": 36% open, 4.9% click
+Variant C "[Name], welcome to Planerio": 36% open, 4.9% click
 
 Statistical significance: ✅ 95% confidence
 Winner: Variant B

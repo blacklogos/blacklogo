@@ -33,7 +33,7 @@ Create [asset type] for [product/campaign]:
 - CTA: [specific action]
 
 Example:
-"Create a launch email for FocusFlow 2.0 targeting existing customers.
+"Create a launch email for Planerio 2.0 targeting existing customers.
 Highlight AI task prioritization. Under 200 words. Friendly but professional tone."
 ```
 

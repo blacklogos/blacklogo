@@ -220,15 +220,15 @@
             <p class="lesson-meta">Module 0: Getting Started | 20 min</p>
         </div>
 
-        <h2>Installing Claude Code</h2>
+        <h2>Installing Claude Code (2025 Edition)</h2>
 
-        <p>In this lesson, you'll install Claude Code and all the tools you need to complete this course. Don't worry - we'll walk through everything step by step!</p>
+        <p>In this lesson, you'll install Claude Code using the new native installer. Good news: <strong>No Node.js required!</strong> The 2025 version uses a native installer that's faster and easier to set up.</p>
 
         <div class="highlight-box">
             <h3>What You'll Install</h3>
             <ul>
-                <li><strong>Claude Code:</strong> The AI-powered assistant</li>
-                <li><strong>Node.js:</strong> Required for Claude Code to run</li>
+                <li><strong>Claude Code:</strong> Native binary installer (auto-updates included)</li>
+                <li><strong>Anthropic Account:</strong> For authentication</li>
                 <li><strong>A code editor:</strong> VS Code (optional but recommended)</li>
             </ul>
         </div>
@@ -238,7 +238,7 @@
         <p>Before we begin, make sure your computer meets these requirements:</p>
 
         <ul>
-            <li><strong>Operating System:</strong> macOS, Windows 10+, or Linux</li>
+            <li><strong>Operating System:</strong> macOS, Windows 10+, or Linux/WSL</li>
             <li><strong>RAM:</strong> At least 4GB (8GB+ recommended)</li>
             <li><strong>Disk Space:</strong> 500MB free space</li>
             <li><strong>Internet:</strong> Stable internet connection</li>
@@ -247,83 +247,110 @@
         <h2>Step-by-Step Installation</h2>
 
         <div class="step">
-            <h3><span class="step-number">1</span>Create an Anthropic Account</h3>
-            <p>Visit <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> and create a free account. You'll need this to use Claude Code.</p>
-            <p>Once registered, navigate to your account settings to get your API key.</p>
-        </div>
-
-        <div class="step">
-            <h3><span class="step-number">2</span>Install Node.js</h3>
-            <p>Claude Code requires Node.js. Download and install it from <a href="https://nodejs.org" target="_blank">nodejs.org</a>.</p>
-            <p>Choose the <strong>LTS (Long Term Support)</strong> version for your operating system.</p>
-            <p>To verify installation, open your terminal/command prompt and run:</p>
-            <pre><code>node --version
-npm --version</code></pre>
-            <p>You should see version numbers displayed.</p>
-        </div>
-
-        <div class="step">
-            <h3><span class="step-number">3</span>Install Claude Code</h3>
-            <p>Open your terminal/command prompt and run:</p>
-            <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
-            <p>This will install Claude Code globally on your system.</p>
-            <div class="warning-box">
-                <p><strong>Mac/Linux users:</strong> If you get a permission error, try:</p>
-                <pre><code>sudo npm install -g @anthropic-ai/claude-code</code></pre>
-            </div>
-        </div>
-
-        <div class="step">
-            <h3><span class="step-number">4</span>Configure Your API Key</h3>
-            <p>Claude Code needs your Anthropic API key to work. Run:</p>
-            <pre><code>claude-code config set-key</code></pre>
-            <p>When prompted, paste your API key from step 1.</p>
+            <h3><span class="step-number">1</span>Install Claude Code</h3>
+            <p><strong>For macOS, Linux, or WSL:</strong></p>
+            <pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+            <p><strong>For Windows:</strong></p>
+            <p>Download the installer from <a href="https://claude.ai/download" target="_blank">claude.ai/download</a> and run it.</p>
+            <p>The native installer will automatically:</p>
+            <ul>
+                <li>Install Claude Code binary</li>
+                <li>Set up auto-updates</li>
+                <li>Configure your system PATH</li>
+            </ul>
             <div class="success-box">
-                <p><strong>Security Note:</strong> Your API key is stored securely on your local machine and is never shared.</p>
+                <p><strong>No Node.js required!</strong> The 2025 native installer is a standalone binary that manages everything for you.</p>
             </div>
         </div>
 
         <div class="step">
-            <h3><span class="step-number">5</span>Install VS Code (Optional)</h3>
+            <h3><span class="step-number">2</span>Set Up Authentication</h3>
+            <p>When you first run Claude Code, it will prompt you to authenticate. You have two options:</p>
+            <p><strong>Option 1: Claude Console (API Key)</strong></p>
+            <ol>
+                <li>Visit <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a></li>
+                <li>Create an account or sign in</li>
+                <li>Get your API key from the console</li>
+                <li>Set it in your terminal:</li>
+            </ol>
+            <pre><code># Mac/Linux
+export ANTHROPIC_API_KEY='your-key-here'
+
+# To make it permanent, add to ~/.zshrc or ~/.bashrc
+echo 'export ANTHROPIC_API_KEY="your-key-here"' >> ~/.zshrc
+
+# Windows PowerShell
+$env:ANTHROPIC_API_KEY='your-key-here'</code></pre>
+            <p><strong>Option 2: Claude App (OAuth)</strong></p>
+            <p>If you have a Claude Pro or Max subscription, you can use OAuth authentication through the Claude app.</p>
+            <div class="warning-box">
+                <p><strong>Note:</strong> API usage requires active billing at console.anthropic.com, or a Claude Pro/Max subscription.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">3</span>Verify Installation</h3>
+            <p>Open your terminal/command prompt and run:</p>
+            <pre><code>claude --version
+claude doctor</code></pre>
+            <p>The <code>claude doctor</code> command checks your installation and shows:</p>
+            <ul>
+                <li>Installation type (native or npm)</li>
+                <li>Version information</li>
+                <li>Configuration status</li>
+                <li>Any potential issues</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">4</span>Install VS Code (Optional)</h3>
             <p>While not required, <strong>Visual Studio Code</strong> makes it easier to view and edit marketing files.</p>
             <p>Download it from <a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a>.</p>
             <p>After installation, you can open any folder with:</p>
             <pre><code>code .</code></pre>
+            <p><strong>Bonus:</strong> Claude Code also has a VS Code extension (beta) that lets you use it directly in your editor!</p>
         </div>
 
         <h2>Verify Your Installation</h2>
 
         <p>Let's make sure everything is working correctly. In your terminal, run:</p>
 
-        <pre><code>claude-code --version</code></pre>
+        <pre><code>claude --version
+claude doctor</code></pre>
 
-        <p>You should see the Claude Code version number. If you do, congratulations! You're all set up.</p>
+        <p>You should see the Claude Code version number and a diagnostic report. If you do, congratulations! You're all set up.</p>
 
-        <h2>Understanding Your Setup</h2>
+        <h2>Understanding Your 2025 Setup</h2>
 
-        <p>Now that you've installed Claude Code, let's understand what you have:</p>
+        <p>Now that you've installed Claude Code, here's what you have:</p>
 
         <ul>
-            <li><strong>Terminal/Command Line:</strong> Where you'll interact with Claude Code</li>
-            <li><strong>Claude Code CLI:</strong> The command-line interface for Claude</li>
-            <li><strong>API Connection:</strong> Links your local setup to Claude's AI</li>
-            <li><strong>VS Code (optional):</strong> For viewing and editing files</li>
+            <li><strong>Native Binary:</strong> Claude Code runs as a standalone application (no Node.js dependency)</li>
+            <li><strong>Auto-Updates:</strong> Claude Code automatically updates itself with latest features</li>
+            <li><strong>Claude Sonnet 4.5:</strong> The world's best coding model (now default)</li>
+            <li><strong>Checkpoints:</strong> Press Esc+Esc to rewind any changes</li>
+            <li><strong>Subagents:</strong> Parallel AI assistants for specialized tasks</li>
+            <li><strong>Hooks:</strong> Automation that runs at specific workflow points</li>
+            <li><strong>VS Code Extension (optional):</strong> Use Claude Code directly in your editor</li>
         </ul>
 
         <h2>Common Installation Issues</h2>
 
-        <h3>Issue: "command not found: claude-code"</h3>
-        <p><strong>Solution:</strong> Make sure you installed with the <code>-g</code> flag. Try closing and reopening your terminal, or restart your computer.</p>
+        <h3>Issue: "command not found: claude"</h3>
+        <p><strong>Solution:</strong> Close and reopen your terminal to refresh PATH. If still not working, try reinstalling or check your system PATH settings.</p>
 
-        <h3>Issue: "Permission denied"</h3>
-        <p><strong>Solution:</strong> On Mac/Linux, use <code>sudo</code> before the install command. On Windows, run Command Prompt as Administrator.</p>
+        <h3>Issue: "Installation failed"</h3>
+        <p><strong>Solution:</strong> Check your internet connection. Try with elevated privileges if needed. Verify firewall/antivirus isn't blocking the installer.</p>
 
-        <h3>Issue: "API key invalid"</h3>
-        <p><strong>Solution:</strong> Double-check your API key from the Anthropic console. Make sure you copied it completely.</p>
+        <h3>Issue: "API key not working"</h3>
+        <p><strong>Solution:</strong> Verify your key at console.anthropic.com. Check for extra spaces or quotes. Restart terminal after setting the environment variable.</p>
+
+        <h3>Issue: "Already have npm version installed"</h3>
+        <p><strong>Solution:</strong> Run <code>claude install</code> to migrate from npm to the native installer. This provides better auto-updates and performance.</p>
 
         <div class="warning-box">
             <h3>Still Having Issues?</h3>
-            <p>Visit the <a href="https://docs.anthropic.com/claude/docs" target="_blank">Claude Code documentation</a> or check the troubleshooting section.</p>
+            <p>Run <code>claude doctor</code> to diagnose problems, or visit the <a href="https://docs.claude.com/en/docs/claude-code" target="_blank">Claude Code documentation</a> for detailed troubleshooting.</p>
         </div>
 
         <h2>What's Next?</h2>
@@ -334,9 +361,9 @@ npm --version</code></pre>
             <h3>Checkpoint</h3>
             <p>Before moving on, make sure you can:</p>
             <ul>
-                <li>✓ Run <code>node --version</code> successfully</li>
-                <li>✓ Run <code>claude-code --version</code> successfully</li>
-                <li>✓ Have your API key configured</li>
+                <li>✓ Run <code>claude --version</code> successfully</li>
+                <li>✓ Run <code>claude doctor</code> and see a healthy status</li>
+                <li>✓ Have your authentication configured (API key or OAuth)</li>
             </ul>
         </div>
 

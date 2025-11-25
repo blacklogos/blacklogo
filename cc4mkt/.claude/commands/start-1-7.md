@@ -56,7 +56,7 @@ Most powerful: combine pattern + content:
 ```
 Find email files mentioning "free trial"
 Find blog posts about "team collaboration" from Q1
-Find social posts targeting "remote teams"
+Find social posts targeting "enterprise and large corporations"
 ```
 
 ---
@@ -75,7 +75,7 @@ Fix inconsistent naming in social folder
 ### Batch Updates
 ```
 Update pricing across all files ($10 → $12)
-Replace "FocusFlow 1.0" with "FocusFlow 2.0"
+Replace "Planerio 1.0" with "Planerio 2.0"
 Update old links to new domain
 ```
 

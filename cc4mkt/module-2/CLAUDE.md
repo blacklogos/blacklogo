@@ -65,7 +65,7 @@ Build the brief section by section, showing strategic thinking:
 **Key Learning**: A good brief = aligned execution = better results
 
 **Interactive Elements**:
-- Build FocusFlow 2.0 launch brief together
+- Build Planerio 2.0 launch brief together
 - Challenge: Create brief for different campaign type
 - Review with multiple agent perspectives
 

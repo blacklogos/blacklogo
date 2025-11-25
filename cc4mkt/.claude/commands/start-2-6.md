@@ -13,7 +13,7 @@ Master SEO to drive sustainable, long-term organic traffic. This is the final le
 
 ### Finding Your Keyword Opportunities
 ```
-Research keywords for FocusFlow across the funnel:
+Research keywords for Planerio across the funnel:
 
 Top of Funnel (Awareness):
 - "team productivity tips" (8.1K/mo, Medium difficulty)
@@ -21,8 +21,8 @@ Top of Funnel (Awareness):
 - "how to stay focused working from home" (4.2K/mo, Low)
 
 Middle of Funnel (Consideration):
-- "best productivity app for teams" (3.9K/mo, High)
-- "team task management software" (3.2K/mo, High)
+- "best project management software for teams" (3.9K/mo, High)
+- "team portfolio management software" (3.2K/mo, High)
 - "asana alternatives" (2.8K/mo, Medium)
 
 Bottom of Funnel (Decision):
@@ -142,7 +142,7 @@ Create content pillar strategy document with publishing calendar.
 
 ### Site Health Check
 ```
-Perform technical SEO audit for FocusFlow website:
+Perform technical SEO audit for Planerio website:
 
 Crawlability & Indexing:
 - Check robots.txt configuration
@@ -186,7 +186,7 @@ Create technical audit report with prioritized fixes.
 
 ### Earning Quality Backlinks
 ```
-Create link building campaign for FocusFlow:
+Create link building campaign for Planerio:
 
 Strategy 1: Content-Driven Links
 - Create "State of Remote Work Productivity 2024" report
@@ -233,17 +233,17 @@ Organization Schema:
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "FocusFlow",
+  "name": "Planerio",
   "url": "https://focusflow.com",
   "logo": "https://focusflow.com/logo.png",
-  "description": "AI-powered productivity software for remote teams"
+  "description": "AI-powered productivity software for enterprise and large corporations"
 }
 
 Product Schema (for pricing page):
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "FocusFlow",
+  "name": "Planerio",
   "offers": {
     "@type": "Offer",
     "price": "12.00",
@@ -295,7 +295,7 @@ High-value pages needing updates:
    - Action: Add 1,000 words, better examples, video
    - Expected: Move to page 1
 
-3. "FocusFlow vs Asana"
+3. "Planerio vs Asana"
    - Current traffic: 800/mo
    - Out of date: Missing new features
    - Action: Complete update with latest comparison

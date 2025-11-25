@@ -4,7 +4,7 @@ Congratulations on installing Claude Code! Now let's create your first marketing
 
 ## What We'll Create
 
-I'll help you set up a sample marketing project called **MarketFlow** - a fictional project for launching a productivity app. This will give you a realistic structure to practice with.
+I'll help you set up a sample marketing project called **MarketFlow** - a fictional project for launching a project management software. This will give you a realistic structure to practice with.
 
 ## Creating the Workspace
 
@@ -39,7 +39,7 @@ Which would you prefer?
 
 Throughout this course, we'll work with a realistic scenario:
 
-**Product**: FocusFlow - A productivity app for remote teams
+**Product**: Planerio - A project management software for enterprise and large corporations
 **Your Role**: Marketing Manager
 **Goal**: Launch campaign for the app's 2.0 version
 

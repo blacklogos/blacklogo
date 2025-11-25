@@ -12,7 +12,7 @@ Great marketing copy follows proven formulas. Let's master them!
 
 ### Welcome Email Series
 ```
-Create a 5-email welcome sequence for FocusFlow trial users:
+Create a 5-email welcome sequence for Planerio trial users:
 
 Email 1 (Day 0): Welcome + Quick Win
 - Subject line options (3 variants)
@@ -60,7 +60,7 @@ Headlines:
 - [12 more variations]
 
 Descriptions:
-- "Join 5,000+ remote teams using FocusFlow..."
+- "Join 5,000+ enterprise and large corporations using Planerio..."
 - [3 more variations]
 
 Include:
@@ -75,17 +75,17 @@ Create 3 LinkedIn ad variants for Manager Maria persona:
 
 Variant A: Problem-Agitate-Solve
 "Tired of asking 'What's everyone working on?'
-FocusFlow gives you real-time team visibility.
+Planerio gives you real-time team visibility.
 See what matters. Stay focused. Move forward."
 
 Variant B: Social Proof
-"5,000+ remote team managers trust FocusFlow.
+"5,000+ enterprise project managers trust Planerio.
 AI-powered task prioritization + team dashboards.
 Try free for 14 days. No credit card required."
 
 Variant C: Benefit-Driven
 "Save 2 hours every day on team coordination.
-FocusFlow automates prioritization so you can focus on results.
+Planerio automates prioritization so you can focus on results.
 Start your free trial →"
 
 Write complete ad copy with images descriptions and CTAs.
@@ -101,7 +101,7 @@ Concept 1: Testimonial video ad
 - Visual: Screen recordings of dashboard
 
 Concept 2: Problem/Solution carousel
-- 5 cards showing common problems → FocusFlow solutions
+- 5 cards showing common problems → Planerio solutions
 - Card 1: "Drowning in tasks?" → AI prioritization
 - [Complete all 5 cards]
 
@@ -119,7 +119,7 @@ Write ad copy, creative briefs, and targeting parameters.
 
 ### Trial Signup Landing Page
 ```
-Write conversion-optimized landing page for FocusFlow trial:
+Write conversion-optimized landing page for Planerio trial:
 
 Above the fold:
 - Headline: [Benefit-driven, clear, compelling]
@@ -162,7 +162,7 @@ Write complete landing page copy with section headers.
 
 ### LinkedIn Post Series
 ```
-Create 5 LinkedIn posts for FocusFlow 2.0 launch:
+Create 5 LinkedIn posts for Planerio 2.0 launch:
 
 Post 1: Launch announcement
 - Hook: Exciting news
@@ -198,7 +198,7 @@ Write complete posts (150-200 words each) with hashtag strategy.
 Create viral Twitter thread about productivity:
 
 Tweet 1: Hook
-"I analyzed how 100 remote teams stay productive.
+"I analyzed how 100 enterprise and large corporations stay productive.
 The difference between high and low performers?
 It's not what you think. 🧵"
 
@@ -208,7 +208,7 @@ Tweets 2-8: Value delivery
 - [etc.]
 
 Tweet 9: Soft pitch
-"That's why we built FocusFlow..."
+"That's why we built Planerio..."
 
 Tweet 10: CTA
 "Try free for 14 days: [link]"
@@ -226,7 +226,7 @@ For Email 1 (Welcome), create 3 subject line variants to A/B test:
 
 Variant A (Benefit): "Your productivity just got easier"
 Variant B (Curiosity): "Your first win is 5 minutes away"
-Variant C (Personalization): "[Name], welcome to FocusFlow"
+Variant C (Personalization): "[Name], welcome to Planerio"
 
 Hypothesis: Benefit-driven will win (40% open rate target)
 Test on: 3,000 sends (1,000 each variant)
@@ -242,7 +242,7 @@ Test 3 CTA button variants:
 
 Variant A: "Start Free Trial"
 Variant B: "Get Started Free"
-Variant C: "Try FocusFlow Free"
+Variant C: "Try Planerio Free"
 
 Hypothesis: "Start Free Trial" will convert best (35% target)
 Test setup: 50/25/25 traffic split

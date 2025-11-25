@@ -1,34 +1,51 @@
 # Module 0: Getting Started - Quick Reference
 
-## Installation Checklist
+## Installation Checklist (2025 Edition)
 
 ### Prerequisites
-- [ ] Node.js installed (v18+ or v20+)
 - [ ] Terminal/command line access
-- [ ] Anthropic API key from console.anthropic.com
+- [ ] Anthropic API key from console.anthropic.com OR Claude Pro/Max subscription
+- [ ] Internet connection
 
-### Installation Steps
+**No Node.js required!** - Native installer handles everything.
+
+### Installation Steps (2025 Method)
+
+**Mac/Linux/WSL:**
 ```bash
 # Install Claude Code
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 
 # Verify installation
 claude --version
+claude doctor
 
 # Set API key (Mac/Linux)
 export ANTHROPIC_API_KEY='your-key-here'
 
-# Set API key (Windows)
-setx ANTHROPIC_API_KEY "your-key-here"
+# Make it permanent
+echo 'export ANTHROPIC_API_KEY="your-key-here"' >> ~/.zshrc
+```
+
+**Windows:**
+```powershell
+# Download installer from https://claude.ai/download and run it
+
+# Set API key (Windows PowerShell)
+$env:ANTHROPIC_API_KEY='your-key-here'
+
+# Verify
+claude --version
+claude doctor
 ```
 
 ### Common Issues
 | Problem | Solution |
 |---------|----------|
-| `node: command not found` | Install Node.js from nodejs.org |
-| `permission denied` | Use `sudo npm install -g` (Mac/Linux) |
+| `command not found: claude` | Restart terminal, reinstall, or check PATH |
+| `Installation failed` | Check internet, firewall, antivirus |
 | `ANTHROPIC_API_KEY not found` | Re-export key or add to shell config |
-| `claude: command not found` | Check npm global bin path |
+| `Already have npm version` | Run `claude install` to migrate |
 
 ## MarketFlow Setup
 
@@ -66,6 +83,7 @@ MarketFlow/
 ```bash
 claude                    # Start Claude Code
 claude --version         # Check version
+claude doctor            # Diagnose installation issues
 claude --help            # Get help
 ```
 

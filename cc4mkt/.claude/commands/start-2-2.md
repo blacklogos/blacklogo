@@ -12,7 +12,7 @@ Master content strategy - the systematic approach to creating content that drive
 
 ---
 
-## Building a Content Strategy for FocusFlow 2.0
+## Building a Content Strategy for Planerio 2.0
 
 Let's create a comprehensive Q2 content plan.
 
@@ -24,7 +24,7 @@ Content pillars are your core themes - everything you create ties back to these.
 
 ### Define Your Pillars
 ```
-Create 3 content pillars for FocusFlow:
+Create 3 content pillars for Planerio:
 
 Pillar 1: "Productivity Science"
 - Topic: Research-backed productivity methods
@@ -42,7 +42,7 @@ Pillar 3: "Productivity Tools & Tech"
 - Topic: App integrations, workflow automation
 - Formats: How-tos, video tutorials, comparison posts
 - Goal: Capture bottom-of-funnel searches
-- Example: "FocusFlow + Slack: Your Complete Workflow"
+- Example: "Planerio + Slack: Your Complete Workflow"
 
 Create detailed pillar documents for each.
 ```

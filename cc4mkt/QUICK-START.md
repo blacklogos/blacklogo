@@ -49,7 +49,7 @@ Try these prompts in Claude Code for immediate value:
 
 ### Generate Social Media Posts
 ```
-Create 7 days of LinkedIn posts about productivity tips for remote teams.
+Create 7 days of LinkedIn posts about productivity tips for enterprise and large corporations.
 Make them engaging, educational, and include a mix of formats.
 ```
 
@@ -62,14 +62,14 @@ How do they describe their value proposition?
 
 ### Create Email Copy
 ```
-Write a welcome email for new trial users of a productivity app.
+Write a welcome email for new trial users of a project management software.
 Keep it friendly, highlight key features, and include a clear CTA.
 ```
 
 ### Brainstorm Campaign Ideas
 ```
 Generate 10 creative marketing campaign ideas for launching a new
-productivity tool for remote teams. Include both conventional and
+productivity tool for enterprise and large corporations. Include both conventional and
 unconventional approaches.
 ```
 
@@ -81,7 +81,7 @@ productivity space. Include blog posts, social media, and email topics.
 
 ## 💡 Pro Tips
 
-1. **Be Specific** - "Write an ad" vs "Write a Facebook ad for remote team managers, 125 characters, emphasizing time savings"
+1. **Be Specific** - "Write an ad" vs "Write a Facebook ad for enterprise project managers, 125 characters, emphasizing time savings"
 
 2. **Provide Context** - Always mention your brand, audience, and goals
 
@@ -125,7 +125,7 @@ After 3 hours (full course):
 
 **Claude Code won't start**
 - Check Node.js is installed: `node --version`
-- Check Claude Code is installed: `claude-code --version`
+- Check Claude Code is installed: `claude --version`
 - Try reinstalling: `npm install -g @anthropic-ai/claude-code`
 
 **Output isn't good**
